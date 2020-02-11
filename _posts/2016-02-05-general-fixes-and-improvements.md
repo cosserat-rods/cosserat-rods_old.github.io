@@ -3,14 +3,6 @@ title: General fixes and improvements
 type: minor
 ---
 
-This release fixes a few minor issues reported by users. We've also made a few quality of life improvements.
+This is an example of a minor update announcement as opposed to a major update below. 
 
-**Features:**
-
-* Streamlined access to contact details
-* Better sort order for archived messages
-
-**Fixes:**
-
-* Input sometimes getting stuck
-* One more memory leak obliterated
+>To get the date, save the file with the date in the title (ex. "2016-02-05-general-fixes-and-improvements.md")

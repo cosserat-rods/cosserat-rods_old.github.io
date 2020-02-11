@@ -1,8 +1,8 @@
 # ----
 # Site
 
-title: Edition Template
-url: "https://long-pig.cloudvent.net"
+title: Cosserat Rods
+url: "testURL.com"
 baseurl:
 google_analytics_key:
 show_full_navigation: true
@@ -15,11 +15,12 @@ author:
   email:
   twitter: # twitter username without the @ symbol
 social:
-  name: Edition Template
+  name: Test Template
   links:
     - https://github.com/CloudCannon/edition-jekyll-template
 
 # -----
+markdown: kramdown
 # Build
 
 timezone: Etc/UTC
@@ -35,7 +36,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
-  - LICENCE
+  - LICENSE
 
 collections:
   docs:

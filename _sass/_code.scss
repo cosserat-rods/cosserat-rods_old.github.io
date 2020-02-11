@@ -1,14 +1,30 @@
-pre, code, tt {
-	font-family: Inconsolata, Consolas, Courier, "Courier New", "Liberation Mono", monospace;
+/* 
+pre, tt {
+	font-family: "Merriweather", serif;
+	// font-family: Inconsolata, Consolas, Courier, "Courier New", "Liberation Mono";
 	font-size: 0.85em;
 	white-space: pre-wrap;
 	border-radius: 2px;
 	line-height: 1.4;
 	font-weight: 400;
-	background-color: #404145;
-	color: #FAFAFA;
+	// background-color: #D8DDEE;
+	// color: #252628;
 	border-radius: 2px;
 }
+*/
+
+code {
+	font-family: Inconsolata, Consolas, Courier, "Courier New", "Liberation Mono", monospace;
+	// font-size: 1.0em;
+	white-space: pre-wrap;
+	border-radius: 2px;
+	line-height: 1.4;
+	font-weight: 400;
+	background-color: #D8DDEE;
+	color: #252628;
+	border-radius: 2px;
+}
+
 
 pre {
 	box-sizing: border-box;
@@ -21,6 +37,7 @@ pre {
 	border-radius: 3px;
 
 	code, tt {
+		font-family: "Merriweather", serif;
 		font-size: inherit;
 		white-space: pre-wrap;
 		background: transparent;
@@ -28,6 +45,7 @@ pre {
 		padding: 0
 	}
 }
+
 
 blockquote > code,
 li > code,

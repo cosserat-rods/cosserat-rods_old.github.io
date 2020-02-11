@@ -1,17 +1,16 @@
 ---
-title: Media support
+title: Example of a major release announcement
 type: major
 ---
 
-ChatApp introduces media support! Send images, videos and documents to your contacts.
+We can have a running list of updates and release announcements. 
+
+This release introduces
 
 **Features:**
 
-* Image support
-* Video support
-* Document support
+*
 
 **Fixes:**
 
-* Edge case contact syncing issue
-* All memory leaks obliterated
+*
