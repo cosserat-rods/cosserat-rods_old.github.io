@@ -4,8 +4,6 @@ category: Publications
 order: 0
 ---
 
-##### Papers that have used Cosserat rods to model various systems. 
-\\
 Weiner, Bhosale, Gazzola, King, **Mechanics of randomly packed filaments – the ‘bird nest’ as meta-material**, Journal of Applied Physics, 2020.  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -> Combining multiple rods...
 

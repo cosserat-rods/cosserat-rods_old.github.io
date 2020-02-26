@@ -1,4 +1,4 @@
-/* 
+
 pre, tt {
 	font-family: "Merriweather", serif;
 	// font-family: Inconsolata, Consolas, Courier, "Courier New", "Liberation Mono";
@@ -7,11 +7,11 @@ pre, tt {
 	border-radius: 2px;
 	line-height: 1.4;
 	font-weight: 400;
-	// background-color: #D8DDEE;
-	// color: #252628;
+	background-color: #D8DDEE;
+	color: #252628;
 	border-radius: 2px;
 }
-*/
+
 
 code {
 	font-family: Inconsolata, Consolas, Courier, "Courier New", "Liberation Mono", monospace;
@@ -37,7 +37,7 @@ pre {
 	border-radius: 3px;
 
 	code, tt {
-		font-family: "Merriweather", serif;
+		// font-family: "Merriweather", serif;
 		font-size: inherit;
 		white-space: pre-wrap;
 		background: transparent;

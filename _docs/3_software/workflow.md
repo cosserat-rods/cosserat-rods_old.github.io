@@ -1,63 +1,18 @@
 ---
-title: Pyelastica
-category: Software
-order: 2
+title: Workflow
+category: Pyelastica
+order: 4
 ---
-
-The python implementation of elastica is the easiest version to get started with. This page contains useful information for getting elastica set up, using it to model single and multiple rod systems, and postprocessing the results. 
-
-#### &nbsp; [Getting Started](#getting-started)  
-##### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -[Installation](#installation)
-##### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -[Documentation](#documentation)
-##### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -[Pylastica Workflow](#pylastica-workflow)
-##### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -[Useful Information](#useful-information)
-#### &nbsp; [Tutorials](#tutorials)
-#### &nbsp; [Visualization](#visualization)  
-
-<br /> 
-
-# Getting Started
-## Installation
-Pyelastica uses Python 3, which needs to be installed prior to using Pylastica. For information on installing Python, see [here](https://realpython.com/installing-python/). If you are interested in using a package manager like Conda, see [here](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html).
-
->The easiest way to install Pyelastica is with PIP: `pip install pyelastica` (**not yet implemented**)
-
-You can also download the source code for Pyelastica directly from [GitHub](link_to_github). 
-
-## Documentation
-We are working to build out the documentation. The latest version of Pylastica's documentation can be found [here](https://www.readthedocs.org). 
 
 ## Pyelastica workflow
 When using Pyelastica, most users will setup a simulation in which they define a system of rods, define initial and boundary conditions on the rods, run the simulation, and then post-process the results. For this case, the typical outline for using Pyelastica would be:
 
 ####  1. import necessary modules 
 There are several different modules from Elastica that need to be imported. They can be broadly classified as:  
-&ensp; a. Wrappers -- For the most general case, you would need to import the following:
-```
-from elastica.wrappers import (
-    BaseSystemCollection,
-    Connections,
-    Constraints,
-    Forcing,
-    CallBacks)
-```
-&ensp; b. System conditions (i.e. rods and boundary conditions) -- some examples are:
-```
-from elastica.rod.cosserat_rod import CosseratRod
-from elastica.boundary_conditions import OneEndFixedRod
-from elastica.joint import FreeJoint, HingeJoint
-from elastica.external_forces import GravityForces, UniformForces
-from elastica.interaction import AnistropicFrictionalPlane
-```
-&ensp; c. Call back function -- for saving state information during simulation.
-```
-from elastica.callback_functions import CallBackBaseClass
-```
-&ensp; d. Time stepper functions -- Currently `PositionVerlet` is the best default.
-```
-from elastica.timestepper.symplectic_steppers import PositionVerlet
-from elastica.timestepper import integrate
-```
+&ensp; a. wrappers  
+&ensp; b. system conditions (i.e. rods and boundary conditions)  
+&ensp; c. call backs (for saving state information during simulation)  
+&ensp; d. timestepper  
 >See the examples folder for a list to typical import statements. Future implementations will work to simplify this step.
 
 ####  2. create simulator
@@ -178,50 +133,8 @@ integrate(timestepper, SystemSimulator, final_time, total_steps)
 #####  7. post-process
 Once the simulation ends, it is time to analyze the data. If you defined a callback function, the data you outputted in available there (i.e. `callback_data_rod1`, otherwise you can access the final configuration of you system through your rod objects. For example, if you want the final position of one of your rods, you can get it from `rod1.position_collection[:]`. 
 
-## Useful Information
-<span style="color:red">**Still need to do**</span>
-
-What parameters are defined  
-**per node:**   
-&nbsp; position  
-&nbsp; area?  
-
-**per element:**  
-&nbsp; elastic moduli  
-&nbsp; poisson ratio  
-&nbsp; dx  
-&nbsp; length  
-&nbsp; nu  
-
-**per simulation:**  
-&nbsp; timestep  
-&nbsp; duration  
-&nbsp; timestepping method
-
-#### Rules of Thumb
-To help get you started and building initial intuition about Pyelastica, here are some general rules of thumb to follow. 
->**Important!** These are based on general observations of how simulations tend to behave and are not guaranteed to always hold. Particularly for choosing dx and dt, it is important to perform a separate convergence study for your specific case.
-
-    1. Number of elements and stable dx
-    2. Timestepper (dt)
-    3. Stability concerns? dx~dt? 
-    4. Run time estimation
-        i.   scaling with increased dx and dt (linear?)
-        ii.  scaling with adding rods
-        iii. parallelization/HPC outlook
-    5. Call back timing
-        i.   use for output - time needed for videos
-        ii.  storage requirements
-        iii. memory or i/o to disk
-
-# Tutorials
-We are creating a number of Jupyter Notebooks and python scripts to help get users started with using Pyelastica. We have uploaded the notebooks to [Binder](link-to-binder-notebooks), allowing you to try out some of the tutorials without having to install Pyelastica. You can also download the notebooks [here](link-to-notebooks). 
-
->Additional examples are also available in the examples folder of Pyelastica's [Github repo](link-to-github-repo).
-
-
 # Visualization
-If you wish to visualize your system, make sure you define your callback function to output all necessary data. You can either plot your data using a python package such as `matplotlib`, or any rendering software that you choose. 
+If you wish to visualize your system, make sure you define your callback function to output all necessary data. You can either plot your data using a python package such as matplotlib, or any rendering software that you choose. 
 >For high-quality visualization, we suggest [POVray](http://povray.com). See [this tutorial](link-to-POVray-tutorial) for examples of different ways of visualizing the system. 
 
 \\
