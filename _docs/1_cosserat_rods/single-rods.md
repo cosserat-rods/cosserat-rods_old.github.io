@@ -1,10 +1,10 @@
 ---
-title: Single Rods
-category: Cosserat Rods &mdash; Theory
+title: Theory
+category: Cosserat Rods
 order: 1
 ---
 
-Cosserat rods are a generalization of Kirchhoff rods, which are able to model 1-d slender rods incorporating only bend and twist. Cosserat rods add the ability to consider stretching and shearing, allowing all the possible modes of deformation of the system to be considered. The **key assumption** of Cosserat rods are that their length is much larger than their radius (L >> r). This allows their dynamical behavior to approximated by averaging balance laws at every cross-section.  
+Cosserat rods are a generalization of Kirchhoff rods, which are able to model 1-d slender rods incorporating only bend and twist. Cosserat rods add the ability to consider stretching and shearing, allowing all the possible modes of deformation of the system to be considered. The **key assumption** of Cosserat rods are that their length is much larger than their radius (L >> r). This allows their dynamical behavior to approximated by averaging balance laws at every cross-section. We also assume that the rods are linearly elastic.
 
 
 ## Mathematical Description of Cosserat Rods
@@ -12,6 +12,7 @@ Cosserat rods are a generalization of Kirchhoff rods, which are able to model 1-
 
 <img src="../../cosserat_rod_continuum.png" alt="image name" width="500"/>
 
+#### Reference Frames
 For a Cosserat rod described by a centerline $\mathbf{r}(s, t)$ (where $s \in [0, L]$ is the arc-length of the rod and $t$ is time) we begin by defining two reference frames within which we can express a vector $\mathbf{x}$:  
 
 The laboratory (Eulerian) frame: $\mathbf{x} = x_1 \mathbf{i} + x_2 \mathbf{j} + x_3 \mathbf{k}$  
@@ -31,8 +32,7 @@ Finally, there are a number of material and structural parameters that need to d
 * shearing stiffness matrix $\mathbf{S}$ 
 * second area moment of inertia $\mathbf{I}$ 
 
-The bending stiffness, shearing stiffness and second area moment of inertia can also be defined in terms of the shear strain, curvature, elastic modulus, shear modulus and internal forces and torques.
-
+#### Conservation of Momentum
 With all these terms defined, we can now define the balance laws that need to be satisfied at every cross-section. By balancing both linear and angular momentum at every cross-section we are able to describe the dynamics of the Cosserat rod. For a prescribed external force and couple line densities ($\bar{\mathbf{f}}$ and $\mathbf{c}$, respectively) the momentum balance equations are:
 
 Linear Momentum: 
@@ -41,10 +41,22 @@ $\small{\rho A \cdot \partial_t^2 \bar{\mathbf{x}} = \overbrace{\partial_s \left
 Angular Momentum: 
 $\small{\begin{align} \frac{\rho \mathbf{I}}{e} \cdot \partial_t \boldsymbol{\omega} =&\overbrace{\partial_s \left( \frac{\mathbf{B} \boldsymbol{\kappa}}{e^3} \right) + \frac{\boldsymbol{\kappa} \times \mathbf{B} \boldsymbol{\kappa}}{e^3}}^{\text{internal bend/twist couple}} +\overbrace{\left( \mathbf{Q}\frac{\bar{\mathbf{x}}_s}{e} \times \mathbf{S} \boldsymbol{\sigma} \right)}^{\substack{\text{internal shear/} \\\\ \text{stretch couple}}} + \\\\&\underbrace{\left( \rho \mathbf{I} \cdot \frac{\boldsymbol{\omega}}{e} \right) \times \boldsymbol{\omega}}\_{\text{Lagrangian transport}}^{\phantom{o}} +\underbrace{\frac{\rho \mathbf{I} \boldsymbol{\omega}}{e^2} \cdot \partial_t e}\_\textrm{unsteady dilation} + \underbrace{e \ \mathbf{c}}\_{\substack{\text{external} \\\\ \text{couple}}} \end{align}}$
 
-Now I am adding othe things
+Solving these equations, along with appropriate boundary conditions, allows us to model the dynamics of a single Cosserat rod. In general, there is not always an analytical solution to these equations. Instead, we use numerical methods to solve for these dynamics. For information on the numerical method we use, see [here](../numerics). If we want to examine how multiple rods interact, we also need to define the interactions and connections between these rods. For details on this, see [here](../multiple-rods).
 
+>**A note on notation:** We have created a pdf with a list of the different variables we use and their connections.
 
-Solution of these equations describes 
+#### Linear Elasticity
+To solve the momentum balance equations, we needed to define a bending stiffness ($\mathbf{B}$) and shearing stiffness ($\mathbf{S}$). We are assuming that the rod is a perfectly elastic material with a linear stress-strain response. For an elastic beam, these stiffness matrices are diagonal 3x3 matrices:
+
+$\mathbf{B} = \begin{bmatrix}  E \ I_1 &  &  \\\\  & E \ I_2 &  \\\\  &  & G \ I_3  \end{bmatrix}  \quad  \text{ and }  \quad  \mathbf{S} = \begin{bmatrix}  \alpha_c G \ A &  &  \\\\  & \alpha_c G \ A &  \\\\  &  & E \ A  \end{bmatrix}$
+
+Here $E$ is the elastic Young's modulus, $G$ is the shear modulus, $I_i$ is the second area moment of inertia, A is the cross sectional area and the constant $\alpha_c$ is $4/3$ (for circular cross sections). Additionally, because of the linear elastic assumption, we can define constitutive laws for both the load-strain relations as well as the torque-curvature relations. These are:
+
+Load-strain: $\mathbf{n} = \mathbf{S}(\boldsymbol{\sigma} - \boldsymbol{\sigma^0})$
+
+Torque-curvature: $\boldsymbol{\tau} = \mathbf{B}(\boldsymbol{\kappa} - \boldsymbol{\kappa^0})$
+
+$\boldsymbol{\sigma^0}$ and $\boldsymbol{\kappa^0}$ are reference curvatures which allow the rod to have a stress-free configuration in shapes other than a straight line. 
 
 ## Useful References
 <span style="color:#1F109D">*Lays out Cosserat rod theory*</span>: Gazzola, Dudte, McCormick, Mahadevan, **Forward and inverse problems in the mechanics of soft filaments**, Royal Society Open Science, 2018.  

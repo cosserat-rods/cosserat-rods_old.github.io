@@ -1,6 +1,6 @@
 ---
 title: Overview
-category: Cosserat Rods &mdash; Theory
+category: Cosserat Rods
 order: 0
 ---
 

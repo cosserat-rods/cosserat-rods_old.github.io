@@ -25,13 +25,16 @@ Pyelastica uses Python 3, which needs to be installed prior to using Pylastica. 
 You can also download the source code for Pyelastica directly from [GitHub](link_to_github). 
 
 ## Documentation
-We are working to build out the documentation. The latest version of Pylastica's documentation can be found [here](https://www.readthedocs.org). 
+We are working to build out the documentation.
+<!--
+The latest version of Pylastica's documentation can be found [here](https://www.readthedocs.org). 
+-->
 
 ## Pyelastica workflow
-When using Pyelastica, most users will setup a simulation in which they define a system of rods, define initial and boundary conditions on the rods, run the simulation, and then post-process the results. For this case, the typical outline for using Pyelastica would be:
+When using Pyelastica, most users will want to setup a simulation in which they define a system of rods, define initial and boundary conditions on the rods, run the simulation, and then post-process the results. The typical outline for using Pyelastica in such as case would be:
 
 ####  1. import necessary modules 
-There are several different modules from Elastica that need to be imported. They can be broadly classified as:  
+There are several different modules from Pyelastica that need to be imported. They can be broadly classified as:  
 &ensp; a. Wrappers -- For the most general case, you would need to import the following:
 ```
 from elastica.wrappers import (
@@ -68,7 +71,7 @@ class SystemSimulator(BaseSystemCollection, Constraints, Connections, Forcing, C
 ```
 This simply combines all the wrappers previously imported together. If a wrapper is not needed for the simulation, it does not need to be added here (i.e. if only one rod, you do not need to include the `Connections` class).
 
-#####  3. define parameters for each rod 
+####  3. define parameters for each rod 
 Each rod has a number of physical parameters that need to be defined. These values then need to be assigned to the rod to create the object and the rod need to be added to the simulator. 
 ```
 # Create rod
@@ -93,7 +96,7 @@ This can be repeated to add multiple rods to the system. Be sure to remember to 
 ####  4. define boundary conditions, forcings and connections
 Now that we have added all our rods to `SystemSimulator`, we need to apply the relevant boundary conditions. See the documentation and tutorials for in depth explanations of the different types of forcings available. 
 
-As a simple example, to fix one end of a rod, we use the `OneEndFixedRod` boundary condition (which we imported in step 1) and apply it to the rod. Here we will be fixing the 0th node as well as the 0th element. 
+As a simple example, to fix one end of a rod, we use the `OneEndFixedRod` boundary condition (which we imported in step 1) and apply it to the rod. Here we will be fixing the $0^{\text{th}}$ node as well as the $0^{\text{th}}$ element. 
 ```
 SystemSimulator.constrain(rod1).using(
     OneEndFixedRod,                 # Displacement BC being applied
@@ -108,7 +111,7 @@ origin_force = np.array([0.0, 0.0, 0.0])
 end_force = np.array([-15.0, 0.0, 0.0]) 
 SystemSimulator.add_forcing_to(rod1).using(
     EndpointForces,                 # Traction BC being applied
-    origin_force,                    # Force vector applied at first node
+    origin_force,                   # Force vector applied at first node
     end_force,                      # Force vector applied at last node
     ramp_up_time=final_time / 2.0   # Ramp up time 
 )

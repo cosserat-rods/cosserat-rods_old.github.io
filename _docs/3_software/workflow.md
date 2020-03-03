@@ -1,8 +1,3 @@
----
-title: Workflow
-category: Pyelastica
-order: 4
----
 
 ## Pyelastica workflow
 When using Pyelastica, most users will setup a simulation in which they define a system of rods, define initial and boundary conditions on the rods, run the simulation, and then post-process the results. For this case, the typical outline for using Pyelastica would be:

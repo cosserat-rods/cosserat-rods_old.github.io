@@ -80,7 +80,7 @@ header {
 	$emblem-vertical-padding: ($nav-header-height - $emblem-size) / 2;
 	$emblem-horizontal-padding: $space;
 
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
