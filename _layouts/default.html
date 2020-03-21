@@ -37,7 +37,7 @@
 
 	<body>
 
-		{% if page.url == "/" %}
+		{% if page.url == "./" %}
 			<div class="CoverImage FlexEmbed" onClick="document.getElementById('about').scrollIntoView({behavior: 'smooth'});">
 			  <div class="hero-text">
 			  	 <div class="button1" >
@@ -130,12 +130,12 @@
 				</ul>
 			</nav>
 		</header>
-		{% if page.url == "/" %}
+		{% if page.url == "./" %}
 		<div id="about"></div>
 		{% endif %}
 		<section class="main" id='main'>
 			<div class="page-header">
-				{% if page.url == "/" %}
+				{% if page.url == "./" %}
 				<h3>Elastica</h3>
 				<h2>An open-source software package for simulations of Cosserat Rods</h2>
 				{% else %}
@@ -147,7 +147,7 @@
 				{{ content }}
 			</article>
 		</section>
-		{% if page.url == "/" %}
+		{% if page.url == "./" %}
 		<img src="/images/elastica_logo_stretched.png" class="center_smallest"/>
 		<img src="/images/logos_updated.png" class="center_small" style="padding-top:20pt"> 
 		<br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
