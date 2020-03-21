@@ -1055,13 +1055,12 @@ body .markdown-body
 .codehilite .vi{color:teal}
 .codehilite .il{color:#009999}
 .codehilite .gc{color:#999;background-color:#EAF2F5}
-</style><title>Welcome</title></head><body><article class="markdown-body"><script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
-
-<p>This will be the main page for the Cosserat Rods website where we introduce the idea along with elastica, provide some initial information, and have some nice pictures. </p>
-<h2 id="cosserat-rod-theory">Cosserat Rod Theory<a class="headerlink" href="#cosserat-rod-theory" title="Permanent link"></a></h2>
-<p>Cosserat rods can be mathematically described as a slender body with a centerline  $\bar{\mathbf{x}}(s, t) \in \mathbb{R}^3$ and rotation matrix $\mathbf{Q}(s, t)={ \bar{\mathbf{d}}_1, \bar{\mathbf{d}}_2, \bar{\mathbf{d}}_3 }^{-1}$. This rotation matrix allows us to define a general relation between frames: $\mathbf{v}=\mathbf{Q}\bar{\mathbf{v}}$, $\bar{\mathbf{v}}=\mathbf{Q}^T \mathbf{v}$, where $\bar{\mathbf{v}}$ is a vector in the lab frame and $\mathbf{v}$ is a vector in the local frame.  </p>
-<p>Here $s \in [0, L_0]$ is the material coordinate of a rod of rest-length $L_0$, $L$ denotes the deformed filament length and $t$ is time. If the rod is unsheared, $\bar{\mathbf{d}}_3$ points along the centerline tangent $\partial_s \bar{\mathbf{x}}=\bar{\mathbf{x}}_s$ while $\bar{\mathbf{d}}_1$ and $\bar{\mathbf{d}}_2$ span the normal&ndash;binormal plane. Shearing and extension shift $\bar{\mathbf{d}}_3$ away from $\bar{\mathbf{x}}_s$, which can be quantified with the shear vector $\boldsymbol{\sigma}=\mathbf{Q} (\bar{\mathbf{x}}_s-\bar{\mathbf{d}}_3) = \mathbf{Q}\bar{\mathbf{x}}_s - \mathbf{d}_3$ in the \emph{local} frame. The curvature vector $\boldsymbol{\kappa}$ encodes $\mathbf{Q}$&rsquo;s rotation rate along the material coordinate $\partial_s \mathbf{d}_j = \boldsymbol{\kappa} \times \mathbf{d}_j$, while the angular velocity $\boldsymbol{\omega}$ is defined by $\partial_t \mathbf{d}_j = \boldsymbol{\omega} \times \mathbf{d}_j$. We also define the velocity of the centerline $\bar{\mathbf{v}} = \partial_t\bar{\mathbf{x}}$ and, in the rest configuration, the bending stiffness matrix $\mathbf{B}$, shearing stiffness matrix $\mathbf{S}$, second area moment of inertia $\mathbf{I}$, cross-sectional area $A$ and mass per unit length $\rho$. Then, the dynamics \cite{Gazzola:2018} of a soft slender body is described by:</p>
-<p>Linear Momentum: $\rho A \cdot \partial_t^2 \bar{\mathbf{x}} = \partial_s \left( \frac{\mathbf{Q}^T \mathbf{S} \boldsymbol{\sigma}}{e} \right) + e\bar{\mathbf{f}}$</p>
-<p>Angular Momentum: $\small{\begin{align} \frac{\rho \mathbf{I}}{e} \cdot \partial_t \boldsymbol{\omega} = \partial_s \left( \frac{\mathbf{B} \boldsymbol{\kappa}}{e^3} \right) + &amp;\frac{\boldsymbol{\kappa} \times \mathbf{B} \boldsymbol{\kappa}}{e^3} + \left( \mathbf{Q}\frac{\bar{\mathbf{x}}_s}{e} \times \mathbf{S} \boldsymbol{\sigma} \right) + \\ &amp;\left( \rho \mathbf{I} \cdot \frac{\boldsymbol{\omega}}{e} \right) \times \boldsymbol{\omega} + \frac{\rho \mathbf{I} \boldsymbol{\omega}}{e^2} \cdot \partial_t e + e\mathbf{c} \end{align}}$</p></article></body></html>
+</style><title>Welcome</title></head><body><article class="markdown-body"><blockquote>
+<p><strong>Elastica</strong> is an <em>free</em> and <em>open-source</em> software project for the simulation of slender one-dimensional bodies using Cosserat Rod theory. </p>
+</blockquote>
+<p>Long, slender structures such as DNA, flagella, muscle fibers, hair, snakes, woven cloth, and long cables are all around us. Elastica enables modeling of these slender structures using Cosserat Rod theory. </p>
+<p><a href="/1_cosserat_rods/case-studies"><strong>See examples of how modeling Cosserat Rods with Elastica have enabled new scientific discoveries</strong></a></p>
+<h4 id="learn-more-about">Learn more about:<a class="headerlink" href="#learn-more-about" title="Permanent link"></a></h4>
+<p><div style="line-height:50%;"> <br> 
+<a href="/1_cosserat_rods/overview/"><strong>Cosserat Rod Theory</strong></a><div style="line-height:10%;"> <br> </div>
+<a href="/3_software/elastica/"><strong>Elastica Software</strong></a></p></article></body></html>

@@ -2,28 +2,15 @@
 title: Welcome
 ---
 
-Welcome to the Cosserat rod project website. This website is dedicated to Cosserat rods and their numerical solution using the numerical package Elastica. 
+>**Elastica** is a *free* and *open-source* software project for the simulation of slender one-dimensional bodies using Cosserat Rod theory. 
 
-![nature_comm-2019.png](./nature_comm-2019.png)
+<p class="small_margin">
+    <a href="/cosserat_rods/case-studies"> <strong> See examples of how modeling Cosserat Rods with Elastica has enabled new scientific discoveries</strong></a>
+</p>
 
-This website is created and maintained by the mattiaLab at the University of Illinois at Urbana-Champaign. For more information on the projects we work on, see [mattia-lab.com](mattia-lab.com)
-
-Funding for the development of Elastica has been generously provided by ...
-
-### To Do:
-#### Major writing
-* Case Studies
-* Publications
-* Funding
-* Tutorials
-
-#### Fine-tune
-* Pyelastica -- rules of thumb
-* Change Log setup
-* Development
-* FAQs
-* Analytics?
-* Welcome page graphics
-* figures -- theory and notation correct
-
-
+#### Learn more about:
+<p class="small">
+<a href="/cosserat_rods/overview/"><strong>Cosserat Rod Theory</strong></a>
+<br/>
+<a href="/software/elastica/"><strong>Elastica Software</strong></a>
+</p>

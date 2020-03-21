@@ -1,81 +1,68 @@
-.highlight {
-	.hll { background-color: #ffffcc }
-	.c { color: #87ceeb} /* Comment */
-	.err { color: #ffffff} /* Error */
-	.g { color: #ffffff} /* Generic */
-	.k { color: #f0e68c} /* Keyword */
-	.l { color: #ffffff} /* Literal */
-	.n { color: #ffffff} /* Name */
-	.o { color: #ffffff} /* Operator */
-	.x { color: #ffffff} /* Other */
-	.p { color: #ffffff} /* Punctuation */
-	.cm { color: #87ceeb} /* Comment.Multiline */
-	.cp { color: #cd5c5c} /* Comment.Preproc */
-	.c1 { color: #87ceeb} /* Comment.Single */
-	.cs { color: #87ceeb} /* Comment.Special */
-	.gd { color: #0000c0; font-weight: bold; background-color: #008080 } /* Generic.Deleted */
-	.ge { color: #c000c0; text-decoration: underline} /* Generic.Emph */
-	.gr { color: #c0c0c0; font-weight: bold; background-color: #c00000 } /* Generic.Error */
-	.gh { color: #cd5c5c} /* Generic.Heading */
-	.gi { color: #ffffff; background-color: #0000c0 } /* Generic.Inserted */
-	span.go { color: #add8e6; font-weight: bold; background-color: #4d4d4d } /* Generic.Output, qualified with span to prevent applying this style to the Go language, see #1153. */
-	.gp { color: #ffffff} /* Generic.Prompt */
-	.gs { color: #ffffff} /* Generic.Strong */
-	.gu { color: #cd5c5c} /* Generic.Subheading */
-	.gt { color: #c0c0c0; font-weight: bold; background-color: #c00000 } /* Generic.Traceback */
-	.kc { color: #f0e68c} /* Keyword.Constant */
-	.kd { color: #f0e68c} /* Keyword.Declaration */
-	.kn { color: #f0e68c} /* Keyword.Namespace */
-	.kp { color: #f0e68c} /* Keyword.Pseudo */
-	.kr { color: #f0e68c} /* Keyword.Reserved */
-	.kt { color: #bdb76b} /* Keyword.Type */
-	.ld { color: #ffffff} /* Literal.Date */
-	.m { color: #EAB289} /* Literal.Number */
-	.s { color: #EAB289} /* Literal.String */
-	.na { color: #8CF0E8} /* Name.Attribute */
-	.nb { color: #ffffff} /* Name.Builtin */
-	.nc { color: #ffffff} /* Name.Class */
-	.no { color: #ffa0a0} /* Name.Constant */
-	.nd { color: #ffffff} /* Name.Decorator */
-	.ni { color: #ffdead} /* Name.Entity */
-	.ne { color: #ffffff} /* Name.Exception */
-	.nf { color: #ffffff} /* Name.Function */
-	.nl { color: #ffffff} /* Name.Label */
-	.nn { color: #ffffff} /* Name.Namespace */
-	.nx { color: #ffffff} /* Name.Other */
-	.py { color: #ffffff} /* Name.Property */
-	.nt { color: #f0e68c} /* Name.Tag */
-	.nv { color: #98fb98} /* Name.Variable */
-	.ow { color: #ffffff} /* Operator.Word */
-	.w { color: #ffffff} /* Text.Whitespace */
-	.mf { color: #ffffff} /* Literal.Number.Float */
-	.mh { color: #ffffff} /* Literal.Number.Hex */
-	.mi { color: #ffffff} /* Literal.Number.Integer */
-	.mo { color: #ffffff} /* Literal.Number.Oct */
-	.sb { color: #ffffff} /* Literal.String.Backtick */
-	.sc { color: #ffffff} /* Literal.String.Char */
-	.sd { color: #ffffff} /* Literal.String.Doc */
-	.s2 { color: #ffffff} /* Literal.String.Double */
-	.se { color: #ffffff} /* Literal.String.Escape */
-	.sh { color: #ffffff} /* Literal.String.Heredoc */
-	.si { color: #ffffff} /* Literal.String.Interpol */
-	.sx { color: #ffffff} /* Literal.String.Other */
-	.sr { color: #ffffff} /* Literal.String.Regex */
-	.s1 { color: #ffffff} /* Literal.String.Single */
-	.ss { color: #ffffff} /* Literal.String.Symbol */
-	.bp { color: #ffffff} /* Name.Builtin.Pseudo */
-	.vc { color: #98fb98} /* Name.Variable.Class */
-	.vg { color: #98fb98} /* Name.Variable.Global */
-	.vi { color: #98fb98} /* Name.Variable.Instance */
-	.il { color: #ffffff} /* Literal.Number.Integer.Long */
-	.bash .nv {
-		-webkit-user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
-		-o-user-select: none;
-		user-select: none;
-	}
-	.language-bash & .nb {
-	    color: #99D4FF;
-	}
-}
+/*
+ * GitHub style for Pygments syntax highlighter, for use with Jekyll
+ * Courtesy of GitHub.com
+ */
+
+.highlight pre, pre, .highlight .hll { background-color: null; border: 1px solid #ccc; padding: 6px 10px; border-radius: 3px; }
+.highlight .c { color: #7E7E72; font-style: italic; }
+.highlight .err { color: #a61717; background-color: #e3d2d2; }
+.highlight .k { font-weight: bold; }
+.highlight .o { font-weight: bold; }
+.highlight .cm { color: #7E7E72; font-style: italic; }
+.highlight .cp { color: #7E7E72; font-weight: bold; }
+.highlight .c1 { color: #7E7E72; font-style: italic; }
+.highlight .cs { color: #7E7E72; font-weight: bold; font-style: italic; }
+.highlight .gd { color: #000000; background-color: #ffdddd; }
+.highlight .gd .x { color: #000000; background-color: #ffaaaa; }
+.highlight .ge { font-style: italic; }
+.highlight .gr { color: #aa0000; }
+.highlight .gh { color: #999999; }
+.highlight .gi { color: #000000; background-color: #ddffdd; }
+.highlight .gi .x { color: #000000; background-color: #aaffaa; }
+.highlight .go { color: #888888; }
+.highlight .gp { color: #555555; }
+.highlight .gs { font-weight: bold; }
+.highlight .gu { color: #800080; font-weight: bold; }
+.highlight .gt { color: #aa0000; }
+.highlight .kc { font-weight: bold; }
+.highlight .kd { font-weight: bold; }
+.highlight .kn { font-weight: bold; }
+.highlight .kp { font-weight: bold; }
+.highlight .kr { font-weight: bold; }
+.highlight .kt { color: #445588; font-weight: bold; }
+.highlight .m { color: #009999; }
+.highlight .s { color: #dd1144; }
+.highlight .n { color: #333333; }
+.highlight .na { color: teal; }
+.highlight .nb { color: #0086b3; }
+.highlight .nc { color: #445588; font-weight: bold; }
+.highlight .no { color: teal; }
+.highlight .ni { color: purple; }
+.highlight .ne { color: #990000; font-weight: bold; }
+.highlight .nf { color: #990000; font-weight: bold; }
+.highlight .nn { color: #555555; }
+.highlight .nt { color: navy; }
+.highlight .nv { color: teal; }
+.highlight .ow { font-weight: bold; }
+.highlight .w { color: #bbbbbb; }
+.highlight .mf { color: #009999; }
+.highlight .mh { color: #009999; }
+.highlight .mi { color: #009999; }
+.highlight .mo { color: #009999; }
+.highlight .sb { color: #dd1144; }
+.highlight .sc { color: #dd1144; }
+.highlight .sd { color: #dd1144; }
+.highlight .s2 { color: #dd1144; }
+.highlight .se { color: #dd1144; }
+.highlight .sh { color: #dd1144; }
+.highlight .si { color: #dd1144; }
+.highlight .sx { color: #dd1144; }
+.highlight .sr { color: #009926; }
+.highlight .s1 { color: #dd1144; }
+.highlight .ss { color: #990073; }
+.highlight .bp { color: #999999; }
+.highlight .vc { color: teal; }
+.highlight .vg { color: teal; }
+.highlight .vi { color: teal; }
+.highlight .il { color: #009999; }
+.highlight .gc { color: #999; background-color: #EAF2F5; }

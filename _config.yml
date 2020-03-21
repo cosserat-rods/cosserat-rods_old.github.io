@@ -1,14 +1,14 @@
 # ----
 # Site
 
-title: Cosserat Rods
+title: Elastica
 url: "testURL.com"
 baseurl:
 google_analytics_key:
 show_full_navigation: true
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
-logo: /siteicon.png
+logo: /images/elastica_logo.svg
 description: Product documentation template for Jekyll.
 author:
   name:

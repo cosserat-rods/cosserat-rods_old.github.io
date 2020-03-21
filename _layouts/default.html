@@ -23,7 +23,7 @@
 		<link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
 		<link rel="apple-touch-icon" href="{{ site.baseurl }}/apple-touch-icon.png">
 		<link rel="icon" type="image/png" href="{{ site.baseurl }}/touch-icon.png" sizes="192x192">
-		<link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicon.png">
+		<link rel="icon" type="image/png" href="{{ site.baseurl }}/images/elastica_fill_logo.svg">
 
 		{% if jekyll.environment == 'production' and site.google_analytics_key != '' %}
 			<script>
@@ -36,9 +36,24 @@
 	</head>
 
 	<body>
+
+		{% if page.url == "/" %}
+			<div class="CoverImage FlexEmbed" onClick="document.getElementById('about').scrollIntoView({behavior: 'smooth'});">
+			  <div class="hero-text">
+			  	 <div class="button1" >
+			    <h1><span style="color:white">Elastica</span></h1>
+			    <p>An open-source software package for simulations of Cosserat Rods</p>
+				    <button class="button button2" >
+				    Learn More				    
+				   </button>
+			   </div>
+
+			  </div>
+			</div>
+		{% endif %}
 		<header>
 			<h1>
-				<a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/nature_comm-2019.png" width="40" height="40" alt="{{ site.title }} logo"></a>
+				<a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/images/elastica_fill_logo.svg" width="40" height="40" alt="{{ site.title }} logo"></a>
 				{{ site.title }}
 				<button type="button" class="open-nav" id="open-nav"></button>
 			</h1>
@@ -52,11 +67,43 @@
 				<ul>
 					<li class="nav-item top-level {% if page.url == '/' %}current{% endif %}">
 						{% assign home = site.html_pages | where: 'url', '/' | first %}
-						<a href="{{ site.baseurl }}/">{{ home.title }}</a>
+						<a href="{{ site.baseurl }}/#about">{{ home.title }}</a>
 					</li>
 				</ul>
 
+				<!-- Hard code for nav-bar-->
 				<ul>
+					<li class="nav-item top-level ">
+						<a href="/cosserat_rods/overview/">Cosserat Rods</a>
+						<ul>
+							<li class="nav-item "><a href="/cosserat_rods/theory/">Theory</a></li> 
+							<li class="nav-item "><a href="/cosserat_rods/numerics/">Numerics</a></li> 
+							<li class="nav-item "><a href="/cosserat_rods/multiple-rods/">Multiple Rods</a></li> 			
+							<li class="nav-item "><a href="/cosserat_rods/case-studies/">Case Studies</a></li> 				
+						</ul>
+					</li>
+
+					<li class="nav-item top-level ">
+						<a href="/software/elastica/">Software</a>
+						<ul>
+							<li class="nav-item "><a href="/software/pyelastica/">Pyelastica</a></li> 
+							<li class="nav-item "><a href="/software/development/">Development</a></li> 
+							<li class="nav-item "><a href="/software/FAQs/">FAQs (Under Development)</a></li> 
+						</ul>
+					</li>
+					<li class="nav-item top-level ">
+						<a href="/publications/publications/">Publications</a>
+					</li>
+					<li class="nav-item top-level ">
+						<a href="/contact/contact/">Contact</a>
+					</li>
+					<li class="nav-item top-level ">
+						<a href="/sponsors/sponsors/">Sponsors</a>
+					</li>
+				</ul>
+
+					<!-- Original script to automatically generate the nav bar. Couldn't figure out how to make it non alphabetical so just hard coding it. Obvious downside if you now need to manually update the nav-bar
+
 					{% assign grouped = site.docs | group_by: 'category' %}
 					{% for group in grouped %}
 						<li class="nav-item top-level {% if group.name == page.category %}current{% endif %}">
@@ -74,7 +121,7 @@
 						</li>
 					{% endfor %}
 				</ul>
-
+				-->
 				<ul>
 					<li class="nav-item top-level {% if page.url == '/changelog/' %}current{% endif %}">
 						{% assign changelog = site.html_pages | where: 'url', '/changelog/' | first %}
@@ -83,17 +130,31 @@
 				</ul>
 			</nav>
 		</header>
-
-		<section class="main">
+		{% if page.url == "/" %}
+		<div id="about"></div>
+		{% endif %}
+		<section class="main" id='main'>
 			<div class="page-header">
+				{% if page.url == "/" %}
+				<h3>Elastica</h3>
+				<h2>An open-source software package for simulations of Cosserat Rods</h2>
+				{% else %}
 				<h2>{% if page.category %}{{ page.category }}{% else %}{{ site.title }}{% endif %}</h2>
 				<h3>{{ page.title }}</h3>
+				{% endif %}
 			</div>
 			<article class="content">
 				{{ content }}
 			</article>
 		</section>
-
+		{% if page.url == "/" %}
+		<img src="/images/elastica_logo_stretched.png" class="center_smallest"/>
+		<img src="/images/logos_updated.png" class="center_small" style="padding-top:20pt"> 
+		<br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+		{% endif %}
+		{% if page.url == "/funding/" %}
+		<img src="/images/logos_updated.png" class="center"> 
+		{% endif %}
 		<script>
 			document.getElementById("open-nav").addEventListener("click", function () {
 				document.body.classList.toggle("nav-open");
