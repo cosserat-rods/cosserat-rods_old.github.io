@@ -14,5 +14,3 @@ title: Welcome
 <br/>   
 <a href="/software/elastica/"><strong>Elastica Software</strong></a>
 </p>
-
-# test
