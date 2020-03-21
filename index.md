@@ -11,6 +11,6 @@ title: Welcome
 #### Learn more about:
 <p class="small">
 <a href="/cosserat_rods/overview/"><strong>Cosserat Rod Theory</strong></a>
-<br/>
+<br/>   
 <a href="/software/elastica/"><strong>Elastica Software</strong></a>
 </p>
