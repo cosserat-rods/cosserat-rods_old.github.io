@@ -2,8 +2,8 @@
 # Site
 
 title: Elastica
-url: "testURL.com"
-baseurl:
+url: "https://cosserat-rods.github.io/"
+baseurl: "https://cosserat-rods.github.io/"
 google_analytics_key:
 show_full_navigation: true
 
