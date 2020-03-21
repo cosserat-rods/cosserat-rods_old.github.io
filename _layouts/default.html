@@ -37,7 +37,7 @@
 
 	<body>
 
-		{% if page.url == "./" %}
+		{% if page.url == "{{ site.baseurl }}" %}
 			<div class="CoverImage FlexEmbed" onClick="document.getElementById('about').scrollIntoView({behavior: 'smooth'});">
 			  <div class="hero-text">
 			  	 <div class="button1" >
