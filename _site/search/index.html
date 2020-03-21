@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Search | Elastica</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Search" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Product documentation template for Jekyll." />
+<meta property="og:description" content="Product documentation template for Jekyll." />
+<link rel="canonical" href="http://localhost:4000/search/" />
+<meta property="og:url" content="http://localhost:4000/search/" />
+<meta property="og:site_name" content="Elastica" />
+<script type="application/ld+json">
+{"description":"Product documentation template for Jekyll.","@type":"WebPage","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/images/elastica_logo.svg"}},"url":"http://localhost:4000/search/","headline":"Search","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+		<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Elastica" />
+		
+		<script>
+		MathJax = {
+		  tex: {
+		    inlineMath: [['$', '$'], ['\\(', '\\)']]
+		  }
+		};
+		</script>
+		<script id="MathJax-script" async
+		  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+		</script>
+
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic|Open+Sans:400,400italic,600,600italic,700,700italic|Inconsolata:400,700">
+		<link rel="stylesheet" href="/css/main.css">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" href="/touch-icon.png" sizes="192x192">
+		<link rel="icon" type="image/png" href="/images/elastica_fill_logo.svg">
+
+		
+	</head>
+
+	<body>
+
+		
+		<header>
+			<h1>
+				<a href="/"><img src="/images/elastica_fill_logo.svg" width="40" height="40" alt="Elastica logo"></a>
+				Elastica
+				<button type="button" class="open-nav" id="open-nav"></button>
+			</h1>
+
+			<form action="/search/" method="get">
+				<input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+				<input type="submit" value="Search" style="display: none;">
+			</form>
+
+			<nav class="full-navigation">
+				<ul>
+					<li class="nav-item top-level ">
+						
+						<a href="/#about">Welcome</a>
+					</li>
+				</ul>
+
+				<!-- Hard code for nav-bar-->
+				<ul>
+					<li class="nav-item top-level ">
+						<a href="/cosserat_rods/overview/">Cosserat Rods</a>
+						<ul>
+							<li class="nav-item "><a href="/cosserat_rods/theory/">Theory</a></li> 
+							<li class="nav-item "><a href="/cosserat_rods/numerics/">Numerics</a></li> 
+							<li class="nav-item "><a href="/cosserat_rods/multiple-rods/">Multiple Rods</a></li> 			
+							<li class="nav-item "><a href="/cosserat_rods/case-studies/">Case Studies</a></li> 				
+						</ul>
+					</li>
+
+					<li class="nav-item top-level ">
+						<a href="/software/elastica/">Software</a>
+						<ul>
+							<li class="nav-item "><a href="/software/pyelastica/">Pyelastica</a></li> 
+							<li class="nav-item "><a href="/software/development/">Development</a></li> 
+							<li class="nav-item "><a href="/software/FAQs/">FAQs (Under Development)</a></li> 
+						</ul>
+					</li>
+					<li class="nav-item top-level ">
+						<a href="/publications/publications/">Publications</a>
+					</li>
+					<li class="nav-item top-level ">
+						<a href="/contact/contact/">Contact</a>
+					</li>
+					<li class="nav-item top-level ">
+						<a href="/sponsors/sponsors/">Sponsors</a>
+					</li>
+				</ul>
+
+					<!-- Original script to automatically generate the nav bar. Couldn't figure out how to make it non alphabetical so just hard coding it. Obvious downside if you now need to manually update the nav-bar
+
+					
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/contact/contact/">Contact</a>
+							<ul>
+								
+									
+									
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/cosserat_rods/overview/">Cosserat Rods</a>
+							<ul>
+								
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/cosserat_rods/theory/">Theory</a></li> 
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/cosserat_rods/numerics/">Numerics</a></li> 
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/cosserat_rods/multiple-rods/">Multiple Rods</a></li> 
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/cosserat_rods/case-studies/">Case Studies</a></li> 
+									
+									
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/publications/publications/">Publications</a>
+							<ul>
+								
+									
+									
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/software/elastica/">Software</a>
+							<ul>
+								
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/software/pyelastica/">Pyelastica</a></li> 
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/software/development/">Development</a></li> 
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/software/FAQs/">FAQs (Under Development)</a></li> 
+									
+									
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/sponsors/sponsors/">Sponsors</a>
+							<ul>
+								
+									
+									
+								
+							</ul>
+						</li>
+					
+				</ul>
+				-->
+				<ul> 
+					<li class="nav-item top-level ">
+						
+						<a href="/changelog/">Change Log</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		
+		<section class="main" id='main'>
+			<div class="page-header">
+				
+				<h2>Elastica</h2>
+				<h3>Search</h3>
+				
+			</div>
+			<article class="content">
+				<p><span id="search-process">Loading</span> results <span id="search-query-container" style="display: none;">for "<strong id="search-query"></strong>"</span></p>
+<ul id="search-results"></ul>
+
+<script>
+	window.data = {
+		
+			
+				
+					
+					
+
+					"contact-contact": {
+						"id": "contact-contact",
+						"title": "Contact Us",
+						"category": "",
+						"url": " /contact/contact/",
+						"content": "Questions about using Elastica? Please open a ticket on Github.\n\nElastic is developed and maintained by the MattiaLab at the University of Illinois at Urbana-Champaign. For more information on the projects we work on, see mattia-lab.com. If you are interested in collaborating with us, please contact Mattia Gazzola.\n\nThis website was created and maintained by Noel Naughton."
+					}
+
+					
+				
+			
+		
+			
+				
+					,
+					
+
+					"cosserat-rods-case-studies": {
+						"id": "cosserat-rods-case-studies",
+						"title": "Case Studies",
+						"category": "",
+						"url": " /cosserat_rods/case-studies/",
+						"content": "Cosserat rods have been used to model a wide range of different physical systems. These systems can consist of a single rod undergoing deformation or multiple rods stitched together to create more complex systems. The case studies below illustrate the unique ability of Cosserat rods to analyze a wide range of both naturally occurring and artificial systems to provide insight into mechanics, dynamics, and control.\n\nSwimming and Slithering\nCosserat rods can be used to understand how different gaits affect swimming and slithering speed. Snakes and slender swimmers such as eels can be modeled either as a single rod, of as the interaction of multiple rods representing different muscle groups. Then, the torque profiles applied can be optimized to identify the gait that yield the fastest forward speed.\n\n\n    Zhang, Chan, Parthasarathy, Gazzola, Modeling and simulation of complex dynamic musculoskeletal architectures, Nature Communications, 2019. doi: 10.1038/s41467-019-12759-5\n\n\nGazzola, Dudte, McCormick, Mahadevan, Forward and inverse problems in the mechanics of soft filaments, Royal Society Open Science, 2018. doi: 10.1098/rsos.171628\n\n\n \n    \n\n\nSolenoids and Plectonomes\nWhen a long, slender fiber is twisted, it will eventually curl up on itself. This behavior has been observed across a wide range of spatial scales, from DNA to metal wires. Understanding these modes of deformation is important in the future development of slender elastomeric structures such as artificial muscles. \ndoi: Learn More\n\n\nCharles, Gazzola, Mahadevan, Topology, geometry, and mechanics of strongly stretched and twisted filaments: solenoids, plectonemes, and artificial muscle fibers, Physical Review Letters, 2019. doi: 10.1103/PhysRevLett.123.208003\n\n\nGazzola, Dudte, McCormick, Mahadevan, Forward and inverse problems in the mechanics of soft filaments, Royal Society Open Science, 2018. doi: 10.1098/rsos.171628\n\n \n    \n\n\nSkeletal Muscles\nSkeletal muscles are long, thin fibers that work together to generate force and allow movement. By combining multiple Cosserat rods together, this behavior of muscles can simulated. Because Cosserat rods can incorporate both extension and shearing, they are well equipped to handle the complex deformations that muscles undergo during contraction.\n\n\n    Zhang, Chan, Parthasarathy, Gazzola, Modeling and simulation of complex dynamic musculoskeletal architectures, Nature Communications, 2019. doi: 10.1038/s41467-019-12759-5\n\n\n \n    \n\n\nSoft Robotics and Bio-robotics\nNew generations of robotics are seeking to develop both soft and biohybrid robots. Biohybrid machines have been developed using muscles to actuate soft robotic structures. While soft, flexible robots have been developed to allow maneuverability in small spaces. Simulations of these robots allow in silico optimization of their designs prior to fabrication, reducing development time and cost.\n\n\nAydin, Zhang, Nuethong, Pagan-Diaz, Bashir, Gazzola, Saif, Neuromuscular actuation of biohybrid motile bots, Proceedings of the National Academy of Sciences, 2019. doi: 10.1073/pnas.1907051116\n\n\nChowdhary, Gazzola, Krishnan, Soman, Lovell, Soft robotics as an enabling technology for agroforestry practice and research, Sustainability, 2019. doi: 10.3390/su11236751\n\n\nPagan‐Diaz, Zhang, Grant, Kim, Aydin, Cvetkovic, Ko, Solomon, Hollis, Kong, Saif, Gazzola, Bashir, Simulation and fabrication of stronger, larger and faster walking biohybrid machines, Advanced Functional Materials, 2018. doi: 10.1002/adfm.201801145\n\n \n    \n\n\nBirds Nest Meta-materials\nBirds create complex structures with desirable mechanical properties. These randomly packed systems exhibit forms of self-assembly. Understanding the characteristics of such meta-material systems can yield insights into next generation fabrication techniques and material properties.\n\n\nWeiner, Bhosale, Gazzola, King, Mechanics of randomly packed filaments – the ‘bird nest’ as meta-material, Journal of Applied Physics, 2020. doi: 10.1063/1.5132809"
+					}
+
+					
+				
+			
+		
+			
+				
+					,
+					
+
+					"cosserat-rods-multiple-rods": {
+						"id": "cosserat-rods-multiple-rods",
+						"title": "Multiple Rods",
+						"category": "",
+						"url": " /cosserat_rods/multiple-rods/",
+						"content": "If you have multiple rods, it is important to properly define how they interact. This is done through the prescription of appropriate boundary conditions that couple the interactions of different rods as well as making sure that the rods do not intersect. There are any number of different ways you can define these interactions. Typically, we enforce these interactions through the application of correcting forces and torques which then cause the rods to satisfy the desired constraints.\n\nJoints\nWhen we define an interaction between nodes at the ends of two rods, we create a joint. The simplest joint we can create is a spherical joint where the rods are free to rotate and twist relative to each other. Additional constraints can also be added to restrict this movement such as limiting rotations of the rods to create a hinge joint or even fixing the relative positions of the rod to create a fixed joint. While in the description below we generally defined the correcting forces and torques as being applied to one of the rods ($R_2$) in reference to the position of another rod ($R_1$), it is important to note that the correcting forces and torques are applied to both rods, which can be seen by swapping the positions of $R_1$ and $R_2$ below.\n\nThe correcting forces and torques that transformed into the local frame and stored in the external force $\\mathbf{f}$ and external couple $\\mathbf{c}$.\n\nSpherical Joint\n\n\nA spherical joint is the simplest joint that can be defined. It is formed by specifying some displacement between the ends of two rods but not otherwise constraining the ability of the rods to rotate relative to each other. The joint is formed between the $i$ and $j$ nodes at the extremities of two rods $R_1$ and $R_2$ ($\\mathbf{r}_{1,i}$ and $\\mathbf{r}_{2,j}$). The distance between the two nodes is $\\boldsymbol{\\epsilon}=\\mathbf{r}_{2,j}-\\mathbf{r}_{1,i}$. An external force $\\mathbf{f}_\\text{c}=k\\boldsymbol{\\epsilon}$ proportional to the distance $\\boldsymbol{\\epsilon}$ is applied to hold the ends of the rods together. Here the constant $k$ can be thought of as the joint stiffness.\n\nIf you instead want to define some fixed distance $\\boldsymbol{\\epsilon^0}$ between the ends of the rods you can simply modify the applied force to account for this offset $\\mathbf{f}_\\text{c}=k(\\boldsymbol{\\epsilon} - \\boldsymbol{\\epsilon^0})$.\n\nHinge Joint\n\nBuilding on the constraints that define a spherical joint, we can also restrict the rotation of the rods relative to each other to form an hinge joint where one of the rods ($R_2$) is restricted to rotation within a plane defined by the rod $R_1$. This constraint is enforced by considering the orientation of the end segments $S_{1i}$ and $S_{2j}$ of $R_1$ and $R_2$. The rotational plane of $R_2$ is defined as the plane with a normal vector $\\mathbf{n}$ (chosen by you) that also contains $\\mathbf{t}_{1i}$, which is the tangent vector of $S_{1i}$.\n\nIn order to keep the rod in this plane, a correcting torque $\\boldsymbol{\\tau}_c$ is applied to $\\mathbf{S}_{2j}$. The correcting torque is proportional to the extent that the joint’s neighboring node $\\mathbf{r}_{2(j-1)}$ is out of the rotation plane $\\boldsymbol{\\epsilon}_{\\perp} = - \\left[\\left(\\mathbf{r}_{2(j-1)}-\\mathbf{r}_{2j}\\right) \\cdot \\mathbf{n}\\right]\\mathbf{n}$ leading to a torque of\n\n$\\boldsymbol{\\tau}_{\\text{c}} = \\left(\\mathbf{r}_{2(j-1)}-\\mathbf{r}_{2j}+\\boldsymbol{\\epsilon}_{\\perp}\\right) \\times \\left(k \\boldsymbol{\\epsilon}_{\\perp}\\right)$.\n\nJust like with the correcting force, you can think of the constant $k$ as being related to the stiffness of the hinge.\n\n\n\nFixed Joint\n\nA fixed joint is similar to a hinge joint except now, instead applying a torque to keep the rod in the plane of rotation, you apply a correcting torque to keep the rod in the plane as well as oriented at some fixed angle $\\theta$ relative to $S_{1i}$. A correcting torque is computed just like for a hinge joint but this time with the force proportional to the deviation from $\\theta$\n\n$\\boldsymbol{\\epsilon}_{\\mapsto} = \\left[\\mathbf{x}_{2j} + l_{2j} \\left(\\mathbf{t}_{1i}\\cos\\theta +\\mathbf{b}_{1i}\\sin\\theta \\right)\\right] - \\mathbf{r}_{2(j-1)}$.\n\nHere, $l_{2j}$ is the length of $S_{2j}$ and $\\mathbf{b}_{1i}=\\mathbf{n} \\times \\mathbf{t}_{1i}$.\n\nRod Collision\n\n\nIf you have a system with multiple rods, it is important that they do not intersect or pass through each other. To avoid this intersection and to model contact between rods, we adapt the approach used for a single rod with self contact. Similar to the approach used to make a joint from two rods $R_1$ and $R_2$, we impose correcting forces $\\mathbf{f}_\\text{c}$ on the contacting segments $S_{1i}$ and $S_{2j}$, which accounts for contact forces and also keeps the elements from intersecting.\n\nThe first step is to determine if any of the rods are even in contact. We compute the minimum distance $d_{\\text{min}}^{ij}$ between two segments from $S_{1i}$ and $S_{2j}$ by parameterizing their centerlines $\\mathbf{c}_i(h) = \\mathbf{r}_i+h(\\mathbf{r}_{i+1}-\\mathbf{r}_i)$ so that\n\n$d_{\\text{min}}^{ij}= \\max_{h_1,h_2\\in[0,1]}||\\mathbf{c}_i(h_1) - \\mathbf{c}_j(h_2)||$.\n\nIf $d_{\\text{min}}^{ij}$ is less than the sum of the radii of the two segments, then they are in contact and penalty forces are applied to the nodes at each end of each segment as a function of the overlap $\\epsilon_{ij} = (r_i + r_j - d_{\\text{min}}^{ij})$, where $r_i$ and $r_j$ are the radii of segments $S_{1i}$ and $S_{2j}$. If $\\epsilon_{ij}$ is smaller than zero, then the two edges are not in contact and no penalty is applied.\n\nNow that we know if any segment of the rod are in contact, we can apply correcting forces to the segments in contact. To do this, we define a unit vector $\\mathbf{d}^{ij}_{\\text{min}}$ that points from the closest point of segment $S_{1i}$ to the closest point of segment $S_{2j}$. This allows us to define the contact force as\n\n$\\mathbf{f}_\\text{c}= H(\\epsilon_{ij})\\cdot\\left[-k \\ \\epsilon_{ij}-\\gamma\\left(\\mathbf{v}_i-\\mathbf{v}_j\\right)\\cdot\\mathbf{d}_{\\text{min}}^{ij}\\right]\\mathbf{d}_{\\text{min}}^{ij}$.\n\n$H(\\epsilon_{ij})$ is the Heaviside function, this ensures force is applied only if there is contact ($\\epsilon_{ij}\\ge0$). The first term in the square brackets is the response of the force to any intersection by the rods, while the second term models energy dissipation during contact  and is proportional the interpenetration velocity $\\mathbf{v}_i-\\mathbf{v}_j$. The coefficient $\\gamma$ defines how much energy dissipation occurs during contact (think of knocking together two pool noodles vs two metal rods).\n\n\n\nUseful References\n\nZhang, Chan, Parthasarathy, Gazzola, Modeling and simulation of complex dynamic musculoskeletal architectures, Nature Communications, 2019. doi: 10.1038/s41467-019-12759-5\n\n\n\nGazzola, Dudte, McCormick, Mahadevan, Forward and inverse problems in the mechanics of soft filaments, Royal Society Open Science, 2018. doi: 10.1098/rsos.171628"
+					}
+
+					
+				
+			
+		
+			
+				
+					,
+					
+
+					"cosserat-rods-numerics": {
+						"id": "cosserat-rods-numerics",
+						"title": "Numerics",
+						"category": "",
+						"url": " /cosserat_rods/numerics/",
+						"content": "The Theory page laid out the continuum theory of Cosserat rods and presented the equations that need to be solved to model the dynamics and kinematics of the rods. In general, there is not always an analytical solution to these equations so we need to use numerical methods instead. We do this by discretizing the rod into a discrete set of nodes connected by straight line segments. Just as a continuum Cosserat rod is associated with a centerline $\\mathbf{r}(t)$ and local coordinate frame $\\mathbf{Q}(t)$, here the discretized Cosserat rod is defined by a collection of centerline vertices $\\mathbf{r}_i(t)$ that are connected together by line segments associated with reference frames $\\mathbf{Q}_i(t)$.\n\nThere are three steps to solving this problem numerically.\n1) Spatially discretize the continuum Cosserat rod equations\n2) Select a time stepping algorithm\n3) Specify your boundary conditions and interaction forces to model different physical effects.\n\n\n\nSpatial Discretization\nWe associate different quantities with the nodes and the segments. At the nodes, along with the position vector $\\mathbf{r}_i$ there is also velocity $\\mathbf{v}_i = \\partial \\mathbf{r}_i/\\partial t$, the pointwise mass $m_i$, and any external forces applied to the node $\\bar{\\mathbf{f}}_i$. There are n+1 total nodes ($i=[0,n]$). The orientation of each segment is defined by the local reference frame $\\mathbf{Q}_j(t)$ and is associated with an edge $\\boldsymbol{\\ell}_j = \\mathbf{r}_{j+1} - \\mathbf{r}_j$ which has a current length $\\ell_j = |\\boldsymbol{\\ell}_j|$, a reference length $\\hat{\\ell}_j = |\\boldsymbol{\\hat{\\ell}}_j|$, a stretch ratio $e_j = \\ell_j/\\hat{\\ell}_j$ and a unit tangent vector $\\mathbf{t}_j = \\boldsymbol{\\ell}_j/\\ell_j$. Because the segments lay between the nodes, there are n number of segments ($j=[0,n-1]$).\n\n\n  Recall our notation of $\\mathbf{x}$ relating to the local frame of reference and $\\bar{\\mathbf{x}}$ relating to the laboratory frame. We can switch between these frames using a rotation matrix $\\mathbf{Q}= \\{ {\\mathbf{d}}_1, {\\mathbf{d}}_2, {\\mathbf{d}}_3 \\}$, which allows us to to convert between the laboratory and local reference frames via $\\mathbf{x}=\\mathbf{Q}\\bar{\\mathbf{x}}$ and $\\bar{\\mathbf{x}}=\\mathbf{Q}^T \\mathbf{x}$.\n\n\nAlong with these geometric properties we also assign a number of dynamical parameters to each segment. These are the shear/axial strain vector $\\boldsymbol{\\sigma}_{j} = \\mathbf{Q}_j(e_j\\bar{\\mathbf{t}}_j)-\\mathbf{d}_{3,j}$, the angular velocity $\\omega_{j}$, the reference cross sectional area of the segment $\\hat{A}_j$, and the mass second moment of inertia, bend/twist matrix and shear/strain matrix of the segment ($\\hat{\\mathbf{J}}_j$, $\\hat{\\mathbf{B}}_j$, and $\\hat{\\mathbf{S}}_j$, respectively). Finally, the external couples applied to each segment are represented as $\\mathbf{c}_{j}$.\n\nIn the continuum case, all quantities are defined point-wise, however, due to our discretization, it is better to represent some quantities, in particular the curvature $\\hat{\\boldsymbol{\\kappa}}_{i}$, as integrated over some domain $\\mathcal{D}$ along the rod. If we then divide the integrated quantity by the length of $\\mathcal{D}$, it becomes equivalent to its point-wise average. We define a region $\\mathcal{D}_i$ at every interior node ($i=[1,n-1]$) as $\\mathcal{D}_i = (\\ell_{i-1} + \\ell_i)/2$. This region is known as a Voronoi region. At each interior node we can then define the Voronoi domain at rest $\\hat{\\mathcal{D}}_i$ and a dilation factor for the domain $\\mathcal{E}_i = \\mathcal{D}_i/\\hat{\\mathcal{D}}_i$. Now we can define our curvature $\\hat{\\boldsymbol{\\kappa}}_{i}$ and, as will be clear below, we also want to define a bend/twist matrix over a Voronoi region $\\hat{\\mathbf{\\mathcal{B}}}_i$ as well\n\n$\\hat{\\boldsymbol{\\kappa}}_{i}=\\frac{\\log(\\mathbf{Q}_i \\mathbf{Q}_{i-1}^T)}{\\hat{\\mathcal{D}}_i} \\quad \\text{and} \\quad \\hat{\\mathbf{\\mathcal{B}}}_i = \\frac{\\hat{\\mathbf{B}}_i\\ell_{i} + \\hat{\\mathbf{B}}_{i-1}\\ell_{i-1}}{2\\hat{\\mathcal{D}}_i}, \\quad\\quad i=[1,n-1]$.\n\nNow we have defined all the discretized quantities that we need and can write the spatially discretized form of the Cosserat rod’s equations of motion\n\n$\\partial_t \\bar{\\mathbf{r}}_i = \\bar{\\mathbf{v}}_i \\quad\\quad i=[0,n]$\n\n$\\partial_t \\mathbf{d}_{k,j} = (\\mathbf{Q}^T_j \\boldsymbol{\\omega}_{j}) \\times \\mathbf{d}_{k,j} \\quad\\quad j=[0,n-1], \\ k=1,2,3$\n\n$m_i \\cdot \\partial_t \\bar{\\mathbf{v}}_i = \\Delta^h \\left( \\frac{\\mathbf{Q}_j^T \\hat{\\mathbf{S}}_j \\boldsymbol{\\sigma}_{j}}{e_j} \\right) + \\bar{\\mathbf{f}}_i \\quad\\quad i=[0,n], \\ j=[0,n-1]$\n\n$\\begin{align}\\frac{ \\hat{\\mathbf{J}}_j}{e_j} \\cdot \\partial_t \\boldsymbol{\\omega}_{j} = &amp;\\Delta^h \\left( \\frac{\\hat{\\mathbf{\\mathcal{B}}}_i \\hat{\\boldsymbol{\\kappa}}_{i}}{\\mathcal{E}_i^3} \\right) + \\mathcal{A}^h\\left(\\frac{\\boldsymbol{\\kappa}_{i} \\times \\hat{\\mathbf{\\mathcal{B}}}_i \\boldsymbol{\\kappa}_{i}}{\\mathcal{E}_i^3} \\hat{\\mathcal{D}}_i \\right)+\\left( \\mathbf{Q}_j \\ \\bar{\\mathbf{t}}_j \\times \\hat{\\mathbf{S}}_j \\boldsymbol{\\sigma}_{j} \\right)\\hat{\\ell}_j + \\\\&amp; \\left( \\hat{\\mathbf{J}}_j \\cdot \\frac{\\boldsymbol{\\omega}_{j}}{e_j} \\right) \\times\\boldsymbol{\\omega}_{j}+\\frac{\\hat{\\mathbf{J}}_j \\boldsymbol{\\omega}_{j}}{e_j^2} \\cdot \\partial_t e_j + \\mathbf{c}_{j} \\quad\\quad j=[0,n-1], \\ i=[1,n-1] \\end{align}$\n\nHere we use two special operators, the discrete difference operator $\\Delta^h$ and the averaging operator $\\mathcal{A}^h$. An important property of these operators is that they take $m$ points and return $m+1$ points, allowing consistency in the equations as written.\n\nNow that we have a method of discretizing the equations in space, we just need to implement a time stepper to evolve the equations.\n\nTime Discretization\nA number of different time stepping methods can be used to evolve our system. Our preferred method is a symplectic, second-order Verlet scheme. While this system of equations is in general not Hamiltonian, in the limit of $e\\rightarrow1$ the system is equivalent to the classic Cosserat rod model which is Hamiltonian, justifying our use of a symplectic integrator.\n\nBoundary conditions and interaction forces\nAs with all differential equations, we need to specify appropriate initial and boundary conditions to allow us to solve the system. Generally speaking, we need to define initial conditions for position and velocity\n\n$\\mathbf{r}_i(t=0) = \\mathbf{r}_i^0 \\quad \\text{and} \\quad \\mathbf{v}_i(t=0) = \\mathbf{v}_i^0$.\n\nWe also often wish to specify a fixed point boundary condition for our rod to maintain definiteness $\\mathbf{r}_0(t) = \\mathbf{r}_0$.\n\nAlong with these conditions, we want to be able to include different physical effects which will allow us to model how our system interacts with a complex environment. A number of these physical interactions have been defined including internal dissipation, muscular activity, self-contact, interaction with solid bodies, static and kinematic friction and hydrodynamic forces. For details on these how these interaction forces are modeled, see Section 4 of Gazzola et al (2018).\n\nAs a general strategy, we divide these interactions into external and internal interactions. The external interactions are accounted for by combining their contributions into the external forces and couples terms $\\bar{\\mathbf{f}}$ and $\\mathbf{c}$. Similarly, internal effects are directly added the the internal force and torque terms $\\mathbf{n}$ and $\\boldsymbol{\\tau}$.\n\n\n\nUseful References\n\nGazzola, Dudte, McCormick, Mahadevan, Forward and inverse problems in the mechanics of soft filaments, Royal Society Open Science, 2018. doi: 10.1098/rsos.171628"
+					}
+
+					
+				
+			
+		
+			
+				
+					,
+					
+
+					"cosserat-rods-overview": {
+						"id": "cosserat-rods-overview",
+						"title": "Overview",
+						"category": "",
+						"url": " /cosserat_rods/overview/",
+						"content": "Many natural and artificial systems can be viewed as made up of soft, slender structures. These structures can be both active and passive. Examples from natural systems are DNA strands, flagella, muscle fibers, and snakes, illustrating the wide range of length scales these systems span. In artificial systems, examples of such structures are woven cloth, artificial muscles, long cables.\n\nWhen the length of such structures is much larger than the radius (L/r » 1), the structure can be viewed as a 1-dimensional rod, allowing substantial simplification of its mathematical treatment. Cosserat rods are a mathemetical description of such 1-dimensional slender structures that incorporates the effects of bending, twisting, stretching and shearing. This allows Cosserat rods to describe the effects of all six degrees of freedom of the rod. These Cosserat rods can be modeled as single rods or can also be combined to model more complex systems such as a collection of muscle fibers.\n\nFor more information on the theory behind Cosserat rods see: Single Rods. \nTo see how they can be combined to create more complex system, see: Multiple Rods.\nFor details on the numerical method we use to solve these systems see: Numerics.\nFinally, for some examples of how Cosserat rods have been used to model a number of different physical systems see: Case Studies.\n\nFor more information on Cosserat rods see:\nSingle Rods – Information on theory behind Cosserat rods.\nMultiple Rods – How to combine multiple rods to create more complex systems.\nNumerics – Details on the numerical method we use to solve these systems.\nCase Studies – Examples of how Cosserat rods have been used to model different systems."
+					}
+
+					
+				
+			
+		
+			
+				
+					,
+					
+
+					"cosserat-rods-theory": {
+						"id": "cosserat-rods-theory",
+						"title": "Theory",
+						"category": "",
+						"url": " /cosserat_rods/theory/",
+						"content": "Cosserat rods are a generalization of Kirchhoff rods, which are able to model 1-d slender rods incorporating only bend and twist. Cosserat rods add the ability to consider stretching and shearing, allowing all the possible modes of deformation of the system to be considered. The key assumption of Cosserat rods are that their length is much larger than their radius ($L \\gg r$). This allows their dynamical behavior to approximated by averaging balance laws at every cross-section. We also assume that the rods are linearly elastic.\n\nMathematical Description of Cosserat Rods\n\n  TL;DR: Cosserat rods are described by a centerline $\\mathbf{r}(s, t)$ and local reference frame $\\mathbf{Q}(s,t)= \\{ {\\mathbf{d}}_1, {\\mathbf{d}}_2, {\\mathbf{d}}_3 \\}$ which consists of a triad of orthonormal basis vectors. The dynamics of the rod are then described by the equations for conservation of linear and angular momentum throughout the rod.\n\n\n\n\nReference Frames\nFor a Cosserat rod described by a centerline $\\mathbf{r}(s, t)$ (where $s \\in [0, L]$ is the arc-length of the rod and $t$ is time) we begin by defining two reference frames within which we can express a vector $\\mathbf{x}$:\n\nThe laboratory (Eulerian) frame: $\\bar{\\mathbf{x}} = x_1 \\mathbf{i} + x_2 \\mathbf{j} + x_3 \\mathbf{k}$\n\nThe local (Lagrangian) frame: $\\mathbf{x} = x_1 \\mathbf{d}_1 + x_2 \\mathbf{d}_2 + x_3 \\mathbf{d}_3$\n\nWe can define a rotation matrix $\\mathbf{Q}$ between these two reference frames as $\\mathbf{Q}= \\{ {\\mathbf{d}}_1, {\\mathbf{d}}_2, {\\mathbf{d}}_3 \\}$ allowing us to to convert between the laboratory and local reference frames via $\\mathbf{x}=\\mathbf{Q}\\bar{\\mathbf{x}}$ and $\\bar{\\mathbf{x}}=\\mathbf{Q}^T \\mathbf{x}$. The local frame describes the orientation of the rod where ${\\mathbf{d}}_3$ points along the centerline tangent ($\\partial_s \\bar{\\mathbf{r}}=\\bar{\\mathbf{r}}_s= e \\bar{\\mathbf{t}}$) when there is no shear while ${\\mathbf{d}}_1$ and ${\\mathbf{d}}_2$ span the normal-binormal plane.\n\nIf there is shear or extension, then ${\\mathbf{d}}_3$ is shifted away from the tangent vector by some amount which can be described by a shear strain vector $\\boldsymbol{\\sigma}= \\mathbf{Q}\\bar{\\mathbf{r}}_s - \\mathbf{d}_3$ in the local frame. When there is shear or extension, it is important to distinguish between the reference configuration ($\\hat{s}$) and the deformed configuration ($s$). The stretch ratio between the two states is defined as $e=\\frac{\\mathrm{d} s}{\\mathrm{d}\\hat{s}}$. If we define a unit tangent vector $\\mathbf{t}$ we can now represent the local orientation of the rod as $\\bar{\\mathbf{r}}_s= e \\bar{\\mathbf{t}}$. Along with shear strain, the rod can also twist and rotate. In the local (Lagrangian) reference frame, as we move along the rod, our reference frame $\\mathbf{Q}(s,t)$ is continually changing. This change represents the curvature of the rod and is represented with a curvature vector $\\boldsymbol{\\kappa}$, which is defined as $\\partial_s \\mathbf{d}_j = \\boldsymbol{\\kappa} \\times \\mathbf{d}_j$.\n\nNow that we have established our reference frames, the next thing we need to do is define how we are going to track changes in the shape of the rod. The change in the $\\mathbf{Q}(s,t)$ over time defines the angular velocity $\\boldsymbol{\\omega}$ of the rod ($\\partial_t \\mathbf{d}_j = \\boldsymbol{\\omega} \\times \\mathbf{d}_j$). We also want to define the translational velocity of each point of the centerline of the rod with a velocity $\\bar{\\mathbf{v}}  = \\partial_t\\bar{\\mathbf{r}}$.\n\nFinally, there are a number of material and structural parameters that need to defined. These are generally defined in the reference ($\\hat{s}$) configuration and are:\n\n  cross-sectional area: $A$\n  mass per unit length: $\\rho$\n  bending stiffness matrix: $\\mathbf{B}$\n  shearing stiffness matrix: $\\mathbf{S}$\n  second area moment of inertia: $\\mathbf{I}$\n\n\nConservation of Momentum\nWith all these terms defined, we can now define the balance laws that need to be satisfied at every cross-section. By balancing both linear and angular momentum at every cross-section we are able to describe the dynamics of the Cosserat rod. For a prescribed external force and couple line densities ($\\bar{\\mathbf{f}}$ and $\\mathbf{c}$, respectively) the momentum balance equations are:\n\nLinear Momentum: \n$\\small{\\rho A \\cdot \\partial_t^2 \\bar{\\mathbf{r}} = \\overbrace{\\partial_s \\left( \\frac{\\mathbf{Q}^T \\mathbf{S} \\boldsymbol{\\sigma}}{e} \\right)}^{\\substack{\\text{internal shear/} \\\\ \\text{stretch force}}} + \\overbrace{e \\ \\bar{\\mathbf{f}}}^{\\substack{\\text{external} \\\\ \\text{force}}} }$\n\nAngular Momentum: \n$\\small{\\begin{align} \\frac{\\rho \\mathbf{I}}{e} \\cdot \\partial_t \\boldsymbol{\\omega} =&amp;\\overbrace{\\partial_s \\left( \\frac{\\mathbf{B} \\boldsymbol{\\kappa}}{e^3} \\right) + \\frac{\\boldsymbol{\\kappa} \\times \\mathbf{B} \\boldsymbol{\\kappa}}{e^3}}^{\\text{internal bend/twist couple}} +\\overbrace{\\left( \\mathbf{Q}\\frac{\\bar{\\mathbf{r}}_s}{e} \\times \\mathbf{S} \\boldsymbol{\\sigma} \\right)}^{\\substack{\\text{internal shear/} \\\\ \\text{stretch couple}}} + \\\\&amp;\\underbrace{\\left( \\rho \\mathbf{I} \\cdot \\frac{\\boldsymbol{\\omega}}{e} \\right) \\times \\boldsymbol{\\omega}}_{\\text{Lagrangian transport}}^{\\phantom{o}} +\\underbrace{\\frac{\\rho \\mathbf{I} \\boldsymbol{\\omega}}{e^2} \\cdot \\partial_t e}_\\textrm{unsteady dilation} + \\underbrace{e \\ \\mathbf{c}}_{\\substack{\\text{external} \\\\ \\text{couple}}} \\end{align}}$\n\nSolving these equations, along with appropriate boundary conditions, allows us to model the dynamics of a single Cosserat rod. In general, there is not always an analytical solution to these equations. Instead, we use numerical methods to solve for these dynamics. For information on the numerical method we use, see here. If we want to examine how multiple rods interact, we also need to define the interactions and connections between these rods. For details on this, see here.\n\n\n  A note on notation: We have created a pdf with a list of the different variables we use and their connections here.\n\n\nLinear Elasticity\nTo solve the momentum balance equations, we needed to define a bending stiffness ($\\mathbf{B}$) and shearing stiffness ($\\mathbf{S}$). We are assuming that the rod is a perfectly elastic material with a linear stress-strain response. For an elastic beam, these stiffness matrices are diagonal 3x3 matrices:\n\n$\\mathbf{B} = \\begin{bmatrix}  E \\ I_1 &amp;  &amp;  \\\\  &amp; E \\ I_2 &amp;  \\\\  &amp;  &amp; G \\ I_3  \\end{bmatrix}  \\quad  \\text{ and }  \\quad  \\mathbf{S} = \\begin{bmatrix}  \\alpha_c G \\ A &amp;  &amp;  \\\\  &amp; \\alpha_c G \\ A &amp;  \\\\  &amp;  &amp; E \\ A  \\end{bmatrix}$\n\nHere $E$ is the elastic Young’s modulus, $G$ is the shear modulus, $I_i$ is the second area moment of inertia, A is the cross sectional area and the constant $\\alpha_c$ is $4/3$ (for circular cross sections). Additionally, because of the linear elastic assumption, we can define constitutive laws for both the load-strain relations as well as the torque-curvature relations. These are:\n\nLoad-strain: $\\mathbf{n} = \\mathbf{S}(\\boldsymbol{\\sigma} - \\boldsymbol{\\sigma^0})$\n\nTorque-curvature: $\\boldsymbol{\\tau} = \\mathbf{B}(\\boldsymbol{\\kappa} - \\boldsymbol{\\kappa^0})$\n\n$\\boldsymbol{\\sigma^0}$ and $\\boldsymbol{\\kappa^0}$ are reference curvatures which allow the rod to have a stress-free configuration in shapes other than a straight line.\n\nUseful References\n\nGazzola, Dudte, McCormick, Mahadevan, Forward and inverse problems in the mechanics of soft filaments, Royal Society Open Science, 2018. doi: 10.1098/rsos.171628\n\n\n\nZhang, Chan, Parthasarathy, Gazzola, Modeling and simulation of complex dynamic musculoskeletal architectures, Nature Communications, 2019. doi: 10.1038/s41467-019-12759-5"
+					}
+
+					
+				
+			
+		
+			
+				
+					,
+					
+
+					"publications-publications": {
+						"id": "publications-publications",
+						"title": "Elastica &amp; Cosserat Rods",
+						"category": "",
+						"url": " /publications/publications/",
+						"content": "2020 \n\nWeiner, Bhosale, Gazzola, King, Mechanics of randomly packed filaments – the ‘bird nest’ as meta-material, Journal of Applied Physics, 2020. doi: 10.1063/1.5132809\n\n\n 2019 \n\nZhang, Chan, Parthasarathy, Gazzola, Modeling and simulation of complex dynamic musculoskeletal architectures, Nature Communications, 2019. doi: 10.1038/s41467-019-12759-5\n\n\n\nCharles, Gazzola, Mahadevan, Topology, geometry, and mechanics of strongly stretched and twisted filaments: solenoids, plectonemes, and artificial muscle fibers, Physical Review Letters, 2019. doi: 10.1103/PhysRevLett.123.208003\n\n\n\nAydin, Zhang, Nuethong, Pagan-Diaz, Bashir, Gazzola, Saif, Neuromuscular actuation of biohybrid motile bots, Proceedings of the National Academy of Sciences, 2019. doi: 10.1073/pnas.1907051116\n\n\n\nChowdhary, Gazzola, Krishnan, Soman, Lovell, Soft robotics as an enabling technology for agroforestry practice and research, Sustainability, 2019. doi: 10.3390/su11236751\n\n\n 2018 \n\nGazzola, Dudte, McCormick, Mahadevan, Forward and inverse problems in the mechanics of soft filaments, Royal Society Open Science, 2018. doi: 10.1098/rsos.171628\n\n\n\nPagan‐Diaz, Zhang, Grant, Kim, Aydin, Cvetkovic, Ko, Solomon, Hollis, Kong, Saif, Gazzola, Bashir, Simulation and fabrication of stronger, larger and faster walking biohybrid machines, Advanced Functional Materials, 2018. doi: 10.1002/adfm.201801145"
+					}
+
+					
+				
+			
+		
+			
+				
+					,
+					
+
+					"software-faqs": {
+						"id": "software-faqs",
+						"title": "FAQs (Under Development)",
+						"category": "",
+						"url": " /software/FAQs/",
+						"content": "Is there support available for Elastica?\n\n\nWhile we are actively developing Elastica, currently we have limited ability to provide support. If you ask a questions on GitHub, we will do our best to help you out.\n\n\n  How should I cite Elastica?\n\n\nWe ask that any publications which uses Elastica cite the following papers:\n\nZhang, Chan, Parthasarathy, Gazzola, Modeling and simulation of complex dynamic musculoskeletal architectures, Nature Communications, 2019. doi: 10.1038/s41467-019-12759-5\n\n\n\nGazzola, Dudte, McCormick, Mahadevan, Forward and inverse problems in the mechanics of soft filaments, Royal Society Open Science, 2018. doi: 10.1098/rsos.171628\n\n\n\n  Do Pylastica and Elastica++ have the same features?\n\n\nAlmost. Due to development cycles, they may not always be equally up to date. If there is a feature in one that you would like to see in the other, let us know on GitHub."
+					}
+
+					
+				
+			
+		
+			
+				
+					,
+					
+
+					"software-development": {
+						"id": "software-development",
+						"title": "Development",
+						"category": "",
+						"url": " /software/development/",
+						"content": "Elastica is open source and we welcome anyone to help us develop and improve it. If you are interested in contributing, connect with us on GitHub or email Mattia Gazzola. We are always looking for people to contribute code to both improve Elastica’s current abilities or add new ones."
+					}
+
+					
+				
+			
+		
+			
+				
+					,
+					
+
+					"software-elastica": {
+						"id": "software-elastica",
+						"title": "Elastica",
+						"category": "",
+						"url": " /software/elastica/",
+						"content": "About Elastica\nElastica is a software tool designed to numerically solve systems made up of collections of Cosserat rods, which can be used to analyze a wide range of both natural and artificial systems ranging from single muscle fibers to birds nests to the next generation of soft robots. Details on the numerical method used can be found here.\n\nFeatures\nElastica has been designed to be modular, extensible and easy to use. It allows the user to define a collection of Cosserat rods subject to both external (i.e. gravity, friction, etc…) and internal (i.e. muscle torque) forces. Rods account for self contact and can be combined to create collections of rods which can then be used to model increasingly complex system.\n\nImplementations\n\n  There are currently two versions of Elastica.\n\n\nPyelastica is a python implementation of Elastica. It is the most user friendly version and we encourage new users to start here. We are actively developing it and continually adding new features and performance improvements.\n\nElastica++ is a C++ implementation of Elastica. This is an older version of Elastica which is less documented and developed. It is currently faster than Pyelastica, and so may be necessary for larger projects, however, we encourage users to start with Pyelastica and only use this implementation if necessary. We hope to in the future update this version to be inter-operable with Pyelastica, allowing improved performance."
+					}
+
+					
+				
+			
+		
+			
+				
+					,
+					
+
+					"software-pyelastica": {
+						"id": "software-pyelastica",
+						"title": "Pyelastica",
+						"category": "",
+						"url": " /software/pyelastica/",
+						"content": "The python implementation of elastica is the easiest version to get started with. This page contains useful information for getting elastica set up, using it to model single and multiple rod systems, and postprocessing the results.\n\n  Getting Started\n      -Installation\n      -Documentation\n      -Pyelastica Workflow\n      -Useful Information\n  Tutorials\n  Visualization\n\n\n\nGetting Started\nInstallation\nPyelastica uses Python 3, which needs to be installed prior to using Pylastica. For information on installing Python, see here. If you are interested in using a package manager like Conda, see here.\n\n\n  The easiest way to install Pyelastica is with PIP: pip install pyelastica (not yet implemented)\n\n\nYou can also download the source code for Pyelastica directly from GitHub.\n\nDocumentation\n(Under Development)\nWe are working to build out the documentation.\n\n\nPyelastica workflow\nWhen using Pyelastica, most users will want to setup a simulation in which they define a system of rods, define initial and boundary conditions on the rods, run the simulation, and then post-process the results. The typical outline for using Pyelastica in such as case would be:\n\n1. import necessary modules\nThere are several different modules from Pyelastica that need to be imported. They can be broadly classified as:\n  a. Wrappers – For the most general case, you would need to import the following:\n    from elastica.wrappers import (\n        BaseSystemCollection,\n        Connections,\n        Constraints,\n        Forcing,\n        CallBacks)\n\n  b. System conditions (i.e. rods and boundary conditions) – some examples are:\n    from elastica.rod.cosserat_rod import CosseratRod\n    from elastica.boundary_conditions import OneEndFixedRod\n    from elastica.joint import FreeJoint, HingeJoint\n    from elastica.external_forces import GravityForces, UniformForces\n    from elastica.interaction import AnistropicFrictionalPlane\n\n  c. Call back function – for saving state information during simulation.\n    from elastica.callback_functions import CallBackBaseClass\n\n  d. Time stepper functions – Currently PositionVerlet is the best default.\n    from elastica.timestepper.symplectic_steppers import PositionVerlet\n    from elastica.timestepper import integrate\n\n\n  See the examples folder for a list to typical import statements. Future implementations will work to simplify this step.\n\n\n2. create simulator\nWe need to define an object that will contain the system we are about to create. To do this we define a simulator class that inherits the necessary attributes from the wrappers we previously imported. We will add rods and different boundary conditions to this class to create our system and pass it to the timestepper to be solved. The most generic simulator class is:\n    class SystemSimulator(BaseSystemCollection, Constraints, Connections, Forcing, CallBacks): \n        pass \n\nThis simply combines all the wrappers previously imported together. If a wrapper is not needed for the simulation, it does not need to be added here (i.e. if only one rod, you do not need to include the Connections class).\n\n3. define parameters for each rod\nEach rod has a number of physical parameters that need to be defined. These values then need to be assigned to the rod to create the object, and the rod needs to be added to the simulator.\n    # Create rod\n    rod1 = CosseratRod.straight_rod(\n        n_elem,        # number of elements\n        start_rod,     # Starting position of first node in rod\n        direction,     # Direction the rod extends\n        normal,        # normal vector of rod\n        base_length,   # original length of rod (m)\n        base_radius,   # original radius of rod (m)\n        density,       # density of rod (kg/m^3)\n        nu,            # Energy dissipation of rod\n        E,             # Elastic Modulus (Pa)\n        poisson_ratio, # Poisson Ratio\n    )\n\n    # Add rod to SystemSimulator\n    SystemSimulator.append(rod1)\n\nThis can be repeated to add multiple rods to the system. Be sure to remember to change the name of the rods (rod1 $\\rightarrow$ rod2) and the starting location for each rod along with the rods physical properties as needed.\n\n\n  A note on notation: Like other FEA packages such as Abaqus, Pyelastica does not enforce units. This means that you are required to make sure that all units for your input variables are consistent. When in doubt, SI units are always safe, however, if you have a very small length scale ($\\sim$ nm), then you may need to rescale your units to avoid needing prohibitively small time steps.\n\n\n4. define boundary conditions, forcings and connections\nNow that we have added all our rods to SystemSimulator, we need to apply the relevant boundary conditions. See the documentation and tutorials for in depth explanations of the different types of forcings available.\n\nAs a simple example, to fix one end of a rod, we use the OneEndFixedRod boundary condition (which we imported in step 1) and apply it to the rod. Here we will be fixing the $0^{\\text{th}}$ node as well as the $0^{\\text{th}}$ element.\n    SystemSimulator.constrain(rod1).using(\n        OneEndFixedRod,                 # Displacement BC being applied\n        constrained_position_idx=(0,),  # Node number to apply BC\n        constrained_director_idx=(0,)   # Element number to apply BC\n    )\n\nWe have now fixed one end of the rod while leaving the other end free. We can also apply forces to free end using the EndpointForces\n    #Define 1x3 array of the applied forces\n    origin_force = np.array([0.0, 0.0, 0.0])\n    end_force = np.array([-15.0, 0.0, 0.0]) \n    SystemSimulator.add_forcing_to(rod1).using(\n        EndpointForces,                 # Traction BC being applied\n        origin_force,                   # Force vector applied at first node\n        end_force,                      # Force vector applied at last node\n        ramp_up_time=final_time / 2.0   # Ramp up time \n    )\n\nWe can also add more complex forcings, such as friction, gravity, or torque throughout the rod (see tutorials and documentation for details). One last condition we can define is the connections between rods.\n    # Connect rod 1 and rod 2. '_connect_idx' specifies the node number that \n    # the connection should be applied to. You are specifying the index of a \n    # list so you can use -1 to access the last node. \n    SystemSimulator.connect(\n        first_rod  = rod1, \n        second_rod = rod2, \n        first_connect_idx  = -1, # Connect to the last node of the first rod. \n        second_connect_idx =  0  # Connect to first node of the second rod. \n        ).using(\n            FixedJoint,  # Type of connection between rods\n            k  = 1e5,    # Spring constant of force holding rods together (F = k*x)\n            nu = 0,      # Energy dissipation of joint\n            kt = 5e3     # Rotational stiffness of rod to avoid rods twisting\n            )\n\n\n5. create callback functions (optional)\nIf you want to know what happens to the rod during the course of the simulation, you must create a callback function to output the data you need as the simulation runs. There is a base class CallBackBaseClass that can help with this. If you do not define a callback function, then at the end of the simulation, you will only have the final state of the system available.\n    # MyCallBack class is derived from the base call back class.   \n    class MyCallBack(CallBackBaseClass):\n        def __init__(self, step_skip: int, callback_params):\n            CallBackBaseClass.__init__(self)\n            self.every = step_skip\n            self.callback_params = callback_params\n        \n        # This function is called every time step\n        def make_callback(self, system, time, current_step: int):         \n            if current_step % self.every == 0:\n                # Save time, step number, position, orientation and velocity\n                self.callback_params[\"time\"].append(time)\n                self.callback_params[\"step\"].append(current_step)\n                self.callback_params[\"position\" ].append(system.position_collection.copy())\n                self.callback_params[\"directors\"].append(system.director_collection.copy())\n                self.callback_params[\"velocity\" ].append(system.velocity_collection.copy())\n                return\n\n    # Create dictionary to hold data from callback function\n    callback_data_rod1, callback_data_rod2 = defaultdict(list), defaultdict(list)\n\n    # Add MyCallBack to SystemSimulator for each rod telling it how often to save data (step_skip)\n    SystemSimulator.collect_diagnostics(rod1).using(\n        MyCallBack, step_skip=1000, callback_params=callback_data_rod1)\n    SystemSimulator.collect_diagnostics(rod2).using(\n        MyCallBack, step_skip=1000, callback_params=callback_data_rod2)\n\nYou can define different callback functions for different rods and also have different data outputted at different step intervals depending on your needs.\n\n6. finalize system, define time stepper and run simulation\nNow that we have finished defining our rods, the different boundary conditions and connections between them, and how often we want to save data, we have finished setting up the simulation. We now need to finalize the simulator by calling SystemSimulator.finalize(). This goes through and collects all the rods and applied conditions, preparing for the simulation.\n\nWith our system now ready to be run, we need to define which timestepping algorithm to use. Currently, we use the position Verlet algorithm. We also need to define how much time we want to simulate as well as either the time step (dt) or the number of total time steps we want to take. Once we have defined these things, we can run the simulation by calling integrate(), which will start the simulation.\n    timestepper = PositionVerlet()\n    final_time = 10   # seconds\n    dt = 1e-5         # seconds\n    total_steps = int(final_time / dt) \n    integrate(timestepper, SystemSimulator, final_time, total_steps)\n\n\n7. post-process\nOnce the simulation ends, it is time to analyze the data. If you defined a callback function, the data you outputted in available there (i.e. callback_data_rod1, otherwise you can access the final configuration of you system through your rod objects. For example, if you want the final position of one of your rods, you can get it from rod1.position_collection[:].\n\nUseful Information\nTo help get you started and building initial intuition about Pyelastica, here are some general rules of thumb to follow.\n\n  Important! These are based on general observations of how simulations tend to behave and are not guaranteed to always hold. Particularly for choosing dx and dt, it is important to perform a separate convergence study for your specific case.\n\n\nNumber of elements per rod\nGenerally, the more flexible your rod, the more elements you need. It is important to always perform a convergence test for your simulation, however, 30-50 elements per rod is a good starting place.\n\nChoosing your dx and dt\nGenerally you will set your dx and then choose a stable dt. Your dx will be a combination of your problems length scale and the number of elements you want. Recall that units can be rescaled as long as they are consistent. If you have have a small rod, selecting a dx on the order of nm without scaling is 1e-9. This small values can cause numerical issues, so it is better to rescale your units so that nm $\\sim O(1)$.\n\nWhen choosing your time step, there are a number of different conditions that can affect your choice. The most important consideration is that the time stepping algorithm remain stable. As a useful heuristic, we have found that dt = 0.01 dx s/m tends to yield stable timesteps, but depending on your problem this may not hold. If you wish to be able to resolve the propagation of different waves, then you need to make sure your dt is able to capture their propagation ($dt = dx \\sqrt{\\rho/G}$ for shear waves or $dt = dx \\sqrt{\\rho/E}$ for flexural waves).\n\nRun time scaling\nPyelastica will scale linearly with the number of time steps, so if you halve your time step, your simulation will take twice as long to finish.\n\nThe algorithms that Pyelastica is based on scale linearly with the number of elements. However, due to overhead from Python calling functions, Pyelastica does not have a strong dependence on the number of nodes. Doubling the number of nodes may only lead to a 10-20% increase in run time. We are working on reducing this overhead, and future versions of Pyelastica will be much faster due to implementation of C++ subroutines. While this means you can decrease your dx without a large run time penalty, remember that you also need to adjust you dt, which will affect the run time.\n\nAdding additional interactions with the environment, such as friction or gravity, will all decrease run time slightly. Most of these interactions will have a small effect on run time except for rod collision and/or self-intersection. These are very expensive routines that should be avoided if possible as they will substantially lengthen your run time.\n\nWe are working to add parallel and HPC capabilities to Pyelastica, but they are not ready yet. If you are interested in helping us implement this, let us know!\n\nCall backs\nThe frequency at which you have your callback function save data will depend on what information you need from the simulation. Excessive call backs can cause performance penalties, however, it is rarely necessary to make call backs at a frequency that this becomes a problem. We have found that making a call back roughly every 100 iterations has a negligible performance penalty.\n\nCurrently, all data saved from call back functions is saved in RAM. If you have many rods or are running for a long time, you may want to consider editing the call back function to write the saved data to disk so you do not run out of RAM during the simulation.\n\nTutorials\n(Under Development)\nWe are creating a number of Jupyter Notebooks and python scripts to help get users started with using Pyelastica. Our goal is to upload the notebooks to Binder, allowing you to try out some of the tutorials without having to install Pyelastica.\n\n\n  Additional examples are also available in the examples folder of Pyelastica’s Github repo.\n\n\nVisualization\nIf you wish to visualize your system, make sure you define your callback function to output all necessary data. You can either plot your data using a python package such as matplotlib, or any rendering software that you choose. Note, many of the visualization scripts in the examples folders require ffmpeg (be sure to install with h264 libraries).\n\n\n  For high-quality visualization, we suggest POVray. See this tutorial for examples of different ways of visualizing the system.\n\n\n\nback to top"
+					}
+
+					
+				
+			
+		
+			
+				
+					,
+					
+
+					"sponsors-sponsors": {
+						"id": "sponsors-sponsors",
+						"title": "&lt;span style=&quot;padding-left:20px&quot;&gt;",
+						"category": "",
+						"url": " /sponsors/sponsors/",
+						"content": "Funding for the development of Elastica has been provided by:"
+					}
+
+					
+				
+			
+		
+	};
+</script>
+<script src="/scripts/lunr.min.js"></script>
+<script src="/scripts/search.js"></script>
+
+			</article>
+		</section>
+		
+		
+		<script>
+			document.getElementById("open-nav").addEventListener("click", function () {
+				document.body.classList.toggle("nav-open");
+			});
+		</script>
+	</body>
+</html>

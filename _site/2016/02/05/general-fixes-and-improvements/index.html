@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>General fixes and improvements | Elastica</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="General fixes and improvements" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This is an example of a minor update announcement as opposed to a major update below." />
+<meta property="og:description" content="This is an example of a minor update announcement as opposed to a major update below." />
+<link rel="canonical" href="http://localhost:4000/2016/02/05/general-fixes-and-improvements/" />
+<meta property="og:url" content="http://localhost:4000/2016/02/05/general-fixes-and-improvements/" />
+<meta property="og:site_name" content="Elastica" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-02-05T00:00:00+00:00" />
+<script type="application/ld+json">
+{"description":"This is an example of a minor update announcement as opposed to a major update below.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2016/02/05/general-fixes-and-improvements/"},"@type":"BlogPosting","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/images/elastica_logo.svg"}},"url":"http://localhost:4000/2016/02/05/general-fixes-and-improvements/","headline":"General fixes and improvements","dateModified":"2016-02-05T00:00:00+00:00","datePublished":"2016-02-05T00:00:00+00:00","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+		<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Elastica" />
+		
+		<script>
+		MathJax = {
+		  tex: {
+		    inlineMath: [['$', '$'], ['\\(', '\\)']]
+		  }
+		};
+		</script>
+		<script id="MathJax-script" async
+		  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+		</script>
+
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic|Open+Sans:400,400italic,600,600italic,700,700italic|Inconsolata:400,700">
+		<link rel="stylesheet" href="/css/main.css">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" href="/touch-icon.png" sizes="192x192">
+		<link rel="icon" type="image/png" href="/images/elastica_fill_logo.svg">
+
+		
+	</head>
+
+	<body>
+
+		
+		<header>
+			<h1>
+				<a href="/"><img src="/images/elastica_fill_logo.svg" width="40" height="40" alt="Elastica logo"></a>
+				Elastica
+				<button type="button" class="open-nav" id="open-nav"></button>
+			</h1>
+
+			<form action="/search/" method="get">
+				<input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+				<input type="submit" value="Search" style="display: none;">
+			</form>
+
+			<nav class="full-navigation">
+				<ul>
+					<li class="nav-item top-level ">
+						
+						<a href="/#about">Welcome</a>
+					</li>
+				</ul>
+
+				<!-- Hard code for nav-bar-->
+				<ul>
+					<li class="nav-item top-level ">
+						<a href="/cosserat_rods/overview/">Cosserat Rods</a>
+						<ul>
+							<li class="nav-item "><a href="/cosserat_rods/theory/">Theory</a></li> 
+							<li class="nav-item "><a href="/cosserat_rods/numerics/">Numerics</a></li> 
+							<li class="nav-item "><a href="/cosserat_rods/multiple-rods/">Multiple Rods</a></li> 			
+							<li class="nav-item "><a href="/cosserat_rods/case-studies/">Case Studies</a></li> 				
+						</ul>
+					</li>
+
+					<li class="nav-item top-level ">
+						<a href="/software/elastica/">Software</a>
+						<ul>
+							<li class="nav-item "><a href="/software/pyelastica/">Pyelastica</a></li> 
+							<li class="nav-item "><a href="/software/development/">Development</a></li> 
+							<li class="nav-item "><a href="/software/FAQs/">FAQs (Under Development)</a></li> 
+						</ul>
+					</li>
+					<li class="nav-item top-level ">
+						<a href="/publications/publications/">Publications</a>
+					</li>
+					<li class="nav-item top-level ">
+						<a href="/contact/contact/">Contact</a>
+					</li>
+					<li class="nav-item top-level ">
+						<a href="/sponsors/sponsors/">Sponsors</a>
+					</li>
+				</ul>
+
+					<!-- Original script to automatically generate the nav bar. Couldn't figure out how to make it non alphabetical so just hard coding it. Obvious downside if you now need to manually update the nav-bar
+
+					
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/contact/contact/">Contact</a>
+							<ul>
+								
+									
+									
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/cosserat_rods/overview/">Cosserat Rods</a>
+							<ul>
+								
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/cosserat_rods/theory/">Theory</a></li> 
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/cosserat_rods/numerics/">Numerics</a></li> 
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/cosserat_rods/multiple-rods/">Multiple Rods</a></li> 
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/cosserat_rods/case-studies/">Case Studies</a></li> 
+									
+									
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/publications/publications/">Publications</a>
+							<ul>
+								
+									
+									
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/software/elastica/">Software</a>
+							<ul>
+								
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/software/pyelastica/">Pyelastica</a></li> 
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/software/development/">Development</a></li> 
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/software/FAQs/">FAQs (Under Development)</a></li> 
+									
+									
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/sponsors/sponsors/">Sponsors</a>
+							<ul>
+								
+									
+									
+								
+							</ul>
+						</li>
+					
+				</ul>
+				-->
+				<ul> 
+					<li class="nav-item top-level ">
+						
+						<a href="/changelog/">Change Log</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		
+		<section class="main" id='main'>
+			<div class="page-header">
+				
+				<h2>Elastica</h2>
+				<h3>General fixes and improvements</h3>
+				
+			</div>
+			<article class="content">
+				<p>This is an example of a minor update announcement as opposed to a major update below.</p>
+
+<blockquote>
+  <p>To get the date, save the file with the date in the title (ex. “2016-02-05-general-fixes-and-improvements.md”)</p>
+</blockquote>
+
+			</article>
+		</section>
+		
+		
+		<script>
+			document.getElementById("open-nav").addEventListener("click", function () {
+				document.body.classList.toggle("nav-open");
+			});
+		</script>
+	</body>
+</html>

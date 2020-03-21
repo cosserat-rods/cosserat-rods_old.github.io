@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Multiple Rods | Elastica</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Multiple Rods" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="If you have multiple rods, it is important to properly define how they interact. This is done through the prescription of appropriate boundary conditions that couple the interactions of different rods as well as making sure that the rods do not intersect. There are any number of different ways you can define these interactions. Typically, we enforce these interactions through the application of correcting forces and torques which then cause the rods to satisfy the desired constraints." />
+<meta property="og:description" content="If you have multiple rods, it is important to properly define how they interact. This is done through the prescription of appropriate boundary conditions that couple the interactions of different rods as well as making sure that the rods do not intersect. There are any number of different ways you can define these interactions. Typically, we enforce these interactions through the application of correcting forces and torques which then cause the rods to satisfy the desired constraints." />
+<link rel="canonical" href="http://localhost:4000/cosserat_rods/multiple-rods/" />
+<meta property="og:url" content="http://localhost:4000/cosserat_rods/multiple-rods/" />
+<meta property="og:site_name" content="Elastica" />
+<script type="application/ld+json">
+{"description":"If you have multiple rods, it is important to properly define how they interact. This is done through the prescription of appropriate boundary conditions that couple the interactions of different rods as well as making sure that the rods do not intersect. There are any number of different ways you can define these interactions. Typically, we enforce these interactions through the application of correcting forces and torques which then cause the rods to satisfy the desired constraints.","@type":"Article","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/images/elastica_logo.svg"}},"url":"http://localhost:4000/cosserat_rods/multiple-rods/","headline":"Multiple Rods","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+		<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Elastica" />
+		
+		<script>
+		MathJax = {
+		  tex: {
+		    inlineMath: [['$', '$'], ['\\(', '\\)']]
+		  }
+		};
+		</script>
+		<script id="MathJax-script" async
+		  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+		</script>
+
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic|Open+Sans:400,400italic,600,600italic,700,700italic|Inconsolata:400,700">
+		<link rel="stylesheet" href="/css/main.css">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" href="/touch-icon.png" sizes="192x192">
+		<link rel="icon" type="image/png" href="/images/elastica_fill_logo.svg">
+
+		
+	</head>
+
+	<body>
+
+		
+		<header>
+			<h1>
+				<a href="/"><img src="/images/elastica_fill_logo.svg" width="40" height="40" alt="Elastica logo"></a>
+				Elastica
+				<button type="button" class="open-nav" id="open-nav"></button>
+			</h1>
+
+			<form action="/search/" method="get">
+				<input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+				<input type="submit" value="Search" style="display: none;">
+			</form>
+
+			<nav class="full-navigation">
+				<ul>
+					<li class="nav-item top-level ">
+						
+						<a href="/#about">Welcome</a>
+					</li>
+				</ul>
+
+				<!-- Hard code for nav-bar-->
+				<ul>
+					<li class="nav-item top-level ">
+						<a href="/cosserat_rods/overview/">Cosserat Rods</a>
+						<ul>
+							<li class="nav-item "><a href="/cosserat_rods/theory/">Theory</a></li> 
+							<li class="nav-item "><a href="/cosserat_rods/numerics/">Numerics</a></li> 
+							<li class="nav-item "><a href="/cosserat_rods/multiple-rods/">Multiple Rods</a></li> 			
+							<li class="nav-item "><a href="/cosserat_rods/case-studies/">Case Studies</a></li> 				
+						</ul>
+					</li>
+
+					<li class="nav-item top-level ">
+						<a href="/software/elastica/">Software</a>
+						<ul>
+							<li class="nav-item "><a href="/software/pyelastica/">Pyelastica</a></li> 
+							<li class="nav-item "><a href="/software/development/">Development</a></li> 
+							<li class="nav-item "><a href="/software/FAQs/">FAQs (Under Development)</a></li> 
+						</ul>
+					</li>
+					<li class="nav-item top-level ">
+						<a href="/publications/publications/">Publications</a>
+					</li>
+					<li class="nav-item top-level ">
+						<a href="/contact/contact/">Contact</a>
+					</li>
+					<li class="nav-item top-level ">
+						<a href="/sponsors/sponsors/">Sponsors</a>
+					</li>
+				</ul>
+
+					<!-- Original script to automatically generate the nav bar. Couldn't figure out how to make it non alphabetical so just hard coding it. Obvious downside if you now need to manually update the nav-bar
+
+					
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/contact/contact/">Contact</a>
+							<ul>
+								
+									
+									
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level current">
+							
+							<a href="/cosserat_rods/overview/">Cosserat Rods</a>
+							<ul>
+								
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/cosserat_rods/theory/">Theory</a></li> 
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/cosserat_rods/numerics/">Numerics</a></li> 
+									
+									
+								
+									
+									
+									<li class="nav-item current"><a href="/cosserat_rods/multiple-rods/">Multiple Rods</a></li> 
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/cosserat_rods/case-studies/">Case Studies</a></li> 
+									
+									
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/publications/publications/">Publications</a>
+							<ul>
+								
+									
+									
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/software/elastica/">Software</a>
+							<ul>
+								
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/software/pyelastica/">Pyelastica</a></li> 
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/software/development/">Development</a></li> 
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/software/FAQs/">FAQs (Under Development)</a></li> 
+									
+									
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/sponsors/sponsors/">Sponsors</a>
+							<ul>
+								
+									
+									
+								
+							</ul>
+						</li>
+					
+				</ul>
+				-->
+				<ul> 
+					<li class="nav-item top-level ">
+						
+						<a href="/changelog/">Change Log</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		
+		<section class="main" id='main'>
+			<div class="page-header">
+				
+				<h2>Cosserat Rods</h2>
+				<h3>Multiple Rods</h3>
+				
+			</div>
+			<article class="content">
+				<p>If you have multiple rods, it is important to properly define how they interact. This is done through the prescription of appropriate boundary conditions that couple the interactions of different rods as well as making sure that the rods do not intersect. There are any number of different ways you can define these interactions. Typically, we enforce these interactions through the application of correcting forces and torques which then cause the rods to satisfy the desired constraints.</p>
+
+<h1 id="joints">Joints</h1>
+<p>When we define an interaction between nodes at the ends of two rods, we create a joint. The simplest joint we can create is a spherical joint where the rods are free to rotate and twist relative to each other. Additional constraints can also be added to restrict this movement such as limiting rotations of the rods to create a hinge joint or even fixing the relative positions of the rod to create a fixed joint. While in the description below we generally defined the correcting forces and torques as being applied to one of the rods ($R_2$) in reference to the position of another rod ($R_1$), it is important to note that the correcting forces and torques are applied to both rods, which can be seen by swapping the positions of $R_1$ and $R_2$ below.</p>
+
+<p>The correcting forces and torques that transformed into the local frame and stored in the external force $\mathbf{f}$ and external couple $\mathbf{c}$.</p>
+
+<h3 id="spherical-joint">Spherical Joint</h3>
+<p><img src="/images/spherical_joint.png" alt="image name" width="300" /></p>
+
+<p>A spherical joint is the simplest joint that can be defined. It is formed by specifying some displacement between the ends of two rods but not otherwise constraining the ability of the rods to rotate relative to each other. The joint is formed between the $i$ and $j$ nodes at the extremities of two rods $R_1$ and $R_2$ ($\mathbf{r}_{1,i}$ and $\mathbf{r}_{2,j}$). The distance between the two nodes is $\boldsymbol{\epsilon}=\mathbf{r}_{2,j}-\mathbf{r}_{1,i}$. An external force $\mathbf{f}_\text{c}=k\boldsymbol{\epsilon}$ proportional to the distance $\boldsymbol{\epsilon}$ is applied to hold the ends of the rods together. Here the constant $k$ can be thought of as the joint stiffness.</p>
+
+<p>If you instead want to define some fixed distance $\boldsymbol{\epsilon^0}$ between the ends of the rods you can simply modify the applied force to account for this offset $\mathbf{f}_\text{c}=k(\boldsymbol{\epsilon} - \boldsymbol{\epsilon^0})$.</p>
+
+<h3 id="hinge-joint">Hinge Joint</h3>
+
+<p>Building on the constraints that define a spherical joint, we can also restrict the rotation of the rods relative to each other to form an hinge joint where one of the rods ($R_2$) is restricted to rotation within a plane defined by the rod $R_1$. This constraint is enforced by considering the orientation of the end segments $S_{1i}$ and $S_{2j}$ of $R_1$ and $R_2$. The rotational plane of $R_2$ is defined as the plane with a normal vector $\mathbf{n}$ (chosen by you) that also contains $\mathbf{t}_{1i}$, which is the tangent vector of $S_{1i}$.</p>
+
+<p>In order to keep the rod in this plane, a correcting torque $\boldsymbol{\tau}_c$ is applied to $\mathbf{S}_{2j}$. The correcting torque is proportional to the extent that the joint’s neighboring node $\mathbf{r}_{2(j-1)}$ is out of the rotation plane $\boldsymbol{\epsilon}_{\perp} = - \left[\left(\mathbf{r}_{2(j-1)}-\mathbf{r}_{2j}\right) \cdot \mathbf{n}\right]\mathbf{n}$ leading to a torque of</p>
+
+<p>$\boldsymbol{\tau}_{\text{c}} = \left(\mathbf{r}_{2(j-1)}-\mathbf{r}_{2j}+\boldsymbol{\epsilon}_{\perp}\right) \times \left(k \boldsymbol{\epsilon}_{\perp}\right)$.</p>
+
+<p>Just like with the correcting force, you can think of the constant $k$ as being related to the stiffness of the hinge.</p>
+
+<p><img src="/images/hinge_joint.png" alt="image name" width="300" /></p>
+
+<h3 id="fixed-joint">Fixed Joint</h3>
+
+<p>A fixed joint is similar to a hinge joint except now, instead applying a torque to keep the rod in the plane of rotation, you apply a correcting torque to keep the rod in the plane as well as oriented at some fixed angle $\theta$ relative to $S_{1i}$. A correcting torque is computed just like for a hinge joint but this time with the force proportional to the deviation from $\theta$</p>
+
+<p>$\boldsymbol{\epsilon}_{\mapsto} = \left[\mathbf{x}_{2j} + l_{2j} \left(\mathbf{t}_{1i}\cos\theta +\mathbf{b}_{1i}\sin\theta \right)\right] - \mathbf{r}_{2(j-1)}$.</p>
+
+<p>Here, $l_{2j}$ is the length of $S_{2j}$ and $\mathbf{b}_{1i}=\mathbf{n} \times \mathbf{t}_{1i}$.</p>
+
+<h1 id="rod-collision">Rod Collision</h1>
+<p><img src="/images/rod_collision.png" alt="image name" width="300" /></p>
+
+<p>If you have a system with multiple rods, it is important that they do not intersect or pass through each other. To avoid this intersection and to model contact between rods, we adapt the approach used for a single rod with self contact. Similar to the approach used to make a joint from two rods $R_1$ and $R_2$, we impose correcting forces $\mathbf{f}_\text{c}$ on the contacting segments $S_{1i}$ and $S_{2j}$, which accounts for contact forces and also keeps the elements from intersecting.</p>
+
+<p>The first step is to determine if any of the rods are even in contact. We compute the minimum distance $d_{\text{min}}^{ij}$ between two segments from $S_{1i}$ and $S_{2j}$ by parameterizing their centerlines $\mathbf{c}_i(h) = \mathbf{r}_i+h(\mathbf{r}_{i+1}-\mathbf{r}_i)$ so that</p>
+
+<p>$d_{\text{min}}^{ij}= \max_{h_1,h_2\in[0,1]}||\mathbf{c}_i(h_1) - \mathbf{c}_j(h_2)||$.</p>
+
+<p>If $d_{\text{min}}^{ij}$ is less than the sum of the radii of the two segments, then they are in contact and penalty forces are applied to the nodes at each end of each segment as a function of the overlap $\epsilon_{ij} = (r_i + r_j - d_{\text{min}}^{ij})$, where $r_i$ and $r_j$ are the radii of segments $S_{1i}$ and $S_{2j}$. If $\epsilon_{ij}$ is smaller than zero, then the two edges are not in contact and no penalty is applied.</p>
+
+<p>Now that we know if any segment of the rod are in contact, we can apply correcting forces to the segments in contact. To do this, we define a unit vector $\mathbf{d}^{ij}_{\text{min}}$ that points from the closest point of segment $S_{1i}$ to the closest point of segment $S_{2j}$. This allows us to define the contact force as</p>
+
+<p>$\mathbf{f}_\text{c}= H(\epsilon_{ij})\cdot\left[-k \ \epsilon_{ij}-\gamma\left(\mathbf{v}_i-\mathbf{v}_j\right)\cdot\mathbf{d}_{\text{min}}^{ij}\right]\mathbf{d}_{\text{min}}^{ij}$.</p>
+
+<p>$H(\epsilon_{ij})$ is the Heaviside function, this ensures force is applied only if there is contact ($\epsilon_{ij}\ge0$). The first term in the square brackets is the response of the force to any intersection by the rods, while the second term models energy dissipation during contact  and is proportional the interpenetration velocity $\mathbf{v}_i-\mathbf{v}_j$. The coefficient $\gamma$ defines how much energy dissipation occurs during contact (think of knocking together two pool noodles vs two metal rods).</p>
+
+<!--
+## Joints and Rod Collision
+Careful reading of this page may cause you to see a possible contradiction. If we define a spherical joint that joints rods $R_1$ and $R_2$, then wouldn't any rotation of $R_1$ relative to $R_2$ cause intersection of the segments closest to the joint? 
+
+You are right, which means that our rod collision method needs to be slightly adapted to account for this case. 
+-->
+
+<h3 id="useful-references">Useful References</h3>
+<p class="reference" style="font-size:12pt; ">
+Zhang, Chan, Parthasarathy, Gazzola, <strong>Modeling and simulation of complex dynamic musculoskeletal architectures</strong>, Nature Communications, 2019. <a href="https://doi.org/10.1038/s41467-019-12759-5">doi: 10.1038/s41467-019-12759-5</a>
+</p>
+
+<p class="reference" style="font-size:12pt; ">
+Gazzola, Dudte, McCormick, Mahadevan, <strong>Forward and inverse problems in the mechanics of soft filaments</strong>, Royal Society Open Science, 2018. <a href="https://doi.org/10.1098/rsos.171628">doi: 10.1098/rsos.171628</a>
+</p>
+
+
+			</article>
+		</section>
+		
+		
+		<script>
+			document.getElementById("open-nav").addEventListener("click", function () {
+				document.body.classList.toggle("nav-open");
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Pyelastica | Elastica</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Pyelastica" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The python implementation of elastica is the easiest version to get started with. This page contains useful information for getting elastica set up, using it to model single and multiple rod systems, and postprocessing the results." />
+<meta property="og:description" content="The python implementation of elastica is the easiest version to get started with. This page contains useful information for getting elastica set up, using it to model single and multiple rod systems, and postprocessing the results." />
+<link rel="canonical" href="http://localhost:4000/software/pyelastica/" />
+<meta property="og:url" content="http://localhost:4000/software/pyelastica/" />
+<meta property="og:site_name" content="Elastica" />
+<script type="application/ld+json">
+{"description":"The python implementation of elastica is the easiest version to get started with. This page contains useful information for getting elastica set up, using it to model single and multiple rod systems, and postprocessing the results.","@type":"Article","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/images/elastica_logo.svg"}},"url":"http://localhost:4000/software/pyelastica/","headline":"Pyelastica","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+		<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Elastica" />
+		
+		<script>
+		MathJax = {
+		  tex: {
+		    inlineMath: [['$', '$'], ['\\(', '\\)']]
+		  }
+		};
+		</script>
+		<script id="MathJax-script" async
+		  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+		</script>
+
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic|Open+Sans:400,400italic,600,600italic,700,700italic|Inconsolata:400,700">
+		<link rel="stylesheet" href="/css/main.css">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" href="/touch-icon.png" sizes="192x192">
+		<link rel="icon" type="image/png" href="/images/elastica_fill_logo.svg">
+
+		
+	</head>
+
+	<body>
+
+		
+		<header>
+			<h1>
+				<a href="/"><img src="/images/elastica_fill_logo.svg" width="40" height="40" alt="Elastica logo"></a>
+				Elastica
+				<button type="button" class="open-nav" id="open-nav"></button>
+			</h1>
+
+			<form action="/search/" method="get">
+				<input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+				<input type="submit" value="Search" style="display: none;">
+			</form>
+
+			<nav class="full-navigation">
+				<ul>
+					<li class="nav-item top-level ">
+						
+						<a href="/#about">Welcome</a>
+					</li>
+				</ul>
+
+				<!-- Hard code for nav-bar-->
+				<ul>
+					<li class="nav-item top-level ">
+						<a href="/cosserat_rods/overview/">Cosserat Rods</a>
+						<ul>
+							<li class="nav-item "><a href="/cosserat_rods/theory/">Theory</a></li> 
+							<li class="nav-item "><a href="/cosserat_rods/numerics/">Numerics</a></li> 
+							<li class="nav-item "><a href="/cosserat_rods/multiple-rods/">Multiple Rods</a></li> 			
+							<li class="nav-item "><a href="/cosserat_rods/case-studies/">Case Studies</a></li> 				
+						</ul>
+					</li>
+
+					<li class="nav-item top-level ">
+						<a href="/software/elastica/">Software</a>
+						<ul>
+							<li class="nav-item "><a href="/software/pyelastica/">Pyelastica</a></li> 
+							<li class="nav-item "><a href="/software/development/">Development</a></li> 
+							<li class="nav-item "><a href="/software/FAQs/">FAQs (Under Development)</a></li> 
+						</ul>
+					</li>
+					<li class="nav-item top-level ">
+						<a href="/publications/publications/">Publications</a>
+					</li>
+					<li class="nav-item top-level ">
+						<a href="/contact/contact/">Contact</a>
+					</li>
+					<li class="nav-item top-level ">
+						<a href="/sponsors/sponsors/">Sponsors</a>
+					</li>
+				</ul>
+
+					<!-- Original script to automatically generate the nav bar. Couldn't figure out how to make it non alphabetical so just hard coding it. Obvious downside if you now need to manually update the nav-bar
+
+					
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/contact/contact/">Contact</a>
+							<ul>
+								
+									
+									
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/cosserat_rods/overview/">Cosserat Rods</a>
+							<ul>
+								
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/cosserat_rods/theory/">Theory</a></li> 
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/cosserat_rods/numerics/">Numerics</a></li> 
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/cosserat_rods/multiple-rods/">Multiple Rods</a></li> 
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/cosserat_rods/case-studies/">Case Studies</a></li> 
+									
+									
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/publications/publications/">Publications</a>
+							<ul>
+								
+									
+									
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level current">
+							
+							<a href="/software/elastica/">Software</a>
+							<ul>
+								
+									
+									
+								
+									
+									
+									<li class="nav-item current"><a href="/software/pyelastica/">Pyelastica</a></li> 
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/software/development/">Development</a></li> 
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/software/FAQs/">FAQs (Under Development)</a></li> 
+									
+									
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/sponsors/sponsors/">Sponsors</a>
+							<ul>
+								
+									
+									
+								
+							</ul>
+						</li>
+					
+				</ul>
+				-->
+				<ul> 
+					<li class="nav-item top-level ">
+						
+						<a href="/changelog/">Change Log</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		
+		<section class="main" id='main'>
+			<div class="page-header">
+				
+				<h2>Software</h2>
+				<h3>Pyelastica</h3>
+				
+			</div>
+			<article class="content">
+				<p>The python implementation of elastica is the easiest version to get started with. This page contains useful information for getting elastica set up, using it to model single and multiple rod systems, and postprocessing the results.</p>
+
+<h4 id="-getting-started">  <a href="#getting-started">Getting Started</a></h4>
+<h5 id="--installation">      -<a href="#installation">Installation</a></h5>
+<h5 id="--documentation">      -<a href="#documentation">Documentation</a></h5>
+<h5 id="--pyelastica-workflow">      -<a href="#pyelastica-workflow">Pyelastica Workflow</a></h5>
+<h5 id="--useful-information">      -<a href="#useful-information">Useful Information</a></h5>
+<h4 id="-tutorials">  <a href="#tutorials">Tutorials</a></h4>
+<h4 id="-visualization">  <a href="#visualization">Visualization</a></h4>
+
+<p><br /></p>
+
+<h1 id="getting-started">Getting Started</h1>
+<h2 id="installation">Installation</h2>
+<p>Pyelastica uses Python 3, which needs to be installed prior to using Pylastica. For information on installing Python, see <a href="https://realpython.com/installing-python/">here</a>. If you are interested in using a package manager like Conda, see <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html">here</a>.</p>
+
+<blockquote>
+  <p>The easiest way to install Pyelastica is with PIP: <code class="language-plaintext highlighter-rouge">pip install pyelastica</code> (<strong>not yet implemented</strong>)</p>
+</blockquote>
+
+<p>You can also download the source code for Pyelastica directly from <a href="link_to_github">GitHub</a>.</p>
+
+<h2 id="documentation">Documentation</h2>
+<h4 id="under-development">(Under Development)</h4>
+<p>We are working to build out the documentation.
+<!--
+The latest version of Pylastica's documentation can be found [here](https://www.readthedocs.org). 
+--></p>
+
+<h2 id="pyelastica-workflow">Pyelastica workflow</h2>
+<p>When using Pyelastica, most users will want to setup a simulation in which they define a system of rods, define initial and boundary conditions on the rods, run the simulation, and then post-process the results. The typical outline for using Pyelastica in such as case would be:</p>
+
+<h4 id="1-import-necessary-modules">1. import necessary modules</h4>
+<p>There are several different modules from Pyelastica that need to be imported. They can be broadly classified as:<br />
+  a. Wrappers – For the most general case, you would need to import the following:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kn">from</span> <span class="nn">elastica.wrappers</span> <span class="kn">import</span> <span class="p">(</span>
+        <span class="n">BaseSystemCollection</span><span class="p">,</span>
+        <span class="n">Connections</span><span class="p">,</span>
+        <span class="n">Constraints</span><span class="p">,</span>
+        <span class="n">Forcing</span><span class="p">,</span>
+        <span class="n">CallBacks</span><span class="p">)</span>
+</code></pre></div></div>
+<p>  b. System conditions (i.e. rods and boundary conditions) – some examples are:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kn">from</span> <span class="nn">elastica.rod.cosserat_rod</span> <span class="kn">import</span> <span class="n">CosseratRod</span>
+    <span class="kn">from</span> <span class="nn">elastica.boundary_conditions</span> <span class="kn">import</span> <span class="n">OneEndFixedRod</span>
+    <span class="kn">from</span> <span class="nn">elastica.joint</span> <span class="kn">import</span> <span class="n">FreeJoint</span><span class="p">,</span> <span class="n">HingeJoint</span>
+    <span class="kn">from</span> <span class="nn">elastica.external_forces</span> <span class="kn">import</span> <span class="n">GravityForces</span><span class="p">,</span> <span class="n">UniformForces</span>
+    <span class="kn">from</span> <span class="nn">elastica.interaction</span> <span class="kn">import</span> <span class="n">AnistropicFrictionalPlane</span>
+</code></pre></div></div>
+<p>  c. Call back function – for saving state information during simulation.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kn">from</span> <span class="nn">elastica.callback_functions</span> <span class="kn">import</span> <span class="n">CallBackBaseClass</span>
+</code></pre></div></div>
+<p>  d. Time stepper functions – Currently <code class="language-plaintext highlighter-rouge">PositionVerlet</code> is the best default.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kn">from</span> <span class="nn">elastica.timestepper.symplectic_steppers</span> <span class="kn">import</span> <span class="n">PositionVerlet</span>
+    <span class="kn">from</span> <span class="nn">elastica.timestepper</span> <span class="kn">import</span> <span class="n">integrate</span>
+</code></pre></div></div>
+<blockquote>
+  <p>See the examples folder for a list to typical import statements. Future implementations will work to simplify this step.</p>
+</blockquote>
+
+<h4 id="2-create-simulator">2. create simulator</h4>
+<p>We need to define an object that will contain the system we are about to create. To do this we define a simulator class that inherits the necessary attributes from the wrappers we previously imported. We will add rods and different boundary conditions to this class to create our system and pass it to the timestepper to be solved. The most generic simulator class is:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">class</span> <span class="nc">SystemSimulator</span><span class="p">(</span><span class="n">BaseSystemCollection</span><span class="p">,</span> <span class="n">Constraints</span><span class="p">,</span> <span class="n">Connections</span><span class="p">,</span> <span class="n">Forcing</span><span class="p">,</span> <span class="n">CallBacks</span><span class="p">):</span> 
+        <span class="k">pass</span> 
+</code></pre></div></div>
+<p>This simply combines all the wrappers previously imported together. If a wrapper is not needed for the simulation, it does not need to be added here (i.e. if only one rod, you do not need to include the <code class="language-plaintext highlighter-rouge">Connections</code> class).</p>
+
+<h4 id="3-define-parameters-for-each-rod">3. define parameters for each rod</h4>
+<p>Each rod has a number of physical parameters that need to be defined. These values then need to be assigned to the rod to create the object, and the rod needs to be added to the simulator.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1"># Create rod
+</span>    <span class="n">rod1</span> <span class="o">=</span> <span class="n">CosseratRod</span><span class="o">.</span><span class="n">straight_rod</span><span class="p">(</span>
+        <span class="n">n_elem</span><span class="p">,</span>        <span class="c1"># number of elements
+</span>        <span class="n">start_rod</span><span class="p">,</span>     <span class="c1"># Starting position of first node in rod
+</span>        <span class="n">direction</span><span class="p">,</span>     <span class="c1"># Direction the rod extends
+</span>        <span class="n">normal</span><span class="p">,</span>        <span class="c1"># normal vector of rod
+</span>        <span class="n">base_length</span><span class="p">,</span>   <span class="c1"># original length of rod (m)
+</span>        <span class="n">base_radius</span><span class="p">,</span>   <span class="c1"># original radius of rod (m)
+</span>        <span class="n">density</span><span class="p">,</span>       <span class="c1"># density of rod (kg/m^3)
+</span>        <span class="n">nu</span><span class="p">,</span>            <span class="c1"># Energy dissipation of rod
+</span>        <span class="n">E</span><span class="p">,</span>             <span class="c1"># Elastic Modulus (Pa)
+</span>        <span class="n">poisson_ratio</span><span class="p">,</span> <span class="c1"># Poisson Ratio
+</span>    <span class="p">)</span>
+
+    <span class="c1"># Add rod to SystemSimulator
+</span>    <span class="n">SystemSimulator</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rod1</span><span class="p">)</span>
+</code></pre></div></div>
+<p>This can be repeated to add multiple rods to the system. Be sure to remember to change the name of the rods (rod1 $\rightarrow$ rod2) and the starting location for each rod along with the rods physical properties as needed.</p>
+
+<blockquote>
+  <p><strong>A note on notation:</strong> Like other FEA packages such as Abaqus, Pyelastica does not enforce units. This means that you are required to make sure that all units for your input variables are consistent. When in doubt, SI units are always safe, however, if you have a very small length scale ($\sim$ nm), then you may need to rescale your units to avoid needing prohibitively small time steps.</p>
+</blockquote>
+
+<h4 id="4-define-boundary-conditions-forcings-and-connections">4. define boundary conditions, forcings and connections</h4>
+<p>Now that we have added all our rods to <code class="language-plaintext highlighter-rouge">SystemSimulator</code>, we need to apply the relevant boundary conditions. See the documentation and tutorials for in depth explanations of the different types of forcings available.</p>
+
+<p>As a simple example, to fix one end of a rod, we use the <code class="language-plaintext highlighter-rouge">OneEndFixedRod</code> boundary condition (which we imported in step 1) and apply it to the rod. Here we will be fixing the $0^{\text{th}}$ node as well as the $0^{\text{th}}$ element.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">SystemSimulator</span><span class="o">.</span><span class="n">constrain</span><span class="p">(</span><span class="n">rod1</span><span class="p">)</span><span class="o">.</span><span class="n">using</span><span class="p">(</span>
+        <span class="n">OneEndFixedRod</span><span class="p">,</span>                 <span class="c1"># Displacement BC being applied
+</span>        <span class="n">constrained_position_idx</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,),</span>  <span class="c1"># Node number to apply BC
+</span>        <span class="n">constrained_director_idx</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,)</span>   <span class="c1"># Element number to apply BC
+</span>    <span class="p">)</span>
+</code></pre></div></div>
+<p>We have now fixed one end of the rod while leaving the other end free. We can also apply forces to free end using the <code class="language-plaintext highlighter-rouge">EndpointForces</code></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1">#Define 1x3 array of the applied forces
+</span>    <span class="n">origin_force</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">])</span>
+    <span class="n">end_force</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mf">15.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">])</span> 
+    <span class="n">SystemSimulator</span><span class="o">.</span><span class="n">add_forcing_to</span><span class="p">(</span><span class="n">rod1</span><span class="p">)</span><span class="o">.</span><span class="n">using</span><span class="p">(</span>
+        <span class="n">EndpointForces</span><span class="p">,</span>                 <span class="c1"># Traction BC being applied
+</span>        <span class="n">origin_force</span><span class="p">,</span>                   <span class="c1"># Force vector applied at first node
+</span>        <span class="n">end_force</span><span class="p">,</span>                      <span class="c1"># Force vector applied at last node
+</span>        <span class="n">ramp_up_time</span><span class="o">=</span><span class="n">final_time</span> <span class="o">/</span> <span class="mf">2.0</span>   <span class="c1"># Ramp up time 
+</span>    <span class="p">)</span>
+</code></pre></div></div>
+<p>We can also add more complex forcings, such as friction, gravity, or torque throughout the rod (see tutorials and documentation for details). One last condition we can define is the connections between rods.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1"># Connect rod 1 and rod 2. '_connect_idx' specifies the node number that 
+</span>    <span class="c1"># the connection should be applied to. You are specifying the index of a 
+</span>    <span class="c1"># list so you can use -1 to access the last node. 
+</span>    <span class="n">SystemSimulator</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+        <span class="n">first_rod</span>  <span class="o">=</span> <span class="n">rod1</span><span class="p">,</span> 
+        <span class="n">second_rod</span> <span class="o">=</span> <span class="n">rod2</span><span class="p">,</span> 
+        <span class="n">first_connect_idx</span>  <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="c1"># Connect to the last node of the first rod. 
+</span>        <span class="n">second_connect_idx</span> <span class="o">=</span>  <span class="mi">0</span>  <span class="c1"># Connect to first node of the second rod. 
+</span>        <span class="p">)</span><span class="o">.</span><span class="n">using</span><span class="p">(</span>
+            <span class="n">FixedJoint</span><span class="p">,</span>  <span class="c1"># Type of connection between rods
+</span>            <span class="n">k</span>  <span class="o">=</span> <span class="mf">1e5</span><span class="p">,</span>    <span class="c1"># Spring constant of force holding rods together (F = k*x)
+</span>            <span class="n">nu</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>      <span class="c1"># Energy dissipation of joint
+</span>            <span class="n">kt</span> <span class="o">=</span> <span class="mf">5e3</span>     <span class="c1"># Rotational stiffness of rod to avoid rods twisting
+</span>            <span class="p">)</span>
+</code></pre></div></div>
+
+<h5 id="5-create-callback-functions-optional">5. create callback functions (optional)</h5>
+<p>If you want to know what happens to the rod during the course of the simulation, you must create a callback function to output the data you need as the simulation runs. There is a base class <code class="language-plaintext highlighter-rouge">CallBackBaseClass</code> that can help with this. If you do not define a callback function, then at the end of the simulation, you will only have the final state of the system available.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1"># MyCallBack class is derived from the base call back class.   
+</span>    <span class="k">class</span> <span class="nc">MyCallBack</span><span class="p">(</span><span class="n">CallBackBaseClass</span><span class="p">):</span>
+        <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step_skip</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">callback_params</span><span class="p">):</span>
+            <span class="n">CallBackBaseClass</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">every</span> <span class="o">=</span> <span class="n">step_skip</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">callback_params</span> <span class="o">=</span> <span class="n">callback_params</span>
+        
+        <span class="c1"># This function is called every time step
+</span>        <span class="k">def</span> <span class="nf">make_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">system</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">current_step</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>         
+            <span class="k">if</span> <span class="n">current_step</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">every</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="c1"># Save time, step number, position, orientation and velocity
+</span>                <span class="bp">self</span><span class="o">.</span><span class="n">callback_params</span><span class="p">[</span><span class="s">"time"</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">time</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">callback_params</span><span class="p">[</span><span class="s">"step"</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">current_step</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">callback_params</span><span class="p">[</span><span class="s">"position"</span> <span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">system</span><span class="o">.</span><span class="n">position_collection</span><span class="o">.</span><span class="n">copy</span><span class="p">())</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">callback_params</span><span class="p">[</span><span class="s">"directors"</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">system</span><span class="o">.</span><span class="n">director_collection</span><span class="o">.</span><span class="n">copy</span><span class="p">())</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">callback_params</span><span class="p">[</span><span class="s">"velocity"</span> <span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">system</span><span class="o">.</span><span class="n">velocity_collection</span><span class="o">.</span><span class="n">copy</span><span class="p">())</span>
+                <span class="k">return</span>
+
+    <span class="c1"># Create dictionary to hold data from callback function
+</span>    <span class="n">callback_data_rod1</span><span class="p">,</span> <span class="n">callback_data_rod2</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">),</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+
+    <span class="c1"># Add MyCallBack to SystemSimulator for each rod telling it how often to save data (step_skip)
+</span>    <span class="n">SystemSimulator</span><span class="o">.</span><span class="n">collect_diagnostics</span><span class="p">(</span><span class="n">rod1</span><span class="p">)</span><span class="o">.</span><span class="n">using</span><span class="p">(</span>
+        <span class="n">MyCallBack</span><span class="p">,</span> <span class="n">step_skip</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">callback_params</span><span class="o">=</span><span class="n">callback_data_rod1</span><span class="p">)</span>
+    <span class="n">SystemSimulator</span><span class="o">.</span><span class="n">collect_diagnostics</span><span class="p">(</span><span class="n">rod2</span><span class="p">)</span><span class="o">.</span><span class="n">using</span><span class="p">(</span>
+        <span class="n">MyCallBack</span><span class="p">,</span> <span class="n">step_skip</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">callback_params</span><span class="o">=</span><span class="n">callback_data_rod2</span><span class="p">)</span>
+</code></pre></div></div>
+<p>You can define different callback functions for different rods and also have different data outputted at different step intervals depending on your needs.</p>
+
+<h5 id="6-finalize-system-define-time-stepper-and-run-simulation">6. finalize system, define time stepper and run simulation</h5>
+<p>Now that we have finished defining our rods, the different boundary conditions and connections between them, and how often we want to save data, we have finished setting up the simulation. We now need to finalize the simulator by calling <code class="language-plaintext highlighter-rouge">SystemSimulator.finalize()</code>. This goes through and collects all the rods and applied conditions, preparing for the simulation.</p>
+
+<p>With our system now ready to be run, we need to define which timestepping algorithm to use. Currently, we use the position Verlet algorithm. We also need to define how much time we want to simulate as well as either the time step (dt) or the number of total time steps we want to take. Once we have defined these things, we can run the simulation by calling <code class="language-plaintext highlighter-rouge">integrate()</code>, which will start the simulation.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">timestepper</span> <span class="o">=</span> <span class="n">PositionVerlet</span><span class="p">()</span>
+    <span class="n">final_time</span> <span class="o">=</span> <span class="mi">10</span>   <span class="c1"># seconds
+</span>    <span class="n">dt</span> <span class="o">=</span> <span class="mf">1e-5</span>         <span class="c1"># seconds
+</span>    <span class="n">total_steps</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">final_time</span> <span class="o">/</span> <span class="n">dt</span><span class="p">)</span> 
+    <span class="n">integrate</span><span class="p">(</span><span class="n">timestepper</span><span class="p">,</span> <span class="n">SystemSimulator</span><span class="p">,</span> <span class="n">final_time</span><span class="p">,</span> <span class="n">total_steps</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h5 id="7-post-process">7. post-process</h5>
+<p>Once the simulation ends, it is time to analyze the data. If you defined a callback function, the data you outputted in available there (i.e. <code class="language-plaintext highlighter-rouge">callback_data_rod1</code>, otherwise you can access the final configuration of you system through your rod objects. For example, if you want the final position of one of your rods, you can get it from <code class="language-plaintext highlighter-rouge">rod1.position_collection[:]</code>.</p>
+
+<h2 id="useful-information">Useful Information</h2>
+<p>To help get you started and building initial intuition about Pyelastica, here are some general rules of thumb to follow.</p>
+<blockquote>
+  <p><strong>Important!</strong> These are based on general observations of how simulations tend to behave and are not guaranteed to always hold. Particularly for choosing dx and dt, it is important to perform a separate convergence study for your specific case.</p>
+</blockquote>
+
+<h4 id="number-of-elements-per-rod">Number of elements per rod</h4>
+<p>Generally, the more flexible your rod, the more elements you need. It is important to always perform a convergence test for your simulation, however, 30-50 elements per rod is a good starting place.</p>
+
+<h4 id="choosing-your-dx-and-dt">Choosing your dx and dt</h4>
+<p>Generally you will set your dx and then choose a stable dt. Your dx will be a combination of your problems length scale and the number of elements you want. Recall that units can be rescaled as long as they are consistent. If you have have a small rod, selecting a dx on the order of nm without scaling is 1e-9. This small values can cause numerical issues, so it is better to rescale your units so that nm $\sim O(1)$.</p>
+
+<p>When choosing your time step, there are a number of different conditions that can affect your choice. The most important consideration is that the time stepping algorithm remain stable. As a useful heuristic, we have found that dt = 0.01 dx s/m tends to yield stable timesteps, but depending on your problem this may not hold. If you wish to be able to resolve the propagation of different waves, then you need to make sure your dt is able to capture their propagation ($dt = dx \sqrt{\rho/G}$ for shear waves or $dt = dx \sqrt{\rho/E}$ for flexural waves).</p>
+
+<h4 id="run-time-scaling">Run time scaling</h4>
+<p>Pyelastica will scale linearly with the number of time steps, so if you halve your time step, your simulation will take twice as long to finish.</p>
+
+<p>The algorithms that Pyelastica is based on scale linearly with the number of elements. However, due to overhead from Python calling functions, Pyelastica does not have a strong dependence on the number of nodes. Doubling the number of nodes may only lead to a 10-20% increase in run time. We are working on reducing this overhead, and future versions of Pyelastica will be much faster due to implementation of C++ subroutines. While this means you can decrease your dx without a large run time penalty, remember that you also need to adjust you dt, which will affect the run time.</p>
+
+<p>Adding additional interactions with the environment, such as friction or gravity, will all decrease run time slightly. Most of these interactions will have a small effect on run time except for rod collision and/or self-intersection. These are very expensive routines that should be avoided if possible as they will substantially lengthen your run time.</p>
+
+<p>We are working to add parallel and HPC capabilities to Pyelastica, but they are not ready yet. If you are interested in helping us implement this, <a href="../development">let us know</a>!</p>
+
+<h3 id="call-backs">Call backs</h3>
+<p>The frequency at which you have your callback function save data will depend on what information you need from the simulation. Excessive call backs can cause performance penalties, however, it is rarely necessary to make call backs at a frequency that this becomes a problem. We have found that making a call back roughly every 100 iterations has a negligible performance penalty.</p>
+
+<p>Currently, all data saved from call back functions is saved in RAM. If you have many rods or are running for a long time, you may want to consider editing the call back function to write the saved data to disk so you do not run out of RAM during the simulation.</p>
+
+<h1 id="tutorials">Tutorials</h1>
+<h3 id="under-development-1">(Under Development)</h3>
+<p>We are creating a number of Jupyter Notebooks and python scripts to help get users started with using Pyelastica. Our goal is to upload the notebooks to <a href="link-to-binder-notebooks">Binder</a>, allowing you to try out some of the tutorials without having to install Pyelastica.</p>
+
+<blockquote>
+  <p>Additional examples are also available in the examples folder of Pyelastica’s <a href="link-to-github-repo">Github repo</a>.</p>
+</blockquote>
+
+<h1 id="visualization">Visualization</h1>
+<p>If you wish to visualize your system, make sure you define your callback function to output all necessary data. You can either plot your data using a python package such as <code class="language-plaintext highlighter-rouge">matplotlib</code>, or any rendering software that you choose. Note, many of the visualization scripts in the examples folders require <a href="https://www.ffmpeg.org/">ffmpeg</a> (be sure to install with h264 libraries).</p>
+
+<blockquote>
+  <p>For high-quality visualization, we suggest <a href="http://povray.com">POVray</a>. See <a href="link-to-POVray-tutorial">this tutorial</a> for examples of different ways of visualizing the system.</p>
+</blockquote>
+
+<p><br />
+<a href="./">back to top</a></p>
+
+			</article>
+		</section>
+		
+		
+		<script>
+			document.getElementById("open-nav").addEventListener("click", function () {
+				document.body.classList.toggle("nav-open");
+			});
+		</script>
+	</body>
+</html>

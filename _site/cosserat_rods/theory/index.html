@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Theory | Elastica</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Theory" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Cosserat rods are a generalization of Kirchhoff rods, which are able to model 1-d slender rods incorporating only bend and twist. Cosserat rods add the ability to consider stretching and shearing, allowing all the possible modes of deformation of the system to be considered. The key assumption of Cosserat rods are that their length is much larger than their radius ($L \gg r$). This allows their dynamical behavior to approximated by averaging balance laws at every cross-section. We also assume that the rods are linearly elastic." />
+<meta property="og:description" content="Cosserat rods are a generalization of Kirchhoff rods, which are able to model 1-d slender rods incorporating only bend and twist. Cosserat rods add the ability to consider stretching and shearing, allowing all the possible modes of deformation of the system to be considered. The key assumption of Cosserat rods are that their length is much larger than their radius ($L \gg r$). This allows their dynamical behavior to approximated by averaging balance laws at every cross-section. We also assume that the rods are linearly elastic." />
+<link rel="canonical" href="http://localhost:4000/cosserat_rods/theory/" />
+<meta property="og:url" content="http://localhost:4000/cosserat_rods/theory/" />
+<meta property="og:site_name" content="Elastica" />
+<script type="application/ld+json">
+{"description":"Cosserat rods are a generalization of Kirchhoff rods, which are able to model 1-d slender rods incorporating only bend and twist. Cosserat rods add the ability to consider stretching and shearing, allowing all the possible modes of deformation of the system to be considered. The key assumption of Cosserat rods are that their length is much larger than their radius ($L \\gg r$). This allows their dynamical behavior to approximated by averaging balance laws at every cross-section. We also assume that the rods are linearly elastic.","@type":"Article","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/images/elastica_logo.svg"}},"url":"http://localhost:4000/cosserat_rods/theory/","headline":"Theory","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+		<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Elastica" />
+		
+		<script>
+		MathJax = {
+		  tex: {
+		    inlineMath: [['$', '$'], ['\\(', '\\)']]
+		  }
+		};
+		</script>
+		<script id="MathJax-script" async
+		  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+		</script>
+
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic|Open+Sans:400,400italic,600,600italic,700,700italic|Inconsolata:400,700">
+		<link rel="stylesheet" href="/css/main.css">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" href="/touch-icon.png" sizes="192x192">
+		<link rel="icon" type="image/png" href="/images/elastica_fill_logo.svg">
+
+		
+	</head>
+
+	<body>
+
+		
+		<header>
+			<h1>
+				<a href="/"><img src="/images/elastica_fill_logo.svg" width="40" height="40" alt="Elastica logo"></a>
+				Elastica
+				<button type="button" class="open-nav" id="open-nav"></button>
+			</h1>
+
+			<form action="/search/" method="get">
+				<input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+				<input type="submit" value="Search" style="display: none;">
+			</form>
+
+			<nav class="full-navigation">
+				<ul>
+					<li class="nav-item top-level ">
+						
+						<a href="/#about">Welcome</a>
+					</li>
+				</ul>
+
+				<!-- Hard code for nav-bar-->
+				<ul>
+					<li class="nav-item top-level ">
+						<a href="/cosserat_rods/overview/">Cosserat Rods</a>
+						<ul>
+							<li class="nav-item "><a href="/cosserat_rods/theory/">Theory</a></li> 
+							<li class="nav-item "><a href="/cosserat_rods/numerics/">Numerics</a></li> 
+							<li class="nav-item "><a href="/cosserat_rods/multiple-rods/">Multiple Rods</a></li> 			
+							<li class="nav-item "><a href="/cosserat_rods/case-studies/">Case Studies</a></li> 				
+						</ul>
+					</li>
+
+					<li class="nav-item top-level ">
+						<a href="/software/elastica/">Software</a>
+						<ul>
+							<li class="nav-item "><a href="/software/pyelastica/">Pyelastica</a></li> 
+							<li class="nav-item "><a href="/software/development/">Development</a></li> 
+							<li class="nav-item "><a href="/software/FAQs/">FAQs (Under Development)</a></li> 
+						</ul>
+					</li>
+					<li class="nav-item top-level ">
+						<a href="/publications/publications/">Publications</a>
+					</li>
+					<li class="nav-item top-level ">
+						<a href="/contact/contact/">Contact</a>
+					</li>
+					<li class="nav-item top-level ">
+						<a href="/sponsors/sponsors/">Sponsors</a>
+					</li>
+				</ul>
+
+					<!-- Original script to automatically generate the nav bar. Couldn't figure out how to make it non alphabetical so just hard coding it. Obvious downside if you now need to manually update the nav-bar
+
+					
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/contact/contact/">Contact</a>
+							<ul>
+								
+									
+									
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level current">
+							
+							<a href="/cosserat_rods/overview/">Cosserat Rods</a>
+							<ul>
+								
+									
+									
+								
+									
+									
+									<li class="nav-item current"><a href="/cosserat_rods/theory/">Theory</a></li> 
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/cosserat_rods/numerics/">Numerics</a></li> 
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/cosserat_rods/multiple-rods/">Multiple Rods</a></li> 
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/cosserat_rods/case-studies/">Case Studies</a></li> 
+									
+									
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/publications/publications/">Publications</a>
+							<ul>
+								
+									
+									
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/software/elastica/">Software</a>
+							<ul>
+								
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/software/pyelastica/">Pyelastica</a></li> 
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/software/development/">Development</a></li> 
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/software/FAQs/">FAQs (Under Development)</a></li> 
+									
+									
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/sponsors/sponsors/">Sponsors</a>
+							<ul>
+								
+									
+									
+								
+							</ul>
+						</li>
+					
+				</ul>
+				-->
+				<ul> 
+					<li class="nav-item top-level ">
+						
+						<a href="/changelog/">Change Log</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		
+		<section class="main" id='main'>
+			<div class="page-header">
+				
+				<h2>Cosserat Rods</h2>
+				<h3>Theory</h3>
+				
+			</div>
+			<article class="content">
+				<p>Cosserat rods are a generalization of Kirchhoff rods, which are able to model 1-d slender rods incorporating only bend and twist. Cosserat rods add the ability to consider stretching and shearing, allowing all the possible modes of deformation of the system to be considered. The <strong>key assumption</strong> of Cosserat rods are that their length is much larger than their radius ($L \gg r$). This allows their dynamical behavior to approximated by averaging balance laws at every cross-section. We also assume that the rods are linearly elastic.</p>
+
+<h2 id="mathematical-description-of-cosserat-rods">Mathematical Description of Cosserat Rods</h2>
+<blockquote>
+  <p><strong>TL;DR</strong>: Cosserat rods are described by a centerline $\mathbf{r}(s, t)$ and local reference frame $\mathbf{Q}(s,t)= \{ {\mathbf{d}}_1, {\mathbf{d}}_2, {\mathbf{d}}_3 \}$ which consists of a triad of orthonormal basis vectors. The dynamics of the rod are then described by the equations for conservation of linear and angular momentum throughout the rod.</p>
+</blockquote>
+
+<p><img src="/images/cosserat_rod_continuum.png" alt="image name" width="500" /></p>
+
+<h4 id="reference-frames">Reference Frames</h4>
+<p>For a Cosserat rod described by a centerline $\mathbf{r}(s, t)$ (where $s \in [0, L]$ is the arc-length of the rod and $t$ is time) we begin by defining two reference frames within which we can express a vector $\mathbf{x}$:</p>
+
+<p>The laboratory (Eulerian) frame: $\bar{\mathbf{x}} = x_1 \mathbf{i} + x_2 \mathbf{j} + x_3 \mathbf{k}$</p>
+
+<p>The local (Lagrangian) frame: $\mathbf{x} = x_1 \mathbf{d}_1 + x_2 \mathbf{d}_2 + x_3 \mathbf{d}_3$</p>
+
+<p>We can define a rotation matrix $\mathbf{Q}$ between these two reference frames as $\mathbf{Q}= \{ {\mathbf{d}}_1, {\mathbf{d}}_2, {\mathbf{d}}_3 \}$ allowing us to to convert between the laboratory and local reference frames via $\mathbf{x}=\mathbf{Q}\bar{\mathbf{x}}$ and $\bar{\mathbf{x}}=\mathbf{Q}^T \mathbf{x}$. The local frame describes the orientation of the rod where ${\mathbf{d}}_3$ points along the centerline tangent ($\partial_s \bar{\mathbf{r}}=\bar{\mathbf{r}}_s= e \bar{\mathbf{t}}$) when there is no shear while ${\mathbf{d}}_1$ and ${\mathbf{d}}_2$ span the normal-binormal plane.</p>
+
+<p>If there is shear or extension, then ${\mathbf{d}}_3$ is shifted away from the tangent vector by some amount which can be described by a shear strain vector $\boldsymbol{\sigma}= \mathbf{Q}\bar{\mathbf{r}}_s - \mathbf{d}_3$ in the <em>local</em> frame. When there is shear or extension, it is important to distinguish between the reference configuration ($\hat{s}$) and the deformed configuration ($s$). The stretch ratio between the two states is defined as $e=\frac{\mathrm{d} s}{\mathrm{d}\hat{s}}$. If we define a unit tangent vector $\mathbf{t}$ we can now represent the local orientation of the rod as $\bar{\mathbf{r}}_s= e \bar{\mathbf{t}}$. Along with shear strain, the rod can also twist and rotate. In the local (Lagrangian) reference frame, as we move along the rod, our reference frame $\mathbf{Q}(s,t)$ is continually changing. This change represents the curvature of the rod and is represented with a curvature vector $\boldsymbol{\kappa}$, which is defined as $\partial_s \mathbf{d}_j = \boldsymbol{\kappa} \times \mathbf{d}_j$.</p>
+
+<p>Now that we have established our reference frames, the next thing we need to do is define how we are going to track changes in the shape of the rod. The change in the $\mathbf{Q}(s,t)$ over time defines the angular velocity $\boldsymbol{\omega}$ of the rod ($\partial_t \mathbf{d}_j = \boldsymbol{\omega} \times \mathbf{d}_j$). We also want to define the translational velocity of each point of the centerline of the rod with a velocity $\bar{\mathbf{v}}  = \partial_t\bar{\mathbf{r}}$.</p>
+
+<p>Finally, there are a number of material and structural parameters that need to defined. These are generally defined in the reference ($\hat{s}$) configuration and are:</p>
+<ul>
+  <li>cross-sectional area: $A$</li>
+  <li>mass per unit length: $\rho$</li>
+  <li>bending stiffness matrix: $\mathbf{B}$</li>
+  <li>shearing stiffness matrix: $\mathbf{S}$</li>
+  <li>second area moment of inertia: $\mathbf{I}$</li>
+</ul>
+
+<h4 id="conservation-of-momentum">Conservation of Momentum</h4>
+<p>With all these terms defined, we can now define the balance laws that need to be satisfied at every cross-section. By balancing both linear and angular momentum at every cross-section we are able to describe the dynamics of the Cosserat rod. For a prescribed external force and couple line densities ($\bar{\mathbf{f}}$ and $\mathbf{c}$, respectively) the momentum balance equations are:</p>
+
+<p>Linear Momentum: 
+$\small{\rho A \cdot \partial_t^2 \bar{\mathbf{r}} = \overbrace{\partial_s \left( \frac{\mathbf{Q}^T \mathbf{S} \boldsymbol{\sigma}}{e} \right)}^{\substack{\text{internal shear/} \\ \text{stretch force}}} + \overbrace{e \ \bar{\mathbf{f}}}^{\substack{\text{external} \\ \text{force}}} }$</p>
+
+<p>Angular Momentum: 
+$\small{\begin{align} \frac{\rho \mathbf{I}}{e} \cdot \partial_t \boldsymbol{\omega} =&amp;\overbrace{\partial_s \left( \frac{\mathbf{B} \boldsymbol{\kappa}}{e^3} \right) + \frac{\boldsymbol{\kappa} \times \mathbf{B} \boldsymbol{\kappa}}{e^3}}^{\text{internal bend/twist couple}} +\overbrace{\left( \mathbf{Q}\frac{\bar{\mathbf{r}}_s}{e} \times \mathbf{S} \boldsymbol{\sigma} \right)}^{\substack{\text{internal shear/} \\ \text{stretch couple}}} + \\&amp;\underbrace{\left( \rho \mathbf{I} \cdot \frac{\boldsymbol{\omega}}{e} \right) \times \boldsymbol{\omega}}_{\text{Lagrangian transport}}^{\phantom{o}} +\underbrace{\frac{\rho \mathbf{I} \boldsymbol{\omega}}{e^2} \cdot \partial_t e}_\textrm{unsteady dilation} + \underbrace{e \ \mathbf{c}}_{\substack{\text{external} \\ \text{couple}}} \end{align}}$</p>
+
+<p>Solving these equations, along with appropriate boundary conditions, allows us to model the dynamics of a single Cosserat rod. In general, there is not always an analytical solution to these equations. Instead, we use numerical methods to solve for these dynamics. For information on the numerical method we use, see <a href="../numerics">here</a>. If we want to examine how multiple rods interact, we also need to define the interactions and connections between these rods. For details on this, see <a href="../multiple-rods">here</a>.</p>
+
+<blockquote>
+  <p><strong>A note on notation:</strong> We have created a pdf with a list of the different variables we use and their connections <a href="../cosserat_rod_notation.pdf">here</a>.</p>
+</blockquote>
+
+<h4 id="linear-elasticity">Linear Elasticity</h4>
+<p>To solve the momentum balance equations, we needed to define a bending stiffness ($\mathbf{B}$) and shearing stiffness ($\mathbf{S}$). We are assuming that the rod is a perfectly elastic material with a linear stress-strain response. For an elastic beam, these stiffness matrices are diagonal 3x3 matrices:</p>
+
+<p>$\mathbf{B} = \begin{bmatrix}  E \ I_1 &amp;  &amp;  \\  &amp; E \ I_2 &amp;  \\  &amp;  &amp; G \ I_3  \end{bmatrix}  \quad  \text{ and }  \quad  \mathbf{S} = \begin{bmatrix}  \alpha_c G \ A &amp;  &amp;  \\  &amp; \alpha_c G \ A &amp;  \\  &amp;  &amp; E \ A  \end{bmatrix}$</p>
+
+<p>Here $E$ is the elastic Young’s modulus, $G$ is the shear modulus, $I_i$ is the second area moment of inertia, A is the cross sectional area and the constant $\alpha_c$ is $4/3$ (for circular cross sections). Additionally, because of the linear elastic assumption, we can define constitutive laws for both the load-strain relations as well as the torque-curvature relations. These are:</p>
+
+<p>Load-strain: $\mathbf{n} = \mathbf{S}(\boldsymbol{\sigma} - \boldsymbol{\sigma^0})$</p>
+
+<p>Torque-curvature: $\boldsymbol{\tau} = \mathbf{B}(\boldsymbol{\kappa} - \boldsymbol{\kappa^0})$</p>
+
+<p>$\boldsymbol{\sigma^0}$ and $\boldsymbol{\kappa^0}$ are reference curvatures which allow the rod to have a stress-free configuration in shapes other than a straight line.</p>
+
+<h3 id="useful-references">Useful References</h3>
+<p class="reference" style="font-size:12pt; ">
+Gazzola, Dudte, McCormick, Mahadevan, <strong>Forward and inverse problems in the mechanics of soft filaments</strong>, Royal Society Open Science, 2018. <a href="https://doi.org/10.1098/rsos.171628">doi: 10.1098/rsos.171628</a>
+</p>
+
+<p class="reference" style="font-size:12pt; ">
+Zhang, Chan, Parthasarathy, Gazzola, <strong>Modeling and simulation of complex dynamic musculoskeletal architectures</strong>, Nature Communications, 2019. <a href="https://doi.org/10.1038/s41467-019-12759-5">doi: 10.1038/s41467-019-12759-5</a>
+</p>
+
+			</article>
+		</section>
+		
+		
+		<script>
+			document.getElementById("open-nav").addEventListener("click", function () {
+				document.body.classList.toggle("nav-open");
+			});
+		</script>
+	</body>
+</html>

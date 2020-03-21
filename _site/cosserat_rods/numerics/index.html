@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Numerics | Elastica</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Numerics" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The Theory page laid out the continuum theory of Cosserat rods and presented the equations that need to be solved to model the dynamics and kinematics of the rods. In general, there is not always an analytical solution to these equations so we need to use numerical methods instead. We do this by discretizing the rod into a discrete set of nodes connected by straight line segments. Just as a continuum Cosserat rod is associated with a centerline $\mathbf{r}(t)$ and local coordinate frame $\mathbf{Q}(t)$, here the discretized Cosserat rod is defined by a collection of centerline vertices $\mathbf{r}_i(t)$ that are connected together by line segments associated with reference frames $\mathbf{Q}_i(t)$." />
+<meta property="og:description" content="The Theory page laid out the continuum theory of Cosserat rods and presented the equations that need to be solved to model the dynamics and kinematics of the rods. In general, there is not always an analytical solution to these equations so we need to use numerical methods instead. We do this by discretizing the rod into a discrete set of nodes connected by straight line segments. Just as a continuum Cosserat rod is associated with a centerline $\mathbf{r}(t)$ and local coordinate frame $\mathbf{Q}(t)$, here the discretized Cosserat rod is defined by a collection of centerline vertices $\mathbf{r}_i(t)$ that are connected together by line segments associated with reference frames $\mathbf{Q}_i(t)$." />
+<link rel="canonical" href="http://localhost:4000/cosserat_rods/numerics/" />
+<meta property="og:url" content="http://localhost:4000/cosserat_rods/numerics/" />
+<meta property="og:site_name" content="Elastica" />
+<script type="application/ld+json">
+{"description":"The Theory page laid out the continuum theory of Cosserat rods and presented the equations that need to be solved to model the dynamics and kinematics of the rods. In general, there is not always an analytical solution to these equations so we need to use numerical methods instead. We do this by discretizing the rod into a discrete set of nodes connected by straight line segments. Just as a continuum Cosserat rod is associated with a centerline $\\mathbf{r}(t)$ and local coordinate frame $\\mathbf{Q}(t)$, here the discretized Cosserat rod is defined by a collection of centerline vertices $\\mathbf{r}_i(t)$ that are connected together by line segments associated with reference frames $\\mathbf{Q}_i(t)$.","@type":"Article","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/images/elastica_logo.svg"}},"url":"http://localhost:4000/cosserat_rods/numerics/","headline":"Numerics","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+		<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Elastica" />
+		
+		<script>
+		MathJax = {
+		  tex: {
+		    inlineMath: [['$', '$'], ['\\(', '\\)']]
+		  }
+		};
+		</script>
+		<script id="MathJax-script" async
+		  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+		</script>
+
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic|Open+Sans:400,400italic,600,600italic,700,700italic|Inconsolata:400,700">
+		<link rel="stylesheet" href="/css/main.css">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" href="/touch-icon.png" sizes="192x192">
+		<link rel="icon" type="image/png" href="/images/elastica_fill_logo.svg">
+
+		
+	</head>
+
+	<body>
+
+		
+		<header>
+			<h1>
+				<a href="/"><img src="/images/elastica_fill_logo.svg" width="40" height="40" alt="Elastica logo"></a>
+				Elastica
+				<button type="button" class="open-nav" id="open-nav"></button>
+			</h1>
+
+			<form action="/search/" method="get">
+				<input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+				<input type="submit" value="Search" style="display: none;">
+			</form>
+
+			<nav class="full-navigation">
+				<ul>
+					<li class="nav-item top-level ">
+						
+						<a href="/#about">Welcome</a>
+					</li>
+				</ul>
+
+				<!-- Hard code for nav-bar-->
+				<ul>
+					<li class="nav-item top-level ">
+						<a href="/cosserat_rods/overview/">Cosserat Rods</a>
+						<ul>
+							<li class="nav-item "><a href="/cosserat_rods/theory/">Theory</a></li> 
+							<li class="nav-item "><a href="/cosserat_rods/numerics/">Numerics</a></li> 
+							<li class="nav-item "><a href="/cosserat_rods/multiple-rods/">Multiple Rods</a></li> 			
+							<li class="nav-item "><a href="/cosserat_rods/case-studies/">Case Studies</a></li> 				
+						</ul>
+					</li>
+
+					<li class="nav-item top-level ">
+						<a href="/software/elastica/">Software</a>
+						<ul>
+							<li class="nav-item "><a href="/software/pyelastica/">Pyelastica</a></li> 
+							<li class="nav-item "><a href="/software/development/">Development</a></li> 
+							<li class="nav-item "><a href="/software/FAQs/">FAQs (Under Development)</a></li> 
+						</ul>
+					</li>
+					<li class="nav-item top-level ">
+						<a href="/publications/publications/">Publications</a>
+					</li>
+					<li class="nav-item top-level ">
+						<a href="/contact/contact/">Contact</a>
+					</li>
+					<li class="nav-item top-level ">
+						<a href="/sponsors/sponsors/">Sponsors</a>
+					</li>
+				</ul>
+
+					<!-- Original script to automatically generate the nav bar. Couldn't figure out how to make it non alphabetical so just hard coding it. Obvious downside if you now need to manually update the nav-bar
+
+					
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/contact/contact/">Contact</a>
+							<ul>
+								
+									
+									
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level current">
+							
+							<a href="/cosserat_rods/overview/">Cosserat Rods</a>
+							<ul>
+								
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/cosserat_rods/theory/">Theory</a></li> 
+									
+									
+								
+									
+									
+									<li class="nav-item current"><a href="/cosserat_rods/numerics/">Numerics</a></li> 
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/cosserat_rods/multiple-rods/">Multiple Rods</a></li> 
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/cosserat_rods/case-studies/">Case Studies</a></li> 
+									
+									
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/publications/publications/">Publications</a>
+							<ul>
+								
+									
+									
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/software/elastica/">Software</a>
+							<ul>
+								
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/software/pyelastica/">Pyelastica</a></li> 
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/software/development/">Development</a></li> 
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/software/FAQs/">FAQs (Under Development)</a></li> 
+									
+									
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/sponsors/sponsors/">Sponsors</a>
+							<ul>
+								
+									
+									
+								
+							</ul>
+						</li>
+					
+				</ul>
+				-->
+				<ul> 
+					<li class="nav-item top-level ">
+						
+						<a href="/changelog/">Change Log</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		
+		<section class="main" id='main'>
+			<div class="page-header">
+				
+				<h2>Cosserat Rods</h2>
+				<h3>Numerics</h3>
+				
+			</div>
+			<article class="content">
+				<p>The <a href="../single-rods">Theory</a> page laid out the continuum theory of Cosserat rods and presented the equations that need to be solved to model the dynamics and kinematics of the rods. In general, there is not always an analytical solution to these equations so we need to use numerical methods instead. We do this by discretizing the rod into a discrete set of nodes connected by straight line segments. Just as a continuum Cosserat rod is associated with a centerline $\mathbf{r}(t)$ and local coordinate frame $\mathbf{Q}(t)$, here the discretized Cosserat rod is defined by a collection of centerline vertices $\mathbf{r}_i(t)$ that are connected together by line segments associated with reference frames $\mathbf{Q}_i(t)$.</p>
+
+<p>There are three steps to solving this problem numerically.<br />
+<a href="#spatial-discretization">1) Spatially discretize the continuum Cosserat rod equations</a><br />
+<a href="#time-discretization">2) Select a time stepping algorithm</a><br />
+<a href="#boundary-conditions-and-interaction-forces">3) Specify your boundary conditions and interaction forces to model different physical effects.</a></p>
+
+<p><img src="/images/numerics.jpg" alt="image name" width="500" /></p>
+
+<h2 id="spatial-discretization">Spatial Discretization</h2>
+<p>We associate different quantities with the nodes and the segments. At the nodes, along with the position vector $\mathbf{r}_i$ there is also velocity $\mathbf{v}_i = \partial \mathbf{r}_i/\partial t$, the pointwise mass $m_i$, and any external forces applied to the node $\bar{\mathbf{f}}_i$. There are <code class="language-plaintext highlighter-rouge">n+1</code> total nodes ($i=[0,n]$). The orientation of each segment is defined by the local reference frame $\mathbf{Q}_j(t)$ and is associated with an edge $\boldsymbol{\ell}_j = \mathbf{r}_{j+1} - \mathbf{r}_j$ which has a current length $\ell_j = |\boldsymbol{\ell}_j|$, a reference length $\hat{\ell}_j = |\boldsymbol{\hat{\ell}}_j|$, a stretch ratio $e_j = \ell_j/\hat{\ell}_j$ and a unit tangent vector $\mathbf{t}_j = \boldsymbol{\ell}_j/\ell_j$. Because the segments lay between the nodes, there are <code class="language-plaintext highlighter-rouge">n</code> number of segments ($j=[0,n-1]$).</p>
+
+<blockquote>
+  <p>Recall our notation of $\mathbf{x}$ relating to the local frame of reference and $\bar{\mathbf{x}}$ relating to the laboratory frame. We can switch between these frames using a rotation matrix $\mathbf{Q}= \{ {\mathbf{d}}_1, {\mathbf{d}}_2, {\mathbf{d}}_3 \}$, which allows us to to convert between the laboratory and local reference frames via $\mathbf{x}=\mathbf{Q}\bar{\mathbf{x}}$ and $\bar{\mathbf{x}}=\mathbf{Q}^T \mathbf{x}$.</p>
+</blockquote>
+
+<p>Along with these geometric properties we also assign a number of dynamical parameters to each segment. These are the shear/axial strain vector $\boldsymbol{\sigma}_{j} = \mathbf{Q}_j(e_j\bar{\mathbf{t}}_j)-\mathbf{d}_{3,j}$, the angular velocity $\omega_{j}$, the reference cross sectional area of the segment $\hat{A}_j$, and the mass second moment of inertia, bend/twist matrix and shear/strain matrix of the segment ($\hat{\mathbf{J}}_j$, $\hat{\mathbf{B}}_j$, and $\hat{\mathbf{S}}_j$, respectively). Finally, the external couples applied to each segment are represented as $\mathbf{c}_{j}$.</p>
+
+<p>In the continuum case, all quantities are defined point-wise, however, due to our discretization, it is better to represent some quantities, in particular the curvature $\hat{\boldsymbol{\kappa}}_{i}$, as integrated over some domain $\mathcal{D}$ along the rod. If we then divide the integrated quantity by the length of $\mathcal{D}$, it becomes equivalent to its point-wise average. We define a region $\mathcal{D}_i$ at every <em>interior</em> node ($i=[1,n-1]$) as $\mathcal{D}_i = (\ell_{i-1} + \ell_i)/2$. This region is known as a Voronoi region. At each interior node we can then define the Voronoi domain at rest $\hat{\mathcal{D}}_i$ and a dilation factor for the domain $\mathcal{E}_i = \mathcal{D}_i/\hat{\mathcal{D}}_i$. Now we can define our curvature $\hat{\boldsymbol{\kappa}}_{i}$ and, as will be clear below, we also want to define a bend/twist matrix over a Voronoi region $\hat{\mathbf{\mathcal{B}}}_i$ as well</p>
+
+<p>$\hat{\boldsymbol{\kappa}}_{i}=\frac{\log(\mathbf{Q}_i \mathbf{Q}_{i-1}^T)}{\hat{\mathcal{D}}_i} \quad \text{and} \quad \hat{\mathbf{\mathcal{B}}}_i = \frac{\hat{\mathbf{B}}_i\ell_{i} + \hat{\mathbf{B}}_{i-1}\ell_{i-1}}{2\hat{\mathcal{D}}_i}, \quad\quad i=[1,n-1]$.</p>
+
+<p>Now we have defined all the discretized quantities that we need and can write the spatially discretized form of the Cosserat rod’s equations of motion</p>
+
+<p>$\partial_t \bar{\mathbf{r}}_i = \bar{\mathbf{v}}_i \quad\quad i=[0,n]$</p>
+
+<p>$\partial_t \mathbf{d}_{k,j} = (\mathbf{Q}^T_j \boldsymbol{\omega}_{j}) \times \mathbf{d}_{k,j} \quad\quad j=[0,n-1], \ k=1,2,3$</p>
+
+<p>$m_i \cdot \partial_t \bar{\mathbf{v}}_i = \Delta^h \left( \frac{\mathbf{Q}_j^T \hat{\mathbf{S}}_j \boldsymbol{\sigma}_{j}}{e_j} \right) + \bar{\mathbf{f}}_i \quad\quad i=[0,n], \ j=[0,n-1]$</p>
+
+<p>$\begin{align}\frac{ \hat{\mathbf{J}}_j}{e_j} \cdot \partial_t \boldsymbol{\omega}_{j} = &amp;\Delta^h \left( \frac{\hat{\mathbf{\mathcal{B}}}_i \hat{\boldsymbol{\kappa}}_{i}}{\mathcal{E}_i^3} \right) + \mathcal{A}^h\left(\frac{\boldsymbol{\kappa}_{i} \times \hat{\mathbf{\mathcal{B}}}_i \boldsymbol{\kappa}_{i}}{\mathcal{E}_i^3} \hat{\mathcal{D}}_i \right)+\left( \mathbf{Q}_j \ \bar{\mathbf{t}}_j \times \hat{\mathbf{S}}_j \boldsymbol{\sigma}_{j} \right)\hat{\ell}_j + \\&amp; \left( \hat{\mathbf{J}}_j \cdot \frac{\boldsymbol{\omega}_{j}}{e_j} \right) \times\boldsymbol{\omega}_{j}+\frac{\hat{\mathbf{J}}_j \boldsymbol{\omega}_{j}}{e_j^2} \cdot \partial_t e_j + \mathbf{c}_{j} \quad\quad j=[0,n-1], \ i=[1,n-1] \end{align}$</p>
+
+<p>Here we use two special operators, the discrete difference operator $\Delta^h$ and the averaging operator $\mathcal{A}^h$. An important property of these operators is that they take $m$ points and return $m+1$ points, allowing consistency in the equations as written.</p>
+
+<p>Now that we have a method of discretizing the equations in space, we just need to implement a time stepper to evolve the equations.</p>
+
+<h2 id="time-discretization">Time Discretization</h2>
+<p>A number of different time stepping methods can be used to evolve our system. Our preferred method is a symplectic, second-order Verlet scheme. While this system of equations is in general not Hamiltonian, in the limit of $e\rightarrow1$ the system is equivalent to the classic Cosserat rod model which is Hamiltonian, justifying our use of a symplectic integrator.</p>
+
+<h2 id="boundary-conditions-and-interaction-forces">Boundary conditions and interaction forces</h2>
+<p>As with all differential equations, we need to specify appropriate initial and boundary conditions to allow us to solve the system. Generally speaking, we need to define initial conditions for position and velocity</p>
+
+<p>$\mathbf{r}_i(t=0) = \mathbf{r}_i^0 \quad \text{and} \quad \mathbf{v}_i(t=0) = \mathbf{v}_i^0$.</p>
+
+<p>We also often wish to specify a fixed point boundary condition for our rod to maintain definiteness $\mathbf{r}_0(t) = \mathbf{r}_0$.</p>
+
+<p>Along with these conditions, we want to be able to include different physical effects which will allow us to model how our system interacts with a complex environment. A number of these physical interactions have been defined including internal dissipation, muscular activity, self-contact, interaction with solid bodies, static and kinematic friction and hydrodynamic forces. For details on these how these interaction forces are modeled, see Section 4 of <a href="http://mattia-lab.com/wp-content/uploads/2018/06/Gazzola_RSOS_2018.pdf">Gazzola et al (2018)</a>.</p>
+
+<p>As a general strategy, we divide these interactions into external and internal interactions. The external interactions are accounted for by combining their contributions into the external forces and couples terms $\bar{\mathbf{f}}$ and $\mathbf{c}$. Similarly, internal effects are directly added the the internal force and torque terms $\mathbf{n}$ and $\boldsymbol{\tau}$.</p>
+
+<!--
+#### Dissipation
+Real materials have internal friction and viscoelastic losses which lead to energy dissipation. A simple method of modeling this dissipation is with Rayleigh potentials, which while not directly modeling the underlying mechanism, does an adequate job of representing the energy loss due to these friction effects. Viscous forces and torques per unit length ($\mathbf{f}_\nu$ and $\mathbf{c}\_\mathcal{L}$) are computed as linear function of the linear and angular velocities along with a constant representing the translations and rotational internal friction coefficients ($\gamma_t$ and $\gamma_r$)
+
+$\mathbf{f}\_{\nu} = -\gamma_t \mathbf{v}$
+
+$\mathbf{c}\_{\mathcal{L},\nu} = -\gamma_r \boldsymbol{\omega}\_\mathcal{L}$
+
+Generally, we use a single dissipation constant such at $\gamma = \gamma_t = \gamma_r$.
+
+#### Muscular activity
+
+#### Self-contact
+
+#### Interaction with solid boundaries
+
+#### Friction
+
+#### Hydrodynamics
+-->
+
+<h3 id="useful-references">Useful References</h3>
+<p class="reference" style="font-size:12pt; ">
+Gazzola, Dudte, McCormick, Mahadevan, <strong>Forward and inverse problems in the mechanics of soft filaments</strong>, Royal Society Open Science, 2018. <a href="https://doi.org/10.1098/rsos.171628">doi: 10.1098/rsos.171628</a>
+</p>
+
+			</article>
+		</section>
+		
+		
+		<script>
+			document.getElementById("open-nav").addEventListener("click", function () {
+				document.body.classList.toggle("nav-open");
+			});
+		</script>
+	</body>
+</html>
