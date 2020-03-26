@@ -10,7 +10,9 @@ If you have multiple rods, it is important to properly define how they interact.
 # Joints
 When we define an interaction between nodes at the ends of two rods, we create a joint. The simplest joint we can create is a spherical joint where the rods are free to rotate and twist relative to each other. Additional constraints can also be added to restrict this movement such as limiting rotations of the rods to create a hinge joint or even fixing the relative positions of the rod to create a fixed joint. While in the description below we generally defined the correcting forces and torques as being applied to one of the rods ($R_2$) in reference to the position of another rod ($R_1$), it is important to note that the correcting forces and torques are applied to both rods, which can be seen by swapping the positions of $R_1$ and $R_2$ below. 
 
-The correcting forces and torques that transformed into the local frame and stored in the external force $\mathbf{f}$ and external couple $\mathbf{c}$.
+All correcting forces and torques are computed in the global reference frame. The correcting forces are added to the net external force vector $\bar{\mathbf{f}}$ in the laboratory reference frame while torques are transformed to the local frame and applied via the net external couple term $\mathbf{c}$.
+
+> To simplify the notation, all vectors below this note are expressed in the global reference frame, even though they do not have the overbar notation used elsewhere. Before being applied, the torques will still need to be transformed to the local reference frame. 
 
 ### Spherical Joint
 <img src="/images/spherical_joint.png" alt="image name" width="300"/>

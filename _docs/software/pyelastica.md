@@ -23,7 +23,7 @@ Pyelastica uses Python 3, which needs to be installed prior to using Pylastica. 
 
 >The easiest way to install Pyelastica is with PIP: `pip install pyelastica` (**not yet implemented**)
 
-You can also download the source code for Pyelastica directly from [GitHub](link_to_github). 
+You can also download the source code for Pyelastica directly from [GitHub](https://github.com/mattialabteam/elastica-python). 
 
 ## Documentation
 #### (Under Development)
@@ -215,7 +215,7 @@ Currently, all data saved from call back functions is saved in RAM. If you have 
 ### (Under Development)
 We are creating a number of Jupyter Notebooks and python scripts to help get users started with using Pyelastica. Our goal is to upload the notebooks to [Binder](link-to-binder-notebooks), allowing you to try out some of the tutorials without having to install Pyelastica. 
 
->Additional examples are also available in the examples folder of Pyelastica's [Github repo](link-to-github-repo).
+>Additional examples are also available in the examples folder of Pyelastica's [Github repo](https://github.com/mattialabteam/elastica-python).
 
 
 # Visualization
