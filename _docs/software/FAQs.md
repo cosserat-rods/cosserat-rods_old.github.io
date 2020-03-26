@@ -11,12 +11,15 @@ While we are actively developing Elastica, currently we have limited ability to 
 
 >How should I cite Elastica?
 
-We ask that any publications which uses Elastica cite the following papers:
-<p class="reference" style="font-size:12pt; ">
+<p class="reference" style="font-size:14pt; ">
+We ask that any publications which uses Elastica cite the following papers:  
+</p>
+
+<p class="reference" style="font-size:11pt; ">
 Zhang, Chan, Parthasarathy, Gazzola, <strong>Modeling and simulation of complex dynamic musculoskeletal architectures</strong>, Nature Communications, 2019. <a href="https://doi.org/10.1038/s41467-019-12759-5">doi: 10.1038/s41467-019-12759-5</a>
 </p>
 
-<p class="reference" style="font-size:12pt; ">
+<p class="reference" style="font-size:11pt; ">
 Gazzola, Dudte, McCormick, Mahadevan, <strong>Forward and inverse problems in the mechanics of soft filaments</strong>, Royal Society Open Science, 2018. <a href="https://doi.org/10.1098/rsos.171628">doi: 10.1098/rsos.171628</a>
 </p> 
 

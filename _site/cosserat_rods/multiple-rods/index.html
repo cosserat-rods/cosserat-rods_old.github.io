@@ -5,6 +5,16 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118710092-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-118710092-2');
+</script>
+
 		<!-- Begin Jekyll SEO tag v2.5.0 -->
 <title>Multiple Rods | Elastica</title>
 <meta name="generator" content="Jekyll v3.8.5" />
@@ -42,11 +52,10 @@
 	</head>
 
 	<body>
-
 		
 		<header>
-			<h1>
-				<a href="/"><img src="/images/elastica_fill_logo.svg" width="40" height="40" alt="Elastica logo"></a>
+			<h1> 
+				<a href=""><img src="/images/elastica_fill_logo.svg" width="40" height="40" alt="Elastica logo"></a>
 				Elastica
 				<button type="button" class="open-nav" id="open-nav"></button>
 			</h1>
@@ -60,9 +69,10 @@
 				<ul>
 					<li class="nav-item top-level ">
 						
-						<a href="/#about">Welcome</a>
+						<a href="#about">Welcome</a>
 					</li>
 				</ul>
+
 
 				<!-- Hard code for nav-bar-->
 				<ul>
@@ -220,7 +230,11 @@
 <h1 id="joints">Joints</h1>
 <p>When we define an interaction between nodes at the ends of two rods, we create a joint. The simplest joint we can create is a spherical joint where the rods are free to rotate and twist relative to each other. Additional constraints can also be added to restrict this movement such as limiting rotations of the rods to create a hinge joint or even fixing the relative positions of the rod to create a fixed joint. While in the description below we generally defined the correcting forces and torques as being applied to one of the rods ($R_2$) in reference to the position of another rod ($R_1$), it is important to note that the correcting forces and torques are applied to both rods, which can be seen by swapping the positions of $R_1$ and $R_2$ below.</p>
 
-<p>The correcting forces and torques that transformed into the local frame and stored in the external force $\mathbf{f}$ and external couple $\mathbf{c}$.</p>
+<p>All correcting forces and torques are computed in the global reference frame. The correcting forces are added to the net external force vector $\bar{\mathbf{f}}$ in the laboratory reference frame while torques are transformed to the local frame and applied via the net external couple term $\mathbf{c}$.</p>
+
+<blockquote>
+  <p>To simplify the notation, all vectors below this note are expressed in the global reference frame, even though they do not have the overbar notation used elsewhere. Before being applied, the torques will still need to be transformed to the local reference frame.</p>
+</blockquote>
 
 <h3 id="spherical-joint">Spherical Joint</h3>
 <p><img src="/images/spherical_joint.png" alt="image name" width="300" /></p>

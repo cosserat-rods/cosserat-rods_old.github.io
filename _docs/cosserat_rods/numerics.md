@@ -5,7 +5,7 @@ category_order: 1
 order: 2
 ---
 
-The [Theory](../single-rods) page laid out the continuum theory of Cosserat rods and presented the equations that need to be solved to model the dynamics and kinematics of the rods. In general, there is not always an analytical solution to these equations so we need to use numerical methods instead. We do this by discretizing the rod into a discrete set of nodes connected by straight line segments. Just as a continuum Cosserat rod is associated with a centerline $\mathbf{r}(t)$ and local coordinate frame $\mathbf{Q}(t)$, here the discretized Cosserat rod is defined by a collection of centerline vertices $\mathbf{r}_i(t)$ that are connected together by line segments associated with reference frames $\mathbf{Q}_i(t)$. 
+The [Theory](../theory) page laid out the continuum theory of Cosserat rods and presented the equations that need to be solved to model the dynamics and kinematics of the rods. In general, there is not always an analytical solution to these equations so we need to use numerical methods instead. We do this by discretizing the rod into a discrete set of nodes connected by straight line segments. Just as a continuum Cosserat rod is associated with a centerline $\mathbf{r}(t)$ and local coordinate frame $\mathbf{Q}(t)$, here the discretized Cosserat rod is defined by a collection of centerline vertices $\mathbf{r}_i(t)$ that are connected together by line segments associated with reference frames $\mathbf{Q}_i(t)$. 
 
 There are three steps to solving this problem numerically.  
 [1) Spatially discretize the continuum Cosserat rod equations](#spatial-discretization)  
@@ -53,7 +53,7 @@ $\mathbf{r}_i(t=0) = \mathbf{r}_i^0 \quad \text{and} \quad \mathbf{v}_i(t=0) = \
 
 We also often wish to specify a fixed point boundary condition for our rod to maintain definiteness $\mathbf{r}_0(t) = \mathbf{r}_0$.
 
-Along with these conditions, we want to be able to include different physical effects which will allow us to model how our system interacts with a complex environment. A number of these physical interactions have been defined including internal dissipation, muscular activity, self-contact, interaction with solid bodies, static and kinematic friction and hydrodynamic forces. For details on these how these interaction forces are modeled, see Section 4 of [Gazzola et al (2018)](http://mattia-lab.com/wp-content/uploads/2018/06/Gazzola_RSOS_2018.pdf).
+Along with these conditions, we want to be able to include different physical effects which will allow us to model how our system interacts with a complex environment. A number of these physical interactions have been defined including internal dissipation, muscular activity, self-contact, interaction with solid bodies, static and kinematic friction and hydrodynamic forces. For details on these how these interaction forces are modeled, see Section 4 of [Gazzola et al (2018)](https://royalsocietypublishing.org/doi/10.1098/rsos.171628).
 
 As a general strategy, we divide these interactions into external and internal interactions. The external interactions are accounted for by combining their contributions into the external forces and couples terms $\bar{\mathbf{f}}$ and $\mathbf{c}$. Similarly, internal effects are directly added the the internal force and torque terms $\mathbf{n}$ and $\boldsymbol{\tau}$. 
 
