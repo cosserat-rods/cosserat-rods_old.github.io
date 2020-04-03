@@ -2,8 +2,12 @@
 title: Welcome
 ---
 
->**Elastica** is a *free* and *open-source* software project for the simulation of slender one-dimensional bodies using Cosserat Rod theory. 
+>**Elastica** is a *free* and *open-source* software project for the simulation of assemblies of slender, one-dimensional bodies using Cosserat Rod theory. 
 
+
+Elastica is developed by the [mattiaLab](http://mattia-lab.com/) at the University of Illinois at Urbana-Champaign. We bring together theory, computing, and experiments for the discovery of rational design principles. 
+
+<!--
 <p class="small_margin">
     <a href="/cosserat_rods/case-studies"> <strong> See examples of how modeling Cosserat Rods with Elastica has enabled new scientific discoveries</strong></a>
 </p>
@@ -14,3 +18,4 @@ title: Welcome
 <br/>   
 <a href="/software/elastica/"><strong>Elastica Software</strong></a> 
 </p>
+--> 

@@ -72,7 +72,7 @@
 				<input type="submit" value="Search" style="display: none;">
 			</form>
 
-			<nav {% if site.show_full_navigation %}class="full-navigation"{% endif %}>
+			<nav {% if site.show_full_navigation %}class="full-navigation WhateverYourNavIs"{% endif %}>
 				<ul>
 					<li class="nav-item top-level {% if page.url == '/' %}current{% endif %}">
 						{% assign home = site.html_pages | where: 'url', '/' | first %}
@@ -82,7 +82,7 @@
 
 
 				<!-- Hard code for nav-bar-->
-				<ul>
+				<ul> 
 					<li class="nav-item top-level ">
 						<a href="/cosserat_rods/overview/">Cosserat Rods</a>
 						<ul>
@@ -91,6 +91,10 @@
 							<li class="nav-item "><a href="/cosserat_rods/multiple-rods/">Multiple Rods</a></li> 			
 							<li class="nav-item "><a href="/cosserat_rods/case-studies/">Case Studies</a></li> 				
 						</ul>
+					</li>
+
+					<li class="nav-item top-level ">
+						<a href="/elastica+control/">Elastica + Control</a>
 					</li>
 
 					<li class="nav-item top-level ">
@@ -103,6 +107,9 @@
 					</li>
 					<li class="nav-item top-level ">
 						<a href="/publications/publications/">Publications</a>
+					</li>
+					<li class="nav-item top-level ">
+						<a href="/publications/press/">Press</a>
 					</li>
 					<li class="nav-item top-level ">
 						<a href="/contact/contact/">Contact</a>
@@ -137,6 +144,12 @@
 						{% assign changelog = site.html_pages | where: 'url', '/changelog/' | first %}
 						<a href="{{ site.baseurl }}/changelog/">{{ changelog.title }}</a>
 					</li>
+					<li class="nav-item top-level ">
+						<a href="https://github.com/mattialabteam">Github</a>
+					</li>
+					<li class="nav-item top-level ">
+						<a > </a>
+					</li>
 				</ul>
 			</nav>
 		</header>
@@ -144,26 +157,41 @@
 		<div id="about"></div>
 		{% endif %}
 		<section class="main" id='main'>
-			<div class="page-header">
+			
 				{% if page.url == "/" %}
-				<h3>Elastica</h3>
-				<h2>An open-source software package for simulations of Cosserat Rods</h2>
-				{% else %}
-				<h2>{% if page.category %}{{ page.category }}{% else %}{{ site.title }}{% endif %}</h2>
-				<h3>{{ page.title }}</h3>
-				{% endif %}
+			<div style="height:100vh;position: relative;">
+				<div class="page-header">
+					<h3>Elastica</h3>
+					<h2>An open-source software package for simulations of Cosserat Rods</h2>
+				</div>
+			
+				<article class="content">
+					{{ content }}
+				</article> 
+				<div class="bottom_div">
+				<img src="/images/sponsors_row.png" class="center_row_image" > 
+				</div>
 			</div>
-			<article class="content">
-				{{ content }}
-			</article>
+				
+				{% else %}
+				<div class="page-header">
+					<h2>{% if page.category %}{{ page.category }}{% else %}{{ site.title }}{% endif %}</h2>
+					<h3>{{ page.title }}</h3>
+				</div>
+				<article class="content">
+					{{ content }}
+				</article>		
+
+				{% endif %}
+				
+
 		</section>
 		{% if page.url == "/" %}
-		<img src="/images/elastica_logo_stretched.png" class="center_smallest"/>
-		<img src="/images/logos_updated.png" class="center_small" style="padding-top:20pt"> 
-		<br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+		<!-- <img src="/images/elastica_logo_stretched.png" class="center_smallest"/> -->
+
 		{% endif %}
 		{% if page.url == "/sponsors/sponsors/" %}
-		<img src="/images/logos_updated.png" class="center"> 
+		<img src="/images/sponsors_grid.png" class="center_small"> 
 		{% endif %}
 		<script>
 			document.getElementById("open-nav").addEventListener("click", function () {

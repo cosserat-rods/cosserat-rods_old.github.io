@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118710092-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-118710092-2');
+</script>
+
+		<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Elastica + Control | Elastica</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Elastica + Control" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Problem Statement The objective is to train a model to move a (cyber)-octopus with two soft arms and a head to reach a target location, and then grab an object. The octopus is modeled as an assembly of Cosserat rods and is activated by muscles surrounding its arms. Input to the mechanical model is the activation signals to the surrounding muscles, which causes it to contract, thus moving the arms. The output of the model comes from the octopus’ environment. The mechanical model will be provided both for the octopus and its interaction with its environment. The goal is to find the correct muscle activation signals that make the octopus crawl to reach the target location and then make one arm to grab the object." />
+<meta property="og:description" content="Problem Statement The objective is to train a model to move a (cyber)-octopus with two soft arms and a head to reach a target location, and then grab an object. The octopus is modeled as an assembly of Cosserat rods and is activated by muscles surrounding its arms. Input to the mechanical model is the activation signals to the surrounding muscles, which causes it to contract, thus moving the arms. The output of the model comes from the octopus’ environment. The mechanical model will be provided both for the octopus and its interaction with its environment. The goal is to find the correct muscle activation signals that make the octopus crawl to reach the target location and then make one arm to grab the object." />
+<link rel="canonical" href="http://localhost:4000/elastica+control/" />
+<meta property="og:url" content="http://localhost:4000/elastica+control/" />
+<meta property="og:site_name" content="Elastica" />
+<script type="application/ld+json">
+{"description":"Problem Statement The objective is to train a model to move a (cyber)-octopus with two soft arms and a head to reach a target location, and then grab an object. The octopus is modeled as an assembly of Cosserat rods and is activated by muscles surrounding its arms. Input to the mechanical model is the activation signals to the surrounding muscles, which causes it to contract, thus moving the arms. The output of the model comes from the octopus’ environment. The mechanical model will be provided both for the octopus and its interaction with its environment. The goal is to find the correct muscle activation signals that make the octopus crawl to reach the target location and then make one arm to grab the object.","@type":"Article","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/images/elastica_logo.svg"}},"url":"http://localhost:4000/elastica+control/","headline":"Elastica + Control","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+		<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Elastica" />
+		
+		<script>
+		MathJax = {
+		  tex: {
+		    inlineMath: [['$', '$'], ['\\(', '\\)']]
+		  }
+		};
+		</script>
+		<script id="MathJax-script" async
+		  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+		</script>
+
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic|Open+Sans:400,400italic,600,600italic,700,700italic|Inconsolata:400,700">
+		<link rel="stylesheet" href="/css/main.css">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" href="/touch-icon.png" sizes="192x192">
+		<link rel="icon" type="image/png" href="/images/elastica_fill_logo.svg">
+
+		
+	</head>
+
+	<body>
+		
+		<header>
+			<h1> 
+				<a href=""><img src="/images/elastica_fill_logo.svg" width="40" height="40" alt="Elastica logo"></a>
+				Elastica
+				<button type="button" class="open-nav" id="open-nav"></button>
+			</h1>
+
+			<form action="/search/" method="get">
+				<input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+				<input type="submit" value="Search" style="display: none;">
+			</form>
+
+			<nav class="full-navigation WhateverYourNavIs">
+				<ul>
+					<li class="nav-item top-level ">
+						
+						<a href="#about">Welcome</a>
+					</li>
+				</ul>
+
+
+				<!-- Hard code for nav-bar-->
+				<ul> 
+					<li class="nav-item top-level ">
+						<a href="/cosserat_rods/overview/">Cosserat Rods</a>
+						<ul>
+							<li class="nav-item "><a href="/cosserat_rods/theory/">Theory</a></li> 
+							<li class="nav-item "><a href="/cosserat_rods/numerics/">Numerics</a></li> 
+							<li class="nav-item "><a href="/cosserat_rods/multiple-rods/">Multiple Rods</a></li> 			
+							<li class="nav-item "><a href="/cosserat_rods/case-studies/">Case Studies</a></li> 				
+						</ul>
+					</li>
+
+					<li class="nav-item top-level ">
+						<a href="/elastica+control/">Elastica + Control</a>
+					</li>
+
+					<li class="nav-item top-level ">
+						<a href="/software/elastica/">Software</a>
+						<ul>
+							<li class="nav-item "><a href="/software/pyelastica/">Pyelastica</a></li> 
+							<li class="nav-item "><a href="/software/development/">Development</a></li> 
+							<li class="nav-item "><a href="/software/FAQs/">FAQs (Under Development)</a></li> 
+						</ul>
+					</li>
+					<li class="nav-item top-level ">
+						<a href="/publications/publications/">Publications</a>
+					</li>
+					<li class="nav-item top-level ">
+						<a href="/publications/press/">Press</a>
+					</li>
+					<li class="nav-item top-level ">
+						<a href="/contact/contact/">Contact</a>
+					</li>
+					<li class="nav-item top-level ">
+						<a href="/sponsors/sponsors/">Sponsors</a>
+					</li>
+				</ul>
+
+					<!-- Original script to automatically generate the nav bar. Couldn't figure out how to make it non alphabetical so just hard coding it. Obvious downside if you now need to manually update the nav-bar
+
+					
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/contact/contact/">Contact</a>
+							<ul>
+								
+									
+									
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/cosserat_rods/overview/">Cosserat Rods</a>
+							<ul>
+								
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/cosserat_rods/theory/">Theory</a></li> 
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/cosserat_rods/numerics/">Numerics</a></li> 
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/cosserat_rods/multiple-rods/">Multiple Rods</a></li> 
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/cosserat_rods/case-studies/">Case Studies</a></li> 
+									
+									
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/elastica+control/"></a>
+							<ul>
+								
+									
+									
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/publications/press/"><span style="padding-left:20px"></a>
+							<ul>
+								
+									
+									
+								
+									
+									
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/publications/publications/">Publications</a>
+							<ul>
+								
+									
+									
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/software/elastica/">Software</a>
+							<ul>
+								
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/software/pyelastica/">Pyelastica</a></li> 
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/software/development/">Development</a></li> 
+									
+									
+								
+									
+									
+									<li class="nav-item "><a href="/software/FAQs/">FAQs (Under Development)</a></li> 
+									
+									
+								
+							</ul>
+						</li>
+					
+				</ul>
+				-->
+				<ul> 
+					<li class="nav-item top-level ">
+						
+						<a href="/changelog/">Change Log</a>
+					</li>
+					<li class="nav-item top-level ">
+						<a href="https://github.com/mattialabteam">Github</a>
+					</li>
+					<li class="nav-item top-level ">
+						<a > </a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		
+		<section class="main" id='main'>
+			
+				
+				<div class="page-header">
+					<h2>Elastica</h2>
+					<h3>Elastica + Control</h3>
+				</div>
+				<article class="content">
+					<h2 id="problem-statement">Problem Statement</h2>
+<p>The objective is to train a model to move a (cyber)-octopus with two soft arms and a head to reach a target location, and then grab an object. The octopus is modeled as an assembly of Cosserat rods and is activated by muscles surrounding its arms. Input to the mechanical model is the activation signals to the surrounding muscles, which causes it to contract, thus moving the arms. The output of the model comes from the octopus’ environment. The mechanical model will be provided both for the octopus and its interaction with its environment. The goal is to find the correct muscle activation signals that make the octopus crawl to reach the target location and then make one arm to grab the object.</p>
+
+<h2 id="progression-of-specific-goals">Progression of specific goals</h2>
+<p>These goals build on each other, you need to successfully accomplish all prior goals to get credit for later goals.</p>
+
+<p>1) Make your octopus crawl to the target location.<br />
+2) Have your octopus grab the object by wrapping one arm around the object.<br />
+3) Make your octopus return to its starting location with the object.<br />
+4) Generalize your policy to perform these tasks for an arbitrarily located object. <br />
+5) Have your octopus be the fastest to accomplish these tasks.</p>
+
+<h2 id="problem-context">Problem Context</h2>
+<p>Octopuses have flexible limbs made up of muscles with no internal bone structure. These limbs, know as muscular hydrostats, have an almost infinite number of degrees of freedom, allowing an octopus to perform complex actions with its arms, but also making them difficult to mathematically model. Attempts to model octopus arms are motivated not only by a desire to understand them biologically, but also to adapt their control ability and decision making processes to the rapidly developing field of soft robotics. We have developed a simulation package Elastica that models flexible 1-d rods, which can be used to represent octopus arms as a long, slender rod. We now want to learn methods for controlling these arms.</p>
+
+<p>You are being provided with a model of an octopus that consists of two arms connected by a head. Each arm can be controlled independently. These arms are actuated through the contraction of muscles in the arms. This muscle activation produces a torque profile along the arm, resulting in movement of the arm. The arms interact with the ground through friction. You goal is to teach the octopus to crawl towards an object, grab it, and bring it back to where the octopus started.</p>
+
+<h2 id="controlling-octopus-arms-with-hierarchical-basis-functions">Controlling octopus arms with hierarchical basis functions</h2>
+<p>For this problem, we abstract the activation of the octopus muscles to the generation of a torque profile defined by the activation of a set of hierarchical radial basis function. Here we are using Gaussian basis functions.</p>
+
+<p><img src="basis.png" alt="" /></p>
+
+<p><img src="rotation.png" alt="" /></p>
+
+<p>There are three levels of these basis functions, with 1 basis function in the first level, 2 in the second lever and 4 in the third, leading to 7 basis functions in set. These levels have different maximum levels of activation. The lower levels have larger magnitudes than the higher levels, meaning they represent bulk motion of the rod while the higher levels allow finer control of the rod along the interval. In the code, the magnitude of each level will be fixed but you can choose the amount of activation at each level by setting the activation level between -1 and 1.</p>
+
+<p>There are two bending modes (in the normal and binormal directions) and a twisting mode (in the tangent direction), so we define torques in these three different directions and independently for each arm. This yields six different sets of basis functions that can be activated for a total of 42 inputs.</p>
+
+<h2 id="overview-of-provided-elastica-code">Overview of provided Elastica code</h2>
+<p>We are providing you the Elastica software package which is written in Python. Elastica simulates the dynamics and kinematics of 1-d slender rods. We have set up the model for you such that you do not need to worry about the details of the model, only the activation patterns of the muscle. In the provided <code class="language-plaintext highlighter-rouge">two_arm_octopus_ai_imp.py</code> file you will import the <code class="language-plaintext highlighter-rouge">Environment</code> class which will define and setup the simulation.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Environment</code> has three relevant functions:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Environment.reset(self)</code>:  setups and initializes the simulation environment. Call this prior to running any simulations.</li>
+  <li><code class="language-plaintext highlighter-rouge">Environment.step(self, activation_array_list, time)</code>: takes one timestep for muscle activations defined in <code class="language-plaintext highlighter-rouge">activation_array_list</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">Environment.post_processing(self, filename_video)</code>: Makes 3D video based on saved data from simulation. Requires <code class="language-plaintext highlighter-rouge">ffmpeg</code>.<br />
+We do not suggest changing too much in this function has it may cause unintended consequences to the simulation.</li>
+</ul>
+
+<p>You will want to work within <code class="language-plaintext highlighter-rouge">main()</code> to interface with the simulations and develop your learning model. In <code class="language-plaintext highlighter-rouge">main()</code>, the first thing you need to define is the length of your simulation and initialize the environment. <code class="language-plaintext highlighter-rouge">final_time</code> is the length of time that your simulation will run unless exited early. You want to give your octopus enough time to complete the task, but too much time will lead to excessively long simulation times.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1"># Set simulation integrator type, final time and time step
+</span>    <span class="n">timestepper</span> <span class="o">=</span> <span class="n">PositionVerlet</span><span class="p">()</span>  <span class="c1"># Do not edit
+</span>    <span class="n">final_time</span> <span class="o">=</span> <span class="mf">10.0</span>
+
+    <span class="c1"># Initialize the environment
+</span>    <span class="n">env</span> <span class="o">=</span> <span class="n">Environment</span><span class="p">(</span><span class="n">timestepper</span><span class="p">,</span> <span class="n">COLLECT_DATA</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">total_steps</span><span class="p">,</span> <span class="n">systems</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>With your system initialized, you are now ready to perform the simulation. To perform the simulation there are two steps:<br />
+1) Evaluate the reward function and define the basis function activations
+2) Perform time step</p>
+
+<p>There is also a user defined stopping condition. When met, this will immediately end the simulation. This can be useful to end the simulation if the octopus successfully complete the task early, or has a sufficiently low reward function that there is no point continuing the simulation.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">total_steps</span><span class="p">)):</span>
+        <span class="s">""" Add your learning algorithm here to define activation """</span>
+        <span class="c1"># This will be based on your observations of the system and 
+</span>        <span class="c1"># evaluation of your reward function.  
+</span>        <span class="n">shearable_rod</span> <span class="o">=</span> <span class="n">systems</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">rigid_body</span> <span class="o">=</span> <span class="n">systems</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>   
+        <span class="n">reward</span> <span class="o">=</span> <span class="n">reward_function</span><span class="p">()</span>   
+        <span class="n">activation</span> <span class="o">=</span> <span class="n">segment_activation_function</span><span class="p">()</span>
+
+        <span class="s">""" Perform time step """</span>
+        <span class="n">time</span><span class="p">,</span> <span class="n">systems</span><span class="p">,</span> <span class="n">done</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">activation</span><span class="p">,</span> <span class="n">time</span><span class="p">)</span>
+
+        <span class="s">""" User defined condition to exit simulation loop """</span>
+        <span class="n">done</span> <span class="o">=</span> <span class="n">user_defined_condition_function</span><span class="p">(</span><span class="n">reward</span><span class="p">,</span> <span class="n">systems</span><span class="p">,</span> <span class="n">time</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">done</span><span class="p">:</span>
+            <span class="k">break</span>
+</code></pre></div></div>
+
+<p>It is important to properly define the activation function. It consists of a list of lists defining the activation of the two arms in each of the the three modes of deformation. The activation function should be a list with three entries for the three modes of deformation. Each of these entries is in turn a list with two entries, which are arrays of the basis function activations for the two arms.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">activation</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span><span class="n">arm_1_normal</span><span class="p">,</span>   <span class="n">arm_2_normal</span><span class="p">],</span>    <span class="c1"># activation in normal direction
+</span>        <span class="p">[</span><span class="n">arm_1_binormal</span><span class="p">,</span> <span class="n">arm_2_binormal</span><span class="p">],</span>  <span class="c1"># activation in binormal direction
+</span>        <span class="p">[</span><span class="n">arm_1_tangent</span><span class="p">,</span>  <span class="n">arm_2_tangent</span><span class="p">],</span>   <span class="c1"># activation in tangent direction
+</span>        <span class="p">]</span>
+</code></pre></div></div>
+
+<p>Each activation array has 7 entries that relate to the activation of different basis functions. The ordering goes from the top level to the bottom level of the hierarchy. Each entry can vary from -1 to 1.</p>
+
+<p><code class="language-plaintext highlighter-rouge">activation_array[0]  </code> – One top level muscle segment<br />
+<code class="language-plaintext highlighter-rouge">activation_array[1:3]</code> – Two mid level muscle segment<br />
+<code class="language-plaintext highlighter-rouge">activation_array[3:7]</code> – Four bottom level muscle segment</p>
+
+<h4 id="a-few-practical-notes">A few practical notes</h4>
+<p>1) To save a video of the octopus with <code class="language-plaintext highlighter-rouge">Environment.post_processing()</code>, you need to install <code class="language-plaintext highlighter-rouge">ffmeg</code>. You can download and install it <a href="https://www.ffmpeg.org/">here</a>.</p>
+
+<p>2) The timestep size is set to 40 $\mu s$. This is necessary to keep the simulation stable, however, you may not need to update your muscle activations that often.</p>
+
+<p>3) There is a 15-20 second startup delay while the simulation is initialized. This is a one time cost whenever the Python script is run and resetting the simulation using <code class="language-plaintext highlighter-rouge">.rest()</code> does not incur this delay for subsequent simulations.</p>
+
+
+				</article>		
+
+				
+				
+
+		</section>
+		
+		
+		<script>
+			document.getElementById("open-nav").addEventListener("click", function () {
+				document.body.classList.toggle("nav-open");
+			});
+		</script>
+	</body>
+</html>

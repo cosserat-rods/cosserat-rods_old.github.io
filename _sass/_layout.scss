@@ -233,10 +233,15 @@ nav > ul {
 	}
 }
 
+.WhateverYourNavIs {
+      max-height: calc(100vh - 9rem);
+      overflow-y: auto;
+ }
+
 .nav-item {
 	display: block;
 	font-family: "Open Sans", sans-serif;
-	line-height: 1;
+	line-height: 0.6;
 	margin: 0;
 
 	nav:not(.full-navigation) & > ul {
@@ -262,7 +267,7 @@ nav > ul {
 	}
 
 	&.top-level > a {
-		line-height: 1.1;
+		line-height: 0.75;
 		font-weight: 600;
 		padding-left: $space;
 	}
@@ -472,7 +477,9 @@ img {
 
 
 
-
+// The code below this was added by Noel Naughton and mostly hacked together to get things to work.
+// Sorry in advance for how bad everything is, I was learning as I went. Things are not systematic
+// and mostly just one off solutions for everything. 
 
 
 .FlexEmbed {
@@ -550,6 +557,18 @@ img {
   margin-right: auto;
   margin-top: 10vh; 
   width: 95%;
+}
+
+.center_row_image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+}
+
+.bottom_div {
+  bottom: 10vh;
+  position: absolute;
 }
 
 .center_small {

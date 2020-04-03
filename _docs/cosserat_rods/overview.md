@@ -9,7 +9,8 @@ Many natural and artificial systems can be viewed as made up of soft, slender st
 
 When the length of such structures is much larger than the radius (L/r >> 1), the structure can be viewed as a 1-dimensional rod, allowing substantial simplification of its mathematical treatment. Cosserat rods are a mathemetical description of such 1-dimensional slender structures that incorporates the effects of bending, twisting, stretching and shearing. This allows Cosserat rods to describe the effects of all six degrees of freedom of the rod. These Cosserat rods can be modeled as single rods or can also be combined to model more complex systems such as a collection of muscle fibers. 
 
-For more information on Cosserat rods see:  
+For more information on Cosserat rods see: 
+<div style="margin-top:-15pt"> </div>
 [**Single Rods**](../theory/) -- Information on theory behind Cosserat rods.  
 [**Multiple Rods**](../multiple-rods/) -- How to combine multiple rods to create more complex systems.  
 [**Numerics**](../numerics) -- Details on the numerical method we use to solve these systems.  

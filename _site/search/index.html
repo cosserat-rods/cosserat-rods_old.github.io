@@ -65,7 +65,7 @@
 				<input type="submit" value="Search" style="display: none;">
 			</form>
 
-			<nav class="full-navigation">
+			<nav class="full-navigation WhateverYourNavIs">
 				<ul>
 					<li class="nav-item top-level ">
 						
@@ -75,7 +75,7 @@
 
 
 				<!-- Hard code for nav-bar-->
-				<ul>
+				<ul> 
 					<li class="nav-item top-level ">
 						<a href="/cosserat_rods/overview/">Cosserat Rods</a>
 						<ul>
@@ -84,6 +84,10 @@
 							<li class="nav-item "><a href="/cosserat_rods/multiple-rods/">Multiple Rods</a></li> 			
 							<li class="nav-item "><a href="/cosserat_rods/case-studies/">Case Studies</a></li> 				
 						</ul>
+					</li>
+
+					<li class="nav-item top-level ">
+						<a href="/elastica+control/">Elastica + Control</a>
 					</li>
 
 					<li class="nav-item top-level ">
@@ -96,6 +100,9 @@
 					</li>
 					<li class="nav-item top-level ">
 						<a href="/publications/publications/">Publications</a>
+					</li>
+					<li class="nav-item top-level ">
+						<a href="/publications/press/">Press</a>
 					</li>
 					<li class="nav-item top-level ">
 						<a href="/contact/contact/">Contact</a>
@@ -157,6 +164,31 @@
 					
 						<li class="nav-item top-level ">
 							
+							<a href="/elastica+control/"></a>
+							<ul>
+								
+									
+									
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/publications/press/"><span style="padding-left:20px"></a>
+							<ul>
+								
+									
+									
+								
+									
+									
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
 							<a href="/publications/publications/">Publications</a>
 							<ul>
 								
@@ -195,17 +227,6 @@
 							</ul>
 						</li>
 					
-						<li class="nav-item top-level ">
-							
-							<a href="/sponsors/sponsors/">Sponsors</a>
-							<ul>
-								
-									
-									
-								
-							</ul>
-						</li>
-					
 				</ul>
 				-->
 				<ul> 
@@ -213,19 +234,25 @@
 						
 						<a href="/changelog/">Change Log</a>
 					</li>
+					<li class="nav-item top-level ">
+						<a href="https://github.com/mattialabteam">Github</a>
+					</li>
+					<li class="nav-item top-level ">
+						<a > </a>
+					</li>
 				</ul>
 			</nav>
 		</header>
 		
 		<section class="main" id='main'>
-			<div class="page-header">
+			
 				
-				<h2>Elastica</h2>
-				<h3>Search</h3>
-				
-			</div>
-			<article class="content">
-				<p><span id="search-process">Loading</span> results <span id="search-query-container" style="display: none;">for "<strong id="search-query"></strong>"</span></p>
+				<div class="page-header">
+					<h2>Elastica</h2>
+					<h3>Search</h3>
+				</div>
+				<article class="content">
+					<p><span id="search-process">Loading</span> results <span id="search-query-container" style="display: none;">for "<strong id="search-query"></strong>"</span></p>
 <ul id="search-results"></ul>
 
 <script>
@@ -258,7 +285,7 @@
 						"title": "Case Studies",
 						"category": "",
 						"url": " /cosserat_rods/case-studies/",
-						"content": "Cosserat rods have been used to model a wide range of different physical systems. These systems can consist of a single rod undergoing deformation or multiple rods stitched together to create more complex systems. The case studies below illustrate the unique ability of Cosserat rods to analyze a wide range of both naturally occurring and artificial systems to provide insight into mechanics, dynamics, and control.\n\nSwimming and Slithering\nCosserat rods can be used to understand how different gaits affect swimming and slithering speed. Snakes and slender swimmers such as eels can be modeled either as a single rod, of as the interaction of multiple rods representing different muscle groups. Then, the torque profiles applied can be optimized to identify the gait that yield the fastest forward speed.\n\n\n    Zhang, Chan, Parthasarathy, Gazzola, Modeling and simulation of complex dynamic musculoskeletal architectures, Nature Communications, 2019. doi: 10.1038/s41467-019-12759-5\n\n\nGazzola, Dudte, McCormick, Mahadevan, Forward and inverse problems in the mechanics of soft filaments, Royal Society Open Science, 2018. doi: 10.1098/rsos.171628\n\n\n \n    \n\n\nSolenoids and Plectonomes\nWhen a long, slender fiber is twisted, it will eventually curl up on itself. This behavior has been observed across a wide range of spatial scales, from DNA to metal wires. Understanding these modes of deformation is important in the future development of slender elastomeric structures such as artificial muscles. \ndoi: Learn More\n\n\nCharles, Gazzola, Mahadevan, Topology, geometry, and mechanics of strongly stretched and twisted filaments: solenoids, plectonemes, and artificial muscle fibers, Physical Review Letters, 2019. doi: 10.1103/PhysRevLett.123.208003\n\n\nGazzola, Dudte, McCormick, Mahadevan, Forward and inverse problems in the mechanics of soft filaments, Royal Society Open Science, 2018. doi: 10.1098/rsos.171628\n\n \n    \n\n\nSkeletal Muscles\nSkeletal muscles are long, thin fibers that work together to generate force and allow movement. By combining multiple Cosserat rods together, this behavior of muscles can simulated. Because Cosserat rods can incorporate both extension and shearing, they are well equipped to handle the complex deformations that muscles undergo during contraction.\n\n\n    Zhang, Chan, Parthasarathy, Gazzola, Modeling and simulation of complex dynamic musculoskeletal architectures, Nature Communications, 2019. doi: 10.1038/s41467-019-12759-5\n\n\n \n    \n\n\nSoft Robotics and Bio-robotics\nNew generations of robotics are seeking to develop both soft and biohybrid robots. Biohybrid machines have been developed using muscles to actuate soft robotic structures. While soft, flexible robots have been developed to allow maneuverability in small spaces. Simulations of these robots allow in silico optimization of their designs prior to fabrication, reducing development time and cost.\n\n\nAydin, Zhang, Nuethong, Pagan-Diaz, Bashir, Gazzola, Saif, Neuromuscular actuation of biohybrid motile bots, Proceedings of the National Academy of Sciences, 2019. doi: 10.1073/pnas.1907051116\n\n\nChowdhary, Gazzola, Krishnan, Soman, Lovell, Soft robotics as an enabling technology for agroforestry practice and research, Sustainability, 2019. doi: 10.3390/su11236751\n\n\nPagan‐Diaz, Zhang, Grant, Kim, Aydin, Cvetkovic, Ko, Solomon, Hollis, Kong, Saif, Gazzola, Bashir, Simulation and fabrication of stronger, larger and faster walking biohybrid machines, Advanced Functional Materials, 2018. doi: 10.1002/adfm.201801145\n\n \n    \n\n\nBirds Nest Meta-materials\nBirds create complex structures with desirable mechanical properties. These randomly packed systems exhibit forms of self-assembly. Understanding the characteristics of such meta-material systems can yield insights into next generation fabrication techniques and material properties.\n\n\nWeiner, Bhosale, Gazzola, King, Mechanics of randomly packed filaments – the ‘bird nest’ as meta-material, Journal of Applied Physics, 2020. doi: 10.1063/1.5132809"
+						"content": "Cosserat rods have been used to model a wide range of different physical systems. These systems can consist of a single rod undergoing deformation or multiple rods stitched together to create more complex systems. The case studies below illustrate the flexible and versatile capabilities of Cosserat rods to analyze a wide range of both naturally occurring and artificial systems to provide insight into mechanics, dynamics, and control using Elastica.\n\nSwimming and Slithering\nCosserat rods can be used to understand how different gaits affect swimming and slithering speed. Snakes and slender swimmers such as eels can be modeled either as a single rod, of as the interaction of multiple rods representing different muscle groups. Then, the torque profiles applied can be optimized to identify the gait that yield the fastest forward speed.\n\n\n    Zhang, Chan, Parthasarathy, Gazzola, Modeling and simulation of complex dynamic musculoskeletal architectures, Nature Communications, 2019. doi: 10.1038/s41467-019-12759-5\n\n\nGazzola, Dudte, McCormick, Mahadevan, Forward and inverse problems in the mechanics of soft filaments, Royal Society Open Science, 2018. doi: 10.1098/rsos.171628\n\n\n\n \n    \n\n&nbsp;\n \n    \n\n\n\n\n\nControl of Soft Matter Structures\nSoft, flexible structures have many more degrees of freedom than rigid structures, making the development of control strategies for such systems difficult. Cosserat rod theory can be used model soft slender structures allowing a framework within which novel control strategies for these difficult problems can be developed.\n\n\nChang, Halder, Shih, Tekinalp, Parthasarathy, Gribkova, Chowdhary, Gillette, Gazzola, Mehta Energy Shaping Control of a CyberOctopus Soft Arm, ArXiv ArXiv\n\n\n \n    \n\n\n\n\nSolenoids and Plectonomes\nWhen a long, slender fiber is twisted, it will eventually curl up on itself. This behavior has been observed across a wide range of spatial scales, from DNA to metal wires. Understanding these modes of deformation is important in the future development of slender elastomeric structures such as artificial muscles. \ndoi: Learn More\n\n\nCharles, Gazzola, Mahadevan, Topology, geometry, and mechanics of strongly stretched and twisted filaments: solenoids, plectonemes, and artificial muscle fibers, Physical Review Letters, 2019. doi: 10.1103/PhysRevLett.123.208003\n\n\nGazzola, Dudte, McCormick, Mahadevan, Forward and inverse problems in the mechanics of soft filaments, Royal Society Open Science, 2018. doi: 10.1098/rsos.171628\n\n \n    \n\n\n\n\nComplex Musculoskeletal Architectures\nSkeletal muscles are long, thin fibers that work together to generate force and allow movement. By combining multiple Cosserat rods together, this behavior of muscles can simulated. Because Cosserat rods can incorporate both extension and shearing, they are well equipped to handle the complex deformations that muscles undergo during contraction.\n\n\n    Zhang, Chan, Parthasarathy, Gazzola, Modeling and simulation of complex dynamic musculoskeletal architectures, Nature Communications, 2019. doi: 10.1038/s41467-019-12759-5\n\n\n\n \n    \n\n&nbsp;\n \n    \n\n\n\n\n\nSoft Robotics and Bio-robotics\nNew generations of robotics are seeking to develop both soft and biohybrid robots. Biohybrid machines have been developed using muscles to actuate soft robotic structures. While soft, flexible robots have been developed to allow maneuverability in small spaces. Simulations of these robots allow in silico optimization of their designs prior to fabrication, reducing development time and cost.\n\n\nAydin, Zhang, Nuethong, Pagan-Diaz, Bashir, Gazzola, Saif, Neuromuscular actuation of biohybrid motile bots, Proceedings of the National Academy of Sciences, 2019. doi: 10.1073/pnas.1907051116\n\n\nChowdhary, Gazzola, Krishnan, Soman, Lovell, Soft robotics as an enabling technology for agroforestry practice and research, Sustainability, 2019. doi: 10.3390/su11236751\n\n\nPagan‐Diaz, Zhang, Grant, Kim, Aydin, Cvetkovic, Ko, Solomon, Hollis, Kong, Saif, Gazzola, Bashir, Simulation and fabrication of stronger, larger and faster walking biohybrid machines, Advanced Functional Materials, 2018. doi: 10.1002/adfm.201801145\n\n \n    \n\n\n\n\nBirds Nest Meta-materials\nBirds create complex structures with desirable mechanical properties. These randomly packed systems exhibit forms of self-assembly. Understanding the characteristics of such meta-material systems can yield insights into next generation fabrication techniques and material properties.\n\n\nWeiner, Bhosale, Gazzola, King, Mechanics of randomly packed filaments – the ‘bird nest’ as meta-material, Journal of Applied Physics, 2020. doi: 10.1063/1.5132809"
 					}
 
 					
@@ -309,7 +336,7 @@
 						"title": "Overview",
 						"category": "",
 						"url": " /cosserat_rods/overview/",
-						"content": "Many natural and artificial systems can be viewed as made up of soft, slender structures. These structures can be both active and passive. Examples from natural systems are DNA strands, flagella, muscle fibers, and snakes, illustrating the wide range of length scales these systems span. In artificial systems, examples of such structures are woven cloth, artificial muscles, long cables.\n\nWhen the length of such structures is much larger than the radius (L/r » 1), the structure can be viewed as a 1-dimensional rod, allowing substantial simplification of its mathematical treatment. Cosserat rods are a mathemetical description of such 1-dimensional slender structures that incorporates the effects of bending, twisting, stretching and shearing. This allows Cosserat rods to describe the effects of all six degrees of freedom of the rod. These Cosserat rods can be modeled as single rods or can also be combined to model more complex systems such as a collection of muscle fibers.\n\nFor more information on Cosserat rods see:\nSingle Rods – Information on theory behind Cosserat rods.\nMultiple Rods – How to combine multiple rods to create more complex systems.\nNumerics – Details on the numerical method we use to solve these systems.\nCase Studies – Examples of how Cosserat rods have been used to model different systems."
+						"content": "Many natural and artificial systems can be viewed as made up of soft, slender structures. These structures can be both active and passive. Examples from natural systems are DNA strands, flagella, muscle fibers, and snakes, illustrating the wide range of length scales these systems span. In artificial systems, examples of such structures are woven cloth, artificial muscles, long cables.\n\nWhen the length of such structures is much larger than the radius (L/r » 1), the structure can be viewed as a 1-dimensional rod, allowing substantial simplification of its mathematical treatment. Cosserat rods are a mathemetical description of such 1-dimensional slender structures that incorporates the effects of bending, twisting, stretching and shearing. This allows Cosserat rods to describe the effects of all six degrees of freedom of the rod. These Cosserat rods can be modeled as single rods or can also be combined to model more complex systems such as a collection of muscle fibers.\n\nFor more information on Cosserat rods see:\n \nSingle Rods – Information on theory behind Cosserat rods.\nMultiple Rods – How to combine multiple rods to create more complex systems.\nNumerics – Details on the numerical method we use to solve these systems.\nCase Studies – Examples of how Cosserat rods have been used to model different systems."
 					}
 
 					
@@ -326,7 +353,41 @@
 						"title": "Theory",
 						"category": "",
 						"url": " /cosserat_rods/theory/",
-						"content": "Cosserat rods are a generalization of Kirchhoff rods, which are able to model 1-d slender rods incorporating only bend and twist. Cosserat rods add the ability to consider stretching and shearing, allowing all the possible modes of deformation of the system to be considered. The key assumption of Cosserat rods are that their length is much larger than their radius ($L \\gg r$). This allows their dynamical behavior to approximated by averaging balance laws at every cross-section. We also assume that the rods are linearly elastic.\n\nMathematical Description of Cosserat Rods\n\n  TL;DR: Cosserat rods are described by a centerline $\\mathbf{r}(s, t)$ and local reference frame $\\mathbf{Q}(s,t)= \\{ {\\mathbf{d}}_1, {\\mathbf{d}}_2, {\\mathbf{d}}_3 \\}$ which consists of a triad of orthonormal basis vectors. The dynamics of the rod are then described by the equations for conservation of linear and angular momentum throughout the rod.\n\n\n\n\nReference Frames\nFor a Cosserat rod described by a centerline $\\mathbf{r}(s, t)$ (where $s \\in [0, L]$ is the arc-length of the rod and $t$ is time) we begin by defining two reference frames within which we can express a vector $\\mathbf{x}$:\n\nThe laboratory (Eulerian) frame: $\\bar{\\mathbf{x}} = x_1 \\mathbf{i} + x_2 \\mathbf{j} + x_3 \\mathbf{k}$\n\nThe local (Lagrangian) frame: $\\mathbf{x} = x_1 \\mathbf{d}_1 + x_2 \\mathbf{d}_2 + x_3 \\mathbf{d}_3$\n\nWe can define a rotation matrix $\\mathbf{Q}$ between these two reference frames as $\\mathbf{Q}= \\{ {\\mathbf{d}}_1, {\\mathbf{d}}_2, {\\mathbf{d}}_3 \\}$ allowing us to convert between the laboratory and local reference frames via $\\mathbf{x}=\\mathbf{Q}\\bar{\\mathbf{x}}$ and $\\bar{\\mathbf{x}}=\\mathbf{Q}^T \\mathbf{x}$. The local frame describes the orientation of the rod where ${\\mathbf{d}}_3$ points along the centerline tangent ($\\partial_s \\bar{\\mathbf{r}}=\\bar{\\mathbf{r}}_s= e \\bar{\\mathbf{t}}$) when there is no shear while ${\\mathbf{d}}_1$ and ${\\mathbf{d}}_2$ span the normal-binormal plane.\n\nIf there is shear or extension, then ${\\mathbf{d}}_3$ is shifted away from the tangent vector by some amount which can be described by a shear strain vector $\\boldsymbol{\\sigma}= \\mathbf{Q}\\bar{\\mathbf{r}}_s - \\mathbf{d}_3$ in the local frame. When there is shear or extension, it is important to distinguish between the reference configuration ($\\hat{s}$) and the deformed configuration ($s$). The stretch ratio between the two states is defined as $e=\\frac{\\mathrm{d} s}{\\mathrm{d}\\hat{s}}$. If we define a unit tangent vector $\\mathbf{t}$ we can now represent the local orientation of the rod as $\\bar{\\mathbf{r}}_s= e \\bar{\\mathbf{t}}$. Along with shear strain, the rod can also twist and rotate. In the local (Lagrangian) reference frame, as we move along the rod, our reference frame $\\mathbf{Q}(s,t)$ is continually changing. This change represents the curvature of the rod and is represented with a curvature vector $\\boldsymbol{\\kappa}$, which is defined as $\\partial_s \\mathbf{d}_j = \\boldsymbol{\\kappa} \\times \\mathbf{d}_j$.\n\nNow that we have established our reference frames, the next thing we need to do is define how we are going to track changes in the shape of the rod. The change in the $\\mathbf{Q}(s,t)$ over time defines the angular velocity $\\boldsymbol{\\omega}$ of the rod ($\\partial_t \\mathbf{d}_j = \\boldsymbol{\\omega} \\times \\mathbf{d}_j$). We also want to define the translational velocity of each point of the centerline of the rod with a velocity $\\bar{\\mathbf{v}}  = \\partial_t\\bar{\\mathbf{r}}$.\n\nFinally, there are a number of material and structural parameters that need to defined. These are generally defined in the reference ($\\hat{s}$) configuration and are:\n\n  cross-sectional area: $A$\n  mass per unit length: $\\rho$\n  bending stiffness matrix: $\\mathbf{B}$\n  shearing stiffness matrix: $\\mathbf{S}$\n  second area moment of inertia: $\\mathbf{I}$\n\n\nConservation of Momentum\nWith all these terms defined, we can now define the balance laws that need to be satisfied at every cross-section. By balancing both linear and angular momentum at every cross-section we are able to describe the dynamics of the Cosserat rod. For a prescribed external force and couple line densities ($\\bar{\\mathbf{f}}$ and $\\mathbf{c}$, respectively) the momentum balance equations are:\n\nLinear Momentum: \n$\\small{\\rho A \\cdot \\partial_t^2 \\bar{\\mathbf{r}} = \\overbrace{\\partial_s \\left( \\frac{\\mathbf{Q}^T \\mathbf{S} \\boldsymbol{\\sigma}}{e} \\right)}^{\\substack{\\text{internal shear/} \\\\ \\text{stretch force}}} + \\overbrace{e \\ \\bar{\\mathbf{f}}}^{\\substack{\\text{external} \\\\ \\text{force}}} }$\n\nAngular Momentum: \n$\\small{\\begin{align} \\frac{\\rho \\mathbf{I}}{e} \\cdot \\partial_t \\boldsymbol{\\omega} =&amp;\\overbrace{\\partial_s \\left( \\frac{\\mathbf{B} \\boldsymbol{\\kappa}}{e^3} \\right) + \\frac{\\boldsymbol{\\kappa} \\times \\mathbf{B} \\boldsymbol{\\kappa}}{e^3}}^{\\text{internal bend/twist couple}} +\\overbrace{\\left( \\mathbf{Q}\\frac{\\bar{\\mathbf{r}}_s}{e} \\times \\mathbf{S} \\boldsymbol{\\sigma} \\right)}^{\\substack{\\text{internal shear/} \\\\ \\text{stretch couple}}} + \\\\&amp;\\underbrace{\\left( \\rho \\mathbf{I} \\cdot \\frac{\\boldsymbol{\\omega}}{e} \\right) \\times \\boldsymbol{\\omega}}_{\\text{Lagrangian transport}}^{\\phantom{o}} +\\underbrace{\\frac{\\rho \\mathbf{I} \\boldsymbol{\\omega}}{e^2} \\cdot \\partial_t e}_\\textrm{unsteady dilation} + \\underbrace{e \\ \\mathbf{c}}_{\\substack{\\text{external} \\\\ \\text{couple}}} \\end{align}}$\n\nSolving these equations, along with appropriate boundary conditions, allows us to model the dynamics of a single Cosserat rod. In general, there is not always an analytical solution to these equations. Instead, we use numerical methods to solve for these dynamics. For information on the numerical method we use, see here. If we want to examine how multiple rods interact, we also need to define the interactions and connections between these rods. For details on this, see here.\n\n\n  A note on notation: We have created a pdf with a list of the different variables we use and their connections here.\n\n\nLinear Elasticity\nTo solve the momentum balance equations, we needed to define a bending stiffness ($\\mathbf{B}$) and shearing stiffness ($\\mathbf{S}$). We are assuming that the rod is a perfectly elastic material with a linear stress-strain response. For an elastic beam, these stiffness matrices are diagonal 3x3 matrices:\n\n$\\mathbf{B} = \\begin{bmatrix}  E \\ I_1 &amp;  &amp;  \\\\  &amp; E \\ I_2 &amp;  \\\\  &amp;  &amp; G \\ I_3  \\end{bmatrix}  \\quad  \\text{ and }  \\quad  \\mathbf{S} = \\begin{bmatrix}  \\alpha_c G \\ A &amp;  &amp;  \\\\  &amp; \\alpha_c G \\ A &amp;  \\\\  &amp;  &amp; E \\ A  \\end{bmatrix}$\n\nHere $E$ is the elastic Young’s modulus, $G$ is the shear modulus, $I_i$ is the second area moment of inertia, A is the cross sectional area and the constant $\\alpha_c$ is $4/3$ (for circular cross sections). Additionally, because of the linear elastic assumption, we can define constitutive laws for both the load-strain relations as well as the torque-curvature relations. These are:\n\nLoad-strain: $\\mathbf{n} = \\mathbf{S}(\\boldsymbol{\\sigma} - \\boldsymbol{\\sigma^0})$\n\nTorque-curvature: $\\boldsymbol{\\tau} = \\mathbf{B}(\\boldsymbol{\\kappa} - \\boldsymbol{\\kappa^0})$\n\n$\\boldsymbol{\\sigma^0}$ and $\\boldsymbol{\\kappa^0}$ are reference curvatures which allow the rod to have a stress-free configuration in shapes other than a straight line.\n\nUseful References\n\nGazzola, Dudte, McCormick, Mahadevan, Forward and inverse problems in the mechanics of soft filaments, Royal Society Open Science, 2018. doi: 10.1098/rsos.171628\n\n\n\nZhang, Chan, Parthasarathy, Gazzola, Modeling and simulation of complex dynamic musculoskeletal architectures, Nature Communications, 2019. doi: 10.1038/s41467-019-12759-5"
+						"content": "Cosserat rods are a generalization of Kirchhoff rods, which are able to model 1-d slender rods incorporating only bend and twist. Cosserat rods add the ability to consider stretching and shearing, allowing all the possible modes of deformation of the system to be considered. The key assumption of Cosserat rods are that their length is much larger than their radius ($L \\gg r$). This allows their dynamical behavior to approximated by averaging balance laws at every cross-section. We also assume that the rods are linearly elastic.\n\nMathematical Description of Cosserat Rods\n\n  Cosserat rods are described by a centerline $\\mathbf{r}(s, t)$ and local reference frame $\\mathbf{Q}(s,t)= \\{ {\\mathbf{d}}_1, {\\mathbf{d}}_2, {\\mathbf{d}}_3 \\}$ which consists of a triad of orthonormal basis vectors (using the right-hand rule convention). The dynamics of the rod are then described by the equations for conservation of linear and angular momentum throughout the rod.\n\n\n\n\nReference Frames\nFor a Cosserat rod described by a centerline $\\mathbf{r}(s, t)$ (where $s \\in [0, L]$ is the arc-length of the rod and $t$ is time) we begin by defining two reference frames within which we can express a vector $\\mathbf{x}$:\n\nThe laboratory (Eulerian) frame: $\\bar{\\mathbf{x}} = x_1 \\mathbf{i} + x_2 \\mathbf{j} + x_3 \\mathbf{k}$\n\nThe local (Lagrangian) frame: $\\mathbf{x} = x_1 \\mathbf{d}_1 + x_2 \\mathbf{d}_2 + x_3 \\mathbf{d}_3$\n\nWe can define a rotation matrix $\\mathbf{Q}$ between these two reference frames as $\\mathbf{Q}= \\{ {\\mathbf{d}}_1, {\\mathbf{d}}_2, {\\mathbf{d}}_3 \\}$ allowing us to convert between the laboratory and local reference frames via $\\mathbf{x}=\\mathbf{Q}\\bar{\\mathbf{x}}$ and $\\bar{\\mathbf{x}}=\\mathbf{Q}^T \\mathbf{x}$. The local frame describes the orientation of the rod where ${\\mathbf{d}}_3$ points along the centerline tangent ($\\partial_s \\bar{\\mathbf{r}}=\\bar{\\mathbf{r}}_s= e \\bar{\\mathbf{t}}$) when there is no shear while ${\\mathbf{d}}_1$ and ${\\mathbf{d}}_2$ span the normal-binormal plane.\n\nIf there is shear or extension, then ${\\mathbf{d}}_3$ is shifted away from the tangent vector by some amount which can be described by a shear strain vector $\\boldsymbol{\\sigma}= \\mathbf{Q}\\bar{\\mathbf{r}}_s - \\mathbf{d}_3$ in the local frame. When there is shear or extension, it is important to distinguish between the reference configuration ($\\hat{s}$) and the deformed configuration ($s$). The stretch ratio between the two states is defined as $e=\\frac{\\mathrm{d} s}{\\mathrm{d}\\hat{s}}$. If we define a unit tangent vector $\\mathbf{t}$ we can now represent the local orientation of the rod as $\\bar{\\mathbf{r}}_s= e \\bar{\\mathbf{t}}$. Along with shear strain, the rod can also twist and rotate. In the local (Lagrangian) reference frame, as we move along the rod, our reference frame $\\mathbf{Q}(s,t)$ is continually changing. This change represents the curvature of the rod and is represented with a curvature vector $\\boldsymbol{\\kappa}$, which is defined as $\\partial_s \\mathbf{d}_j = \\boldsymbol{\\kappa} \\times \\mathbf{d}_j$.\n\nNow that we have established our reference frames, the next thing we need to do is define how we are going to track changes in the shape of the rod. The change in the $\\mathbf{Q}(s,t)$ over time defines the angular velocity $\\boldsymbol{\\omega}$ of the rod ($\\partial_t \\mathbf{d}_j = \\boldsymbol{\\omega} \\times \\mathbf{d}_j$). We also want to define the translational velocity of each point of the centerline of the rod with a velocity $\\bar{\\mathbf{v}}  = \\partial_t\\bar{\\mathbf{r}}$.\n\nFinally, there are a number of material and structural parameters that need to defined. These are generally defined in the reference ($\\hat{s}$) configuration and are:\n\n  cross-sectional area: $A$\n  mass per unit length: $\\rho$\n  bending stiffness matrix: $\\mathbf{B}$\n  shearing stiffness matrix: $\\mathbf{S}$\n  second area moment of inertia: $\\mathbf{I}$\n\n\nConservation of Momentum\nWith all these terms defined, we can now define the balance laws that need to be satisfied at every cross-section. By balancing both linear and angular momentum at every cross-section we are able to describe the dynamics of the Cosserat rod. For a prescribed external force and couple line densities ($\\bar{\\mathbf{f}}$ and $\\mathbf{c}$, respectively) the momentum balance equations are:\n\nLinear Momentum: \n$\\small{\\rho A \\cdot \\partial_t^2 \\bar{\\mathbf{r}} = \\overbrace{\\partial_s \\left( \\frac{\\mathbf{Q}^T \\mathbf{S} \\boldsymbol{\\sigma}}{e} \\right)}^{\\substack{\\text{internal shear/} \\\\ \\text{stretch force}}} + \\overbrace{e \\ \\bar{\\mathbf{f}}}^{\\substack{\\text{external} \\\\ \\text{force}}} }$\n\nAngular Momentum: \n$\\small{\\begin{align} \\frac{\\rho \\mathbf{I}}{e} \\cdot \\partial_t \\boldsymbol{\\omega} =&amp;\\overbrace{\\partial_s \\left( \\frac{\\mathbf{B} \\boldsymbol{\\kappa}}{e^3} \\right) + \\frac{\\boldsymbol{\\kappa} \\times \\mathbf{B} \\boldsymbol{\\kappa}}{e^3}}^{\\text{internal bend/twist couple}} +\\overbrace{\\left( \\mathbf{Q}\\frac{\\bar{\\mathbf{r}}_s}{e} \\times \\mathbf{S} \\boldsymbol{\\sigma} \\right)}^{\\substack{\\text{internal shear/} \\\\ \\text{stretch couple}}} + \\\\&amp;\\underbrace{\\left( \\rho \\mathbf{I} \\cdot \\frac{\\boldsymbol{\\omega}}{e} \\right) \\times \\boldsymbol{\\omega}}_{\\text{Lagrangian transport}}^{\\phantom{o}} +\\underbrace{\\frac{\\rho \\mathbf{I} \\boldsymbol{\\omega}}{e^2} \\cdot \\partial_t e}_\\textrm{unsteady dilation} + \\underbrace{e \\ \\mathbf{c}}_{\\substack{\\text{external} \\\\ \\text{couple}}} \\end{align}}$\n\nSolving these equations, along with appropriate boundary conditions, allows us to model the dynamics of a single Cosserat rod. In general, there is not always an analytical solution to these equations. Instead, we use numerical methods to solve for these dynamics. For information on the numerical method we use, see here. If we want to examine how multiple rods interact, we also need to define the interactions and connections between these rods. For details on this, see here.\n\n\n  A note on notation: We have created a pdf with a list of the different variables we use and their connections here.\n\n\nLinear Elasticity\nTo solve the momentum balance equations, we needed to define a bending stiffness ($\\mathbf{B}$) and shearing stiffness ($\\mathbf{S}$). We are assuming that the rod is a perfectly elastic material with a linear stress-strain response. For an elastic beam, these stiffness matrices are diagonal 3x3 matrices:\n\n$\\mathbf{B} = \\begin{bmatrix}  E \\ I_1 &amp;  &amp;  \\\\  &amp; E \\ I_2 &amp;  \\\\  &amp;  &amp; G \\ I_3  \\end{bmatrix}  \\quad  \\text{ and }  \\quad  \\mathbf{S} = \\begin{bmatrix}  \\alpha_c G \\ A &amp;  &amp;  \\\\  &amp; \\alpha_c G \\ A &amp;  \\\\  &amp;  &amp; E \\ A  \\end{bmatrix}$\n\nHere $E$ is the elastic Young’s modulus, $G$ is the shear modulus, $I_i$ is the second area moment of inertia, A is the cross sectional area and the constant $\\alpha_c$ is $4/3$ (for circular cross sections). Additionally, because of the linear elastic assumption, we can define constitutive laws for both the load-strain relations as well as the torque-curvature relations. These are:\n\nLoad-strain: $\\mathbf{n} = \\mathbf{S}(\\boldsymbol{\\sigma} - \\boldsymbol{\\sigma^0})$\n\nTorque-curvature: $\\boldsymbol{\\tau} = \\mathbf{B}(\\boldsymbol{\\kappa} - \\boldsymbol{\\kappa^0})$\n\n$\\boldsymbol{\\sigma^0}$ and $\\boldsymbol{\\kappa^0}$ are reference curvatures which allow the rod to have a stress-free configuration in shapes other than a straight line.\n\nUseful References\n\nGazzola, Dudte, McCormick, Mahadevan, Forward and inverse problems in the mechanics of soft filaments, Royal Society Open Science, 2018. doi: 10.1098/rsos.171628\n\n\n\nZhang, Chan, Parthasarathy, Gazzola, Modeling and simulation of complex dynamic musculoskeletal architectures, Nature Communications, 2019. doi: 10.1038/s41467-019-12759-5"
+					}
+
+					
+				
+			
+		
+			
+				
+					,
+					
+
+					"elastica-control": {
+						"id": "elastica-control",
+						"title": "Elastica + Control",
+						"category": "",
+						"url": " /elastica+control/",
+						"content": "Problem Statement\nThe objective is to train a model to move a (cyber)-octopus with two soft arms and a head to reach a target location, and then grab an object. The octopus is modeled as an assembly of Cosserat rods and is activated by muscles surrounding its arms. Input to the mechanical model is the activation signals to the surrounding muscles, which causes it to contract, thus moving the arms. The output of the model comes from the octopus’ environment. The mechanical model will be provided both for the octopus and its interaction with its environment. The goal is to find the correct muscle activation signals that make the octopus crawl to reach the target location and then make one arm to grab the object.\n\nProgression of specific goals\nThese goals build on each other, you need to successfully accomplish all prior goals to get credit for later goals.\n\n1) Make your octopus crawl to the target location.\n2) Have your octopus grab the object by wrapping one arm around the object.\n3) Make your octopus return to its starting location with the object.\n4) Generalize your policy to perform these tasks for an arbitrarily located object. \n5) Have your octopus be the fastest to accomplish these tasks.\n\nProblem Context\nOctopuses have flexible limbs made up of muscles with no internal bone structure. These limbs, know as muscular hydrostats, have an almost infinite number of degrees of freedom, allowing an octopus to perform complex actions with its arms, but also making them difficult to mathematically model. Attempts to model octopus arms are motivated not only by a desire to understand them biologically, but also to adapt their control ability and decision making processes to the rapidly developing field of soft robotics. We have developed a simulation package Elastica that models flexible 1-d rods, which can be used to represent octopus arms as a long, slender rod. We now want to learn methods for controlling these arms.\n\nYou are being provided with a model of an octopus that consists of two arms connected by a head. Each arm can be controlled independently. These arms are actuated through the contraction of muscles in the arms. This muscle activation produces a torque profile along the arm, resulting in movement of the arm. The arms interact with the ground through friction. You goal is to teach the octopus to crawl towards an object, grab it, and bring it back to where the octopus started.\n\nControlling octopus arms with hierarchical basis functions\nFor this problem, we abstract the activation of the octopus muscles to the generation of a torque profile defined by the activation of a set of hierarchical radial basis function. Here we are using Gaussian basis functions.\n\n\n\n\n\nThere are three levels of these basis functions, with 1 basis function in the first level, 2 in the second lever and 4 in the third, leading to 7 basis functions in set. These levels have different maximum levels of activation. The lower levels have larger magnitudes than the higher levels, meaning they represent bulk motion of the rod while the higher levels allow finer control of the rod along the interval. In the code, the magnitude of each level will be fixed but you can choose the amount of activation at each level by setting the activation level between -1 and 1.\n\nThere are two bending modes (in the normal and binormal directions) and a twisting mode (in the tangent direction), so we define torques in these three different directions and independently for each arm. This yields six different sets of basis functions that can be activated for a total of 42 inputs.\n\nOverview of provided Elastica code\nWe are providing you the Elastica software package which is written in Python. Elastica simulates the dynamics and kinematics of 1-d slender rods. We have set up the model for you such that you do not need to worry about the details of the model, only the activation patterns of the muscle. In the provided two_arm_octopus_ai_imp.py file you will import the Environment class which will define and setup the simulation.\n\nEnvironment has three relevant functions:\n\n  Environment.reset(self):  setups and initializes the simulation environment. Call this prior to running any simulations.\n  Environment.step(self, activation_array_list, time): takes one timestep for muscle activations defined in activation_array_list.\n  Environment.post_processing(self, filename_video): Makes 3D video based on saved data from simulation. Requires ffmpeg.\nWe do not suggest changing too much in this function has it may cause unintended consequences to the simulation.\n\n\nYou will want to work within main() to interface with the simulations and develop your learning model. In main(), the first thing you need to define is the length of your simulation and initialize the environment. final_time is the length of time that your simulation will run unless exited early. You want to give your octopus enough time to complete the task, but too much time will lead to excessively long simulation times.\n\n    # Set simulation integrator type, final time and time step\n    timestepper = PositionVerlet()  # Do not edit\n    final_time = 10.0\n\n    # Initialize the environment\n    env = Environment(timestepper, COLLECT_DATA=True)\n    total_steps, systems = env.reset()\n\n\nWith your system initialized, you are now ready to perform the simulation. To perform the simulation there are two steps:\n1) Evaluate the reward function and define the basis function activations\n2) Perform time step\n\nThere is also a user defined stopping condition. When met, this will immediately end the simulation. This can be useful to end the simulation if the octopus successfully complete the task early, or has a sufficiently low reward function that there is no point continuing the simulation.\n\n    for _ in tqdm(range(total_steps)):\n        \"\"\" Add your learning algorithm here to define activation \"\"\"\n        # This will be based on your observations of the system and \n        # evaluation of your reward function.  \n        shearable_rod = systems[0]\n        rigid_body = systems[1]   \n        reward = reward_function()   \n        activation = segment_activation_function()\n\n        \"\"\" Perform time step \"\"\"\n        time, systems, done = env.step(activation, time)\n\n        \"\"\" User defined condition to exit simulation loop \"\"\"\n        done = user_defined_condition_function(reward, systems, time)\n        if done:\n            break\n\n\nIt is important to properly define the activation function. It consists of a list of lists defining the activation of the two arms in each of the the three modes of deformation. The activation function should be a list with three entries for the three modes of deformation. Each of these entries is in turn a list with two entries, which are arrays of the basis function activations for the two arms.\n\n    activation = [\n        [arm_1_normal,   arm_2_normal],    # activation in normal direction\n        [arm_1_binormal, arm_2_binormal],  # activation in binormal direction\n        [arm_1_tangent,  arm_2_tangent],   # activation in tangent direction\n        ]\n\n\nEach activation array has 7 entries that relate to the activation of different basis functions. The ordering goes from the top level to the bottom level of the hierarchy. Each entry can vary from -1 to 1.\n\nactivation_array[0]   – One top level muscle segment\nactivation_array[1:3] – Two mid level muscle segment\nactivation_array[3:7] – Four bottom level muscle segment\n\nA few practical notes\n1) To save a video of the octopus with Environment.post_processing(), you need to install ffmeg. You can download and install it here.\n\n2) The timestep size is set to 40 $\\mu s$. This is necessary to keep the simulation stable, however, you may not need to update your muscle activations that often.\n\n3) There is a 15-20 second startup delay while the simulation is initialized. This is a one time cost whenever the Python script is run and resetting the simulation using .rest() does not incur this delay for subsequent simulations."
+					}
+
+					
+				
+			
+		
+			
+				
+					,
+					
+
+					"publications-press": {
+						"id": "publications-press",
+						"title": "Press",
+						"category": "",
+						"url": " /publications/press/",
+						"content": "Research using Elastica has been featured in:\n\n\n\n\n        The New York Times\n\n\n\n\n\n        Tech Explore\n\n\n\n\n\n        Engineering.com\n\n\n\n\n\n        Science Daily\n\n\n\n\n\n        Physics"
 					}
 
 					
@@ -343,7 +404,7 @@
 						"title": "Elastica &amp; Cosserat Rods",
 						"category": "",
 						"url": " /publications/publications/",
-						"content": "2020 \n\nWeiner, Bhosale, Gazzola, King, Mechanics of randomly packed filaments – the ‘bird nest’ as meta-material, Journal of Applied Physics, 2020. doi: 10.1063/1.5132809\n\n\n 2019 \n\nZhang, Chan, Parthasarathy, Gazzola, Modeling and simulation of complex dynamic musculoskeletal architectures, Nature Communications, 2019. doi: 10.1038/s41467-019-12759-5\n\n\n\nCharles, Gazzola, Mahadevan, Topology, geometry, and mechanics of strongly stretched and twisted filaments: solenoids, plectonemes, and artificial muscle fibers, Physical Review Letters, 2019. doi: 10.1103/PhysRevLett.123.208003\n\n\n\nAydin, Zhang, Nuethong, Pagan-Diaz, Bashir, Gazzola, Saif, Neuromuscular actuation of biohybrid motile bots, Proceedings of the National Academy of Sciences, 2019. doi: 10.1073/pnas.1907051116\n\n\n\nChowdhary, Gazzola, Krishnan, Soman, Lovell, Soft robotics as an enabling technology for agroforestry practice and research, Sustainability, 2019. doi: 10.3390/su11236751\n\n\n 2018 \n\nGazzola, Dudte, McCormick, Mahadevan, Forward and inverse problems in the mechanics of soft filaments, Royal Society Open Science, 2018. doi: 10.1098/rsos.171628\n\n\n\nPagan‐Diaz, Zhang, Grant, Kim, Aydin, Cvetkovic, Ko, Solomon, Hollis, Kong, Saif, Gazzola, Bashir, Simulation and fabrication of stronger, larger and faster walking biohybrid machines, Advanced Functional Materials, 2018. doi: 10.1002/adfm.201801145"
+						"content": "These publications are provided to the academic community for use in teaching and research. All copyrights remain with the appropriate parties as listed in the publications themselves.\n\n\n Preprints \n\nChang, Halder, Shih, Tekinalp, Parthasarathy, Gribkova, Chowdhary, Gillette, Gazzola, Mehta, Energy Shaping Control of a CyberOctopus Soft Arm, ArXiv ArXiv\n\n\n\n\n 2020 \n\nWeiner, Bhosale, Gazzola, King, Mechanics of randomly packed filaments – the ‘bird nest’ as meta-material, Journal of Applied Physics, 2020. doi: 10.1063/1.5132809\n\n\n 2019 \n\nZhang, Chan, Parthasarathy, Gazzola, Modeling and simulation of complex dynamic musculoskeletal architectures, Nature Communications, 2019. doi: 10.1038/s41467-019-12759-5\n\n\n\nCharles, Gazzola, Mahadevan, Topology, geometry, and mechanics of strongly stretched and twisted filaments: solenoids, plectonemes, and artificial muscle fibers, Physical Review Letters, 2019. doi: 10.1103/PhysRevLett.123.208003\n\n\n\nAydin, Zhang, Nuethong, Pagan-Diaz, Bashir, Gazzola, Saif, Neuromuscular actuation of biohybrid motile bots, Proceedings of the National Academy of Sciences, 2019. doi: 10.1073/pnas.1907051116\n\n\n\nChowdhary, Gazzola, Krishnan, Soman, Lovell, Soft robotics as an enabling technology for agroforestry practice and research, Sustainability, 2019. doi: 10.3390/su11236751\n\n\n 2018 \n\nGazzola, Dudte, McCormick, Mahadevan, Forward and inverse problems in the mechanics of soft filaments, Royal Society Open Science, 2018. doi: 10.1098/rsos.171628\n\n\n\nPagan‐Diaz, Zhang, Grant, Kim, Aydin, Cvetkovic, Ko, Solomon, Hollis, Kong, Saif, Gazzola, Bashir, Simulation and fabrication of stronger, larger and faster walking biohybrid machines, Advanced Functional Materials, 2018. doi: 10.1002/adfm.201801145"
 					}
 
 					
@@ -377,7 +438,7 @@
 						"title": "Development",
 						"category": "",
 						"url": " /software/development/",
-						"content": "Elastica is open source and we welcome anyone to help us develop and improve it. If you are interested in contributing, connect with us on GitHub or email Mattia Gazzola. We are always looking for people to contribute code to both improve Elastica’s current abilities or add new ones."
+						"content": "Elastica is open source and we welcome anyone to help us develop and improve it.\n\nIf you are interested in contributing to the code, connect with us on GitHub. We are always looking for people to contribute code to both improve Elastica’s current abilities or add new ones.\n\nIf you have new ideas on how to use Elastica for research and want to collaborate with us, email Mattia Gazzola or Noel Naughton."
 					}
 
 					
@@ -425,10 +486,10 @@
 
 					"sponsors-sponsors": {
 						"id": "sponsors-sponsors",
-						"title": "&lt;span style=&quot;padding-left:20px&quot;&gt;",
+						"title": "Sponsors",
 						"category": "",
 						"url": " /sponsors/sponsors/",
-						"content": "Funding for the development of Elastica has been provided by:"
+						"content": "Funding for the development of Elastica has been provided by:\n\nONR MURI N00014-19-1-2373 \nNSF EFRI C3 SoRo #1830881\nNSF CAREER #1846752\nNSF CR ENG-1825440\nNSF/USDA #2019-67021-28989 \nNSF/NCSA Blue Waters #OCI-0725070, #ACI-1238993\nXSEDE/TACC  Stampede2 #TG-MCB190004"
 					}
 
 					
@@ -440,7 +501,11 @@
 <script src="/scripts/lunr.min.js"></script>
 <script src="/scripts/search.js"></script>
 
-			</article>
+				</article>		
+
+				
+				
+
 		</section>
 		
 		

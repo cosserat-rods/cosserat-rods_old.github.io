@@ -12,7 +12,7 @@ There are three steps to solving this problem numerically.
 [2) Select a time stepping algorithm](#time-discretization)  
 [3) Specify your boundary conditions and interaction forces to model different physical effects.](#boundary-conditions-and-interaction-forces)  
 
-<img src="/images/numerics.jpg" alt="image name" width="500"/>
+<img src="/images/numerics.jpg" alt="image name" width="600" style="display: block; margin-left: auto; margin-right: auto;"/>
 
 ## Spatial Discretization
 We associate different quantities with the nodes and the segments. At the nodes, along with the position vector $\mathbf{r}_i$ there is also velocity $\mathbf{v}_i = \partial \mathbf{r}_i/\partial t$, the pointwise mass $m_i$, and any external forces applied to the node $\bar{\mathbf{f}}_i$. There are `n+1` total nodes ($i=[0,n]$). The orientation of each segment is defined by the local reference frame $\mathbf{Q}_j(t)$ and is associated with an edge $\boldsymbol{\ell}_j = \mathbf{r}\_{j+1} - \mathbf{r}_j$ which has a current length $\ell_j = \|\boldsymbol{\ell}_j\|$, a reference length $\hat{\ell}_j = \|\boldsymbol{\hat{\ell}}_j\|$, a stretch ratio $e_j = \ell_j/\hat{\ell}_j$ and a unit tangent vector $\mathbf{t}_j = \boldsymbol{\ell}_j/\ell_j$. Because the segments lay between the nodes, there are `n` number of segments ($j=[0,n-1]$).

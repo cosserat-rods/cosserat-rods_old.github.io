@@ -65,7 +65,7 @@
 				<input type="submit" value="Search" style="display: none;">
 			</form>
 
-			<nav class="full-navigation">
+			<nav class="full-navigation WhateverYourNavIs">
 				<ul>
 					<li class="nav-item top-level ">
 						
@@ -75,7 +75,7 @@
 
 
 				<!-- Hard code for nav-bar-->
-				<ul>
+				<ul> 
 					<li class="nav-item top-level ">
 						<a href="/cosserat_rods/overview/">Cosserat Rods</a>
 						<ul>
@@ -84,6 +84,10 @@
 							<li class="nav-item "><a href="/cosserat_rods/multiple-rods/">Multiple Rods</a></li> 			
 							<li class="nav-item "><a href="/cosserat_rods/case-studies/">Case Studies</a></li> 				
 						</ul>
+					</li>
+
+					<li class="nav-item top-level ">
+						<a href="/elastica+control/">Elastica + Control</a>
 					</li>
 
 					<li class="nav-item top-level ">
@@ -96,6 +100,9 @@
 					</li>
 					<li class="nav-item top-level ">
 						<a href="/publications/publications/">Publications</a>
+					</li>
+					<li class="nav-item top-level ">
+						<a href="/publications/press/">Press</a>
 					</li>
 					<li class="nav-item top-level ">
 						<a href="/contact/contact/">Contact</a>
@@ -157,6 +164,31 @@
 					
 						<li class="nav-item top-level ">
 							
+							<a href="/elastica+control/"></a>
+							<ul>
+								
+									
+									
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/publications/press/"><span style="padding-left:20px"></a>
+							<ul>
+								
+									
+									
+								
+									
+									
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
 							<a href="/publications/publications/">Publications</a>
 							<ul>
 								
@@ -195,17 +227,6 @@
 							</ul>
 						</li>
 					
-						<li class="nav-item top-level ">
-							
-							<a href="/sponsors/sponsors/">Sponsors</a>
-							<ul>
-								
-									
-									
-								
-							</ul>
-						</li>
-					
 				</ul>
 				-->
 				<ul> 
@@ -213,26 +234,32 @@
 						
 						<a href="/changelog/">Change Log</a>
 					</li>
+					<li class="nav-item top-level ">
+						<a href="https://github.com/mattialabteam">Github</a>
+					</li>
+					<li class="nav-item top-level ">
+						<a > </a>
+					</li>
 				</ul>
 			</nav>
 		</header>
 		
 		<section class="main" id='main'>
-			<div class="page-header">
+			
 				
-				<h2>Cosserat Rods</h2>
-				<h3>Theory</h3>
-				
-			</div>
-			<article class="content">
-				<p>Cosserat rods are a generalization of Kirchhoff rods, which are able to model 1-d slender rods incorporating only bend and twist. Cosserat rods add the ability to consider stretching and shearing, allowing all the possible modes of deformation of the system to be considered. The <strong>key assumption</strong> of Cosserat rods are that their length is much larger than their radius ($L \gg r$). This allows their dynamical behavior to approximated by averaging balance laws at every cross-section. We also assume that the rods are linearly elastic.</p>
+				<div class="page-header">
+					<h2>Cosserat Rods</h2>
+					<h3>Theory</h3>
+				</div>
+				<article class="content">
+					<p>Cosserat rods are a generalization of Kirchhoff rods, which are able to model 1-d slender rods incorporating only bend and twist. Cosserat rods add the ability to consider stretching and shearing, allowing all the possible modes of deformation of the system to be considered. The <strong>key assumption</strong> of Cosserat rods are that their length is much larger than their radius ($L \gg r$). This allows their dynamical behavior to approximated by averaging balance laws at every cross-section. We also assume that the rods are linearly elastic.</p>
 
 <h2 id="mathematical-description-of-cosserat-rods">Mathematical Description of Cosserat Rods</h2>
 <blockquote>
-  <p><strong>TL;DR</strong>: Cosserat rods are described by a centerline $\mathbf{r}(s, t)$ and local reference frame $\mathbf{Q}(s,t)= \{ {\mathbf{d}}_1, {\mathbf{d}}_2, {\mathbf{d}}_3 \}$ which consists of a triad of orthonormal basis vectors. The dynamics of the rod are then described by the equations for conservation of linear and angular momentum throughout the rod.</p>
+  <p>Cosserat rods are described by a centerline $\mathbf{r}(s, t)$ and local reference frame $\mathbf{Q}(s,t)= \{ {\mathbf{d}}_1, {\mathbf{d}}_2, {\mathbf{d}}_3 \}$ which consists of a triad of orthonormal basis vectors (using the right-hand rule convention). The dynamics of the rod are then described by the equations for conservation of linear and angular momentum throughout the rod.</p>
 </blockquote>
 
-<p><img src="/images/cosserat_rod_continuum.png" alt="image name" width="500" /></p>
+<p><img src="/images/cosserat_rod_continuum.png" alt="image name" width="650" style="display: block; margin-left: auto; margin-right: auto;" /></p>
 
 <h4 id="reference-frames">Reference Frames</h4>
 <p>For a Cosserat rod described by a centerline $\mathbf{r}(s, t)$ (where $s \in [0, L]$ is the arc-length of the rod and $t$ is time) we begin by defining two reference frames within which we can express a vector $\mathbf{x}$:</p>
@@ -293,7 +320,11 @@ Gazzola, Dudte, McCormick, Mahadevan, <strong>Forward and inverse problems in th
 Zhang, Chan, Parthasarathy, Gazzola, <strong>Modeling and simulation of complex dynamic musculoskeletal architectures</strong>, Nature Communications, 2019. <a href="https://doi.org/10.1038/s41467-019-12759-5">doi: 10.1038/s41467-019-12759-5</a>
 </p>
 
-			</article>
+				</article>		
+
+				
+				
+
 		</section>
 		
 		

@@ -65,7 +65,7 @@
 				<input type="submit" value="Search" style="display: none;">
 			</form>
 
-			<nav class="full-navigation">
+			<nav class="full-navigation WhateverYourNavIs">
 				<ul>
 					<li class="nav-item top-level ">
 						
@@ -75,7 +75,7 @@
 
 
 				<!-- Hard code for nav-bar-->
-				<ul>
+				<ul> 
 					<li class="nav-item top-level ">
 						<a href="/cosserat_rods/overview/">Cosserat Rods</a>
 						<ul>
@@ -84,6 +84,10 @@
 							<li class="nav-item "><a href="/cosserat_rods/multiple-rods/">Multiple Rods</a></li> 			
 							<li class="nav-item "><a href="/cosserat_rods/case-studies/">Case Studies</a></li> 				
 						</ul>
+					</li>
+
+					<li class="nav-item top-level ">
+						<a href="/elastica+control/">Elastica + Control</a>
 					</li>
 
 					<li class="nav-item top-level ">
@@ -96,6 +100,9 @@
 					</li>
 					<li class="nav-item top-level ">
 						<a href="/publications/publications/">Publications</a>
+					</li>
+					<li class="nav-item top-level ">
+						<a href="/publications/press/">Press</a>
 					</li>
 					<li class="nav-item top-level ">
 						<a href="/contact/contact/">Contact</a>
@@ -157,6 +164,31 @@
 					
 						<li class="nav-item top-level ">
 							
+							<a href="/elastica+control/"></a>
+							<ul>
+								
+									
+									
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/publications/press/"><span style="padding-left:20px"></a>
+							<ul>
+								
+									
+									
+								
+									
+									
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
 							<a href="/publications/publications/">Publications</a>
 							<ul>
 								
@@ -195,17 +227,6 @@
 							</ul>
 						</li>
 					
-						<li class="nav-item top-level ">
-							
-							<a href="/sponsors/sponsors/">Sponsors</a>
-							<ul>
-								
-									
-									
-								
-							</ul>
-						</li>
-					
 				</ul>
 				-->
 				<ul> 
@@ -213,26 +234,32 @@
 						
 						<a href="/changelog/">Change Log</a>
 					</li>
+					<li class="nav-item top-level ">
+						<a href="https://github.com/mattialabteam">Github</a>
+					</li>
+					<li class="nav-item top-level ">
+						<a > </a>
+					</li>
 				</ul>
 			</nav>
 		</header>
 		
 		<section class="main" id='main'>
-			<div class="page-header">
+			
 				
-				<h2>Cosserat Rods</h2>
-				<h3>Numerics</h3>
-				
-			</div>
-			<article class="content">
-				<p>The <a href="../theory">Theory</a> page laid out the continuum theory of Cosserat rods and presented the equations that need to be solved to model the dynamics and kinematics of the rods. In general, there is not always an analytical solution to these equations so we need to use numerical methods instead. We do this by discretizing the rod into a discrete set of nodes connected by straight line segments. Just as a continuum Cosserat rod is associated with a centerline $\mathbf{r}(t)$ and local coordinate frame $\mathbf{Q}(t)$, here the discretized Cosserat rod is defined by a collection of centerline vertices $\mathbf{r}_i(t)$ that are connected together by line segments associated with reference frames $\mathbf{Q}_i(t)$.</p>
+				<div class="page-header">
+					<h2>Cosserat Rods</h2>
+					<h3>Numerics</h3>
+				</div>
+				<article class="content">
+					<p>The <a href="../theory">Theory</a> page laid out the continuum theory of Cosserat rods and presented the equations that need to be solved to model the dynamics and kinematics of the rods. In general, there is not always an analytical solution to these equations so we need to use numerical methods instead. We do this by discretizing the rod into a discrete set of nodes connected by straight line segments. Just as a continuum Cosserat rod is associated with a centerline $\mathbf{r}(t)$ and local coordinate frame $\mathbf{Q}(t)$, here the discretized Cosserat rod is defined by a collection of centerline vertices $\mathbf{r}_i(t)$ that are connected together by line segments associated with reference frames $\mathbf{Q}_i(t)$.</p>
 
 <p>There are three steps to solving this problem numerically.<br />
 <a href="#spatial-discretization">1) Spatially discretize the continuum Cosserat rod equations</a><br />
 <a href="#time-discretization">2) Select a time stepping algorithm</a><br />
 <a href="#boundary-conditions-and-interaction-forces">3) Specify your boundary conditions and interaction forces to model different physical effects.</a></p>
 
-<p><img src="/images/numerics.jpg" alt="image name" width="500" /></p>
+<p><img src="/images/numerics.jpg" alt="image name" width="600" style="display: block; margin-left: auto; margin-right: auto;" /></p>
 
 <h2 id="spatial-discretization">Spatial Discretization</h2>
 <p>We associate different quantities with the nodes and the segments. At the nodes, along with the position vector $\mathbf{r}_i$ there is also velocity $\mathbf{v}_i = \partial \mathbf{r}_i/\partial t$, the pointwise mass $m_i$, and any external forces applied to the node $\bar{\mathbf{f}}_i$. There are <code class="language-plaintext highlighter-rouge">n+1</code> total nodes ($i=[0,n]$). The orientation of each segment is defined by the local reference frame $\mathbf{Q}_j(t)$ and is associated with an edge $\boldsymbol{\ell}_j = \mathbf{r}_{j+1} - \mathbf{r}_j$ which has a current length $\ell_j = |\boldsymbol{\ell}_j|$, a reference length $\hat{\ell}_j = |\boldsymbol{\hat{\ell}}_j|$, a stretch ratio $e_j = \ell_j/\hat{\ell}_j$ and a unit tangent vector $\mathbf{t}_j = \boldsymbol{\ell}_j/\ell_j$. Because the segments lay between the nodes, there are <code class="language-plaintext highlighter-rouge">n</code> number of segments ($j=[0,n-1]$).</p>
@@ -301,7 +328,11 @@ Generally, we use a single dissipation constant such at $\gamma = \gamma_t = \ga
 Gazzola, Dudte, McCormick, Mahadevan, <strong>Forward and inverse problems in the mechanics of soft filaments</strong>, Royal Society Open Science, 2018. <a href="https://doi.org/10.1098/rsos.171628">doi: 10.1098/rsos.171628</a>
 </p>
 
-			</article>
+				</article>		
+
+				
+				
+
 		</section>
 		
 		

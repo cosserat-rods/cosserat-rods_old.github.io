@@ -9,14 +9,16 @@ Cosserat rods are a generalization of Kirchhoff rods, which are able to model 1-
 
 
 ## Mathematical Description of Cosserat Rods
->**TL;DR**: Cosserat rods are described by a centerline $\mathbf{r}(s, t)$ and local reference frame $\mathbf{Q}(s,t)= \\{ {\mathbf{d}}_1, {\mathbf{d}}_2, {\mathbf{d}}_3 \\}$ which consists of a triad of orthonormal basis vectors. The dynamics of the rod are then described by the equations for conservation of linear and angular momentum throughout the rod.  
+>Cosserat rods are described by a centerline $\mathbf{r}(s, t)$ and local reference frame $\mathbf{Q}(s,t)= \\{ {\mathbf{d}}_1, {\mathbf{d}}_2, {\mathbf{d}}_3 \\}$ which consists of a triad of orthonormal basis vectors (using the right-hand rule convention). The dynamics of the rod are then described by the equations for conservation of linear and angular momentum throughout the rod.  
 
-<img src="/images/cosserat_rod_continuum.png" alt="image name" width="500"/>
+<img src="/images/cosserat_rod_continuum.png" alt="image name" width="650" style="display: block; margin-left: auto; margin-right: auto;"/>
 
 #### Reference Frames
 For a Cosserat rod described by a centerline $\mathbf{r}(s, t)$ (where $s \in [0, L]$ is the arc-length of the rod and $t$ is time) we begin by defining two reference frames within which we can express a vector $\mathbf{x}$:  
 
+
 The laboratory (Eulerian) frame: $\bar{\mathbf{x}} = x_1 \mathbf{i} + x_2 \mathbf{j} + x_3 \mathbf{k}$  
+
 
 The local (Lagrangian) frame: $\mathbf{x} = x_1 \mathbf{d}_1 + x_2 \mathbf{d}_2 + x_3 \mathbf{d}_3$
 

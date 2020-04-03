@@ -65,7 +65,7 @@
 				<input type="submit" value="Search" style="display: none;">
 			</form>
 
-			<nav class="full-navigation">
+			<nav class="full-navigation WhateverYourNavIs">
 				<ul>
 					<li class="nav-item top-level ">
 						
@@ -75,7 +75,7 @@
 
 
 				<!-- Hard code for nav-bar-->
-				<ul>
+				<ul> 
 					<li class="nav-item top-level ">
 						<a href="/cosserat_rods/overview/">Cosserat Rods</a>
 						<ul>
@@ -84,6 +84,10 @@
 							<li class="nav-item "><a href="/cosserat_rods/multiple-rods/">Multiple Rods</a></li> 			
 							<li class="nav-item "><a href="/cosserat_rods/case-studies/">Case Studies</a></li> 				
 						</ul>
+					</li>
+
+					<li class="nav-item top-level ">
+						<a href="/elastica+control/">Elastica + Control</a>
 					</li>
 
 					<li class="nav-item top-level ">
@@ -96,6 +100,9 @@
 					</li>
 					<li class="nav-item top-level ">
 						<a href="/publications/publications/">Publications</a>
+					</li>
+					<li class="nav-item top-level ">
+						<a href="/publications/press/">Press</a>
 					</li>
 					<li class="nav-item top-level ">
 						<a href="/contact/contact/">Contact</a>
@@ -157,6 +164,31 @@
 					
 						<li class="nav-item top-level ">
 							
+							<a href="/elastica+control/"></a>
+							<ul>
+								
+									
+									
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/publications/press/"><span style="padding-left:20px"></a>
+							<ul>
+								
+									
+									
+								
+									
+									
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
 							<a href="/publications/publications/">Publications</a>
 							<ul>
 								
@@ -195,17 +227,6 @@
 							</ul>
 						</li>
 					
-						<li class="nav-item top-level ">
-							
-							<a href="/sponsors/sponsors/">Sponsors</a>
-							<ul>
-								
-									
-									
-								
-							</ul>
-						</li>
-					
 				</ul>
 				-->
 				<ul> 
@@ -213,19 +234,25 @@
 						
 						<a href="/changelog/">Change Log</a>
 					</li>
+					<li class="nav-item top-level ">
+						<a href="https://github.com/mattialabteam">Github</a>
+					</li>
+					<li class="nav-item top-level ">
+						<a > </a>
+					</li>
 				</ul>
 			</nav>
 		</header>
 		
 		<section class="main" id='main'>
-			<div class="page-header">
+			
 				
-				<h2>Cosserat Rods</h2>
-				<h3>Multiple Rods</h3>
-				
-			</div>
-			<article class="content">
-				<p>If you have multiple rods, it is important to properly define how they interact. This is done through the prescription of appropriate boundary conditions that couple the interactions of different rods as well as making sure that the rods do not intersect. There are any number of different ways you can define these interactions. Typically, we enforce these interactions through the application of correcting forces and torques which then cause the rods to satisfy the desired constraints.</p>
+				<div class="page-header">
+					<h2>Cosserat Rods</h2>
+					<h3>Multiple Rods</h3>
+				</div>
+				<article class="content">
+					<p>If you have multiple rods, it is important to properly define how they interact. This is done through the prescription of appropriate boundary conditions that couple the interactions of different rods as well as making sure that the rods do not intersect. There are any number of different ways you can define these interactions. Typically, we enforce these interactions through the application of correcting forces and torques which then cause the rods to satisfy the desired constraints.</p>
 
 <h1 id="joints">Joints</h1>
 <p>When we define an interaction between nodes at the ends of two rods, we create a joint. The simplest joint we can create is a spherical joint where the rods are free to rotate and twist relative to each other. Additional constraints can also be added to restrict this movement such as limiting rotations of the rods to create a hinge joint or even fixing the relative positions of the rod to create a fixed joint. While in the description below we generally defined the correcting forces and torques as being applied to one of the rods ($R_2$) in reference to the position of another rod ($R_1$), it is important to note that the correcting forces and torques are applied to both rods, which can be seen by swapping the positions of $R_1$ and $R_2$ below.</p>
@@ -297,7 +324,11 @@ Gazzola, Dudte, McCormick, Mahadevan, <strong>Forward and inverse problems in th
 </p>
 
 
-			</article>
+				</article>		
+
+				
+				
+
 		</section>
 		
 		
